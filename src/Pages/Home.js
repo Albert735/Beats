@@ -4,15 +4,16 @@ import logo from "../assets/images/home-2.png";
 
 const Home = () => {
   return (
-    <div className="flex  justify-center items-center">
-      <div className="flex justify-center items-centerrelative">
+    <div className="flex  justify-center items-center relative">
+      <div className="flex justify-center items-center relative bg-slate-700 w-full">
         <img
           src={logo}
           alt=""
-          className="md:h-[36.5rem] h-[27rem] absolute md:-top-[4rem] -top-[9.75rem] md:left-[5.5rem] right-10  "
+          className="md:h-[36.5rem] h-[27rem] absolute md:-top-[12rem] -top-[19.5rem] md:left-[5.5rem] left-[20rem]  drop-shadow-2xl"
         />
       </div>
-      <div className="flex-col mt-[1rem] ">
+
+      <div className="">
         <h1>Over Head Bagna Beats</h1>
         <h2>Overview</h2>
         <p>

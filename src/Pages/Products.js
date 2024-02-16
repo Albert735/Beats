@@ -8,15 +8,15 @@ import { GrShop } from "react-icons/gr";
 
 const Products = () => {
   return (
-    <div className="flex md:flex-col justify-center items-center  m-[10rem]">
+    <div className="flex flex-col justify-center items-center  m-[10rem]">
       <h1 className="text-[4rem]">Choose Your Style</h1>
-
-      <div className="flex  gap-[4rem] mt-[5rem]">
-        <div className="flex relative flex-col justify-center items-center bg-[#F1E9E9] px-[2rem] py-5 rounded-lg h-fit">
+        <div className="flex flex-col">
+           <div className="flex  gap-[4rem] mt-[5rem]">
+        <div className="flex relative flex-col justify-center items-center bg-[#F1E9E9] px-[2rem] py-5 rounded-lg h-fit drop-shadow-xl">
           <img
             src={productImage1}
             alt=""
-            className="h-[5rem] md:h-[10rem] -top-[3rem] absolute "
+            className="h-[10rem] md:h-[10rem] -top-[3rem] absolute drop-shadow-xl"
           />
           <div className="flex flex-col mt-28">
             <h2>Black</h2>
@@ -29,11 +29,11 @@ const Products = () => {
           </div>
         </div>
 
-        <div className="flex relative flex-col   justify-center items-center bg-[#F1E9E9] px-[2rem] py-5 rounded-lg h-fit">
+        <div className="flex relative flex-col   justify-center items-center bg-[#F1E9E9] px-[2rem] py-5 rounded-lg h-fit drop-shadow-xl">
           <img
             src={productImage2}
             alt=""
-            className="h-[5rem] md:h-[10rem] -top-[3rem] absolute "
+            className="h-[10rem] md:h-[10rem] -top-[3rem] absolute drop-shadow-xl"
           />
           <div className="flex flex-col gap-2 mt-28">
             <h2>Black</h2>
@@ -46,11 +46,11 @@ const Products = () => {
           </div>
         </div>
 
-        <div className="flex relative flex-col justify-center items-center bg-[#F1E9E9] px-[2rem] py-5 rounded-lg h-fit">
+        <div className="flex relative flex-col justify-center items-center bg-[#F1E9E9] px-[2rem] py-5 rounded-lg h-fit drop-shadow-xl">
           <img
             src={productImage3}
             alt=""
-            className="h-[5rem] md:h-[10rem] -top-[3rem] absolute"
+            className="h-[10rem] md:h-[10rem] -top-[3rem] absolute drop-shadow-xl"
           />
           <div className="flex flex-col gap-2 mt-28">
             <h2>Black</h2>
@@ -65,11 +65,11 @@ const Products = () => {
       </div>
 
       <div className="flex gap-[4rem] mt-[5rem]">
-        <div className="flex relative flex-col justify-center items-center bg-[#F1E9E9] px-[2rem] py-5 rounded-lg h-fit ">
+        <div className="flex relative flex-col justify-center items-center bg-[#F1E9E9] px-[2rem] py-5 rounded-lg h-fit drop-shadow-xl">
           <img
             src={productImage4}
             alt=""
-            className="h-[5rem] md:h-[10rem] -top-[3rem] absolute "
+            className="h-[10rem] md:h-[10rem] -top-[3rem] absolute drop-shadow-xl "
           />
           <div className="flex flex-col gap-2 mt-28">
             <h2>Black</h2>
@@ -83,11 +83,11 @@ const Products = () => {
           </div>
         </div>
 
-        <div className="flex relative  flex-col   justify-center items-center bg-[#F1E9E9] px-[2rem] py-5 rounded-lg h-fit">
+        <div className="flex relative  flex-col   justify-center items-center bg-[#F1E9E9] px-[2rem] py-5 rounded-lg h-fit drop-shadow-xl">
           <img
             src={productImage5}
             alt=""
-            className="h-[5rem] md:h-[10rem] -top-[3rem] absolute "
+            className="h-[10rem] md:h-[10rem] -top-[3rem] absolute drop-shadow-xl"
           />
           <div className="flex flex-col gap-2 mt-28">
             <h2>Black</h2>
@@ -100,6 +100,8 @@ const Products = () => {
           </div>
         </div>
       </div>
+        </div>
+     
     </div>
   );
 };
