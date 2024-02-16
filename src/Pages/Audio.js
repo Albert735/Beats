@@ -1,5 +1,6 @@
 import React from "react";
 import audioImage from "../assets/images/studiopro-pdp-p07.png.large.2x.png";
+import { BsSpeakerFill } from "react-icons/bs";
 
 const Audio = () => {
   return (
@@ -7,6 +8,7 @@ const Audio = () => {
       <img src={audioImage} alt="" className="h-[13rem] md:h-[30rem] drop-shadow-2xl hover:drop-shadow-xl" />
       <div className="flex-col">
         <hi>Lossless Audio</hi>
+        <BsSpeakerFill />
         <h2>Lossless</h2>
         <p>
           Beats Studio Pro has a built in Digital-to-Analog Converter (DAC) that

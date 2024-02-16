@@ -12,33 +12,37 @@ const Products = () => {
       <h1>Choose Your Style</h1>
 
       <div className="flex  gap-[4rem] mt-[5rem]">
-        <div className="flex relative flex-col justify-center items-center bg-[#F1E9E9] p-[3rem] rounded-lg ">
+        <div className="flex relative flex-col justify-center items-center bg-[#F1E9E9] px-[2rem] py-5 rounded-lg h-fit">
           <img
             src={productImage1}
             alt=""
-            className="h-[5rem] md:h-[5rem] -top-[2rem] absolute "
+            className="h-[5rem] md:h-[10rem] -top-[3rem] absolute "
           />
-          <h2>Black</h2>
-          <div className="flex">
-            <p>GHC1599</p>
-            <span>
-              <GrShop />
-            </span>
+          <div className="flex flex-col mt-28">
+            <h2>Black</h2>
+            <div className="flex gap-5">
+              <p>GHC1599</p>
+              <span>
+                <GrShop />
+              </span>
+            </div>
           </div>
         </div>
 
-        <div className="flex relative flex-col   justify-center items-center bg-[#F1E9E9] p-[3rem] rounded-lg ">
+        <div className="flex relative flex-col   justify-center items-center bg-[#F1E9E9] px-[2rem] py-5 rounded-lg h-fit">
           <img
             src={productImage2}
             alt=""
-            className="h-[5rem] md:h-[5rem] -top-[2rem] absolute "
+            className="h-[5rem] md:h-[10rem] -top-[3rem] absolute "
           />
-          <h2>Black</h2>
-          <div className="flex">
-            <p>GHC1599</p>
-            <span>
-              <GrShop />
-            </span>
+          <div className="flex flex-col gap-2 mt-28">
+            <h2>Black</h2>
+            <div className="flex gap-5">
+              <p>GHC1599</p>
+              <span>
+                <GrShop />
+              </span>
+            </div>
           </div>
         </div>
 
