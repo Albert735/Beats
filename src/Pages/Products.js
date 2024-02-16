@@ -9,7 +9,7 @@ import { GrShop } from "react-icons/gr";
 const Products = () => {
   return (
     <div className="flex md:flex-col justify-center items-center  m-[10rem]">
-      <h1>Choose Your Style</h1>
+      <h1 className="text-[4rem]">Choose Your Style</h1>
 
       <div className="flex  gap-[4rem] mt-[5rem]">
         <div className="flex relative flex-col justify-center items-center bg-[#F1E9E9] px-[2rem] py-5 rounded-lg h-fit">
