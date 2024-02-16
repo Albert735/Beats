@@ -3,7 +3,7 @@ import { DiGhostSmall } from "react-icons/di";
 
 const Navbar = () => {
   return (
-    <div className="flex flex-wrap items-center justify-between mx-auto p-4">
+    <div className="flex max-w-screen-xl flex-wrap items-center justify-between mx-auto p-4">
       <h1>Beats</h1>
       <div className="flex">
         <DiGhostSmall size={20} className="md:hidden" />
