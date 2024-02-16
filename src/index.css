@@ -7,3 +7,7 @@
     margin: 0;
     padding: 0;
 }
+
+.bg-image {
+    background-image: url('./assets/images/low-poly-grid-haikei.png');
+}

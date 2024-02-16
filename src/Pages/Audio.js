@@ -1,20 +1,19 @@
 import React from "react";
-import audioImage from "../assets/images/studiopro-pdp-p07.png.large.2x.png";
+import audioImage from "../assets/images/product5.png";
 import { BsSpeakerFill } from "react-icons/bs";
 
 const Audio = () => {
   return (
-    <div className="flex justify-center items-center  md:m-[10rem]">
+    <div className="flex justify-center items-center  md:m-[10rem] bg-image">
       <img
         src={audioImage}
         alt=""
         className="h-[13rem] md:h-[30rem] drop-shadow-2xl hover:drop-shadow-xl"
       />
       <div className="flex-col">
-      <hi>Lossless Audio</hi>
+        <hi>Lossless Audio</hi>
         <div className="flex gap-3">
-          
-          <BsSpeakerFill size={24}/>
+          <BsSpeakerFill size={24} />
           <h2>Lossless</h2>
         </div>
 
