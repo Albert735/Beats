@@ -11,7 +11,7 @@ import Footer from "./Pages/Footer";
 
 function App() {
   return (
-    <div className="bg-[#FFFAFA] ">
+    <div className="bg-[#FFFAFA] dark:bg-[#0E0F10] dark:text-white ">
       <Navbar />
       <Home />
       <Section2 />
