@@ -4,7 +4,7 @@ import { BsSpeakerFill } from "react-icons/bs";
 
 const Audio = () => {
   return (
-    <div className="flex flex-row justify-center items-center md:m-[10rem] bg-image max-w-screen-xl mx-auto p-[5rem]">
+    <div className="flex flex-row justify-center items-center  bg-image max-w-screen-xl mx-auto p-[5rem]">
       <div className="flex relative flex-col justify-center items-center  px-[10rem] py-[5rem] md:-top-[5rem]  h-fit ">
         <img
           src={audioImage}
@@ -21,8 +21,10 @@ const Audio = () => {
         </div>
 
         <p className="leading-loose">
-          Beats Studio Pro has a built<br/> in Digital-to-Analog Converter (DAC)<br/> that
-          delivers high-fidelity lossless audio<br/> via USB-C.2
+          Beats Studio Pro has a built
+          <br /> in Digital-to-Analog Converter (DAC)
+          <br /> that delivers high-fidelity lossless audio
+          <br /> via USB-C.2
         </p>
       </div>
     </div>

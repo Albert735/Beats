@@ -3,16 +3,17 @@ import logo from "../assets/images/beats-logo-161616.png";
 import { FaInstagram } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
+// import { SiMinutemailer } from "react-icons/si";
 
 const Footer = () => {
   return (
-    <div className="flex  max-w-screen-xl flex-wrap justify-between items-center mx-auto p-[4rem]  bg-[#f6e7e7]">
-      <div>
+    <div className="flex  max-w-screen-xl flex-wrap justify-between items-center mx-auto p-[4rem]  bg-[#F1E9E9]">
+      <div className="">
         <img src={logo} alt="" className="h-[3rem] drop-shadow-lg" />
       </div>
 
-      <div di>
-        <h1>Products</h1>
+      <div>
+        <h1 className="font-semibold text-[1.3rem] my-2">Products</h1>
         <ul>
           <li>Headphones</li>
           <li>Earphones</li>
@@ -22,7 +23,7 @@ const Footer = () => {
       </div>
 
       <div>
-        <h1>Products</h1>
+        <h1 className="font-semibold text-[1.3rem] my-2">Support</h1>
         <ul>
           <li>Product help</li>
           <li>Register</li>
@@ -32,12 +33,17 @@ const Footer = () => {
       </div>
 
       <div>
-        <input type="text" placeholder="E-mail Subscription" />
+        <input
+          type="text"
+          placeholder="E-mail Subscription"
+          className="p-4 w-[25rem] rounded-lg"
+          
+        />
 
-        <div className="flex justify-center items-start">
-          <FaLinkedin />
-          <FaInstagram />
-          <FaXTwitter />
+        <div className="flex justify-start items-start my-3 gap-5">
+          <FaLinkedin size={35} className="bg-white rounded-lg p-2" />
+          <FaInstagram size={35} className="bg-white rounded-lg p-2" />
+          <FaXTwitter size={35} className="bg-white rounded-lg p-2" />
         </div>
       </div>
     </div>

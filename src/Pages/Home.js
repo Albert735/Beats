@@ -4,7 +4,7 @@ import logo from "../assets/images/home-2.png";
 
 const Home = () => {
   return (
-    <div className="flex justify-center items-center relative max-w-screen-xl mx-auto mt-[2rem] mb-[20rem]">
+    <div className="flex justify-center items-center relative max-w-screen-xl mx-auto mt-[2rem] mb-[5rem]">
       <div className="flex  justify-center items-center relative   w-full bg-black">
         <img
           src={logo}
@@ -26,7 +26,7 @@ const Home = () => {
         </p>
         <button
           type="button"
-          className="bg-[#f6e7e7] gap-5 flex mt-[3rem]  p-4 rounded-[3rem]"
+          className="bg-[#f6e7e7] gap-5 flex mt-[3rem]  p-4 rounded-[3rem] drop-shadow-md ease-in-out duration-300"
         >
           <p>Add to Bag</p>
           <p> GHC1799</p>
