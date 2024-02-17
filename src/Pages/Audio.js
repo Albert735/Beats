@@ -1,25 +1,28 @@
 import React from "react";
-import audioImage from "../assets/images/product5.png";
+import audioImage from "../assets/images/blackbeats.png";
 import { BsSpeakerFill } from "react-icons/bs";
 
 const Audio = () => {
   return (
-    <div className="flex justify-center items-center  md:m-[10rem] bg-image">
-      <img
-        src={audioImage}
-        alt=""
-        className="h-[13rem] md:h-[30rem] drop-shadow-2xl hover:drop-shadow-xl"
-      />
+    <div className="flex flex-row justify-center items-center md:m-[10rem] bg-image max-w-screen-xl mx-auto p-[5rem]">
+      <div className="flex relative flex-col justify-center items-center  px-[10rem] py-[5rem] md:-top-[5rem]  h-fit ">
+        <img
+          src={audioImage}
+          alt=""
+          className="h-[10rem] md:w-full md:h-[20rem]  drop-shadow-xl hover:drop-shadow-xl absolute"
+        />
+      </div>
+
       <div className="flex-col">
-        <hi>Lossless Audio</hi>
+        <hi className="font-semibold text-[2rem] mb-[3rem]">Lossless Audio</hi>
         <div className="flex gap-3">
           <BsSpeakerFill size={24} />
-          <h2>Lossless</h2>
+          <h2 className="text-[1.2rem]">Lossless</h2>
         </div>
 
-        <p>
-          Beats Studio Pro has a built in Digital-to-Analog Converter (DAC) that
-          delivers high-fidelity lossless audio via USB-C.2
+        <p className="leading-loose">
+          Beats Studio Pro has a built<br/> in Digital-to-Analog Converter (DAC)<br/> that
+          delivers high-fidelity lossless audio<br/> via USB-C.2
         </p>
       </div>
     </div>
