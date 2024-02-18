@@ -19,7 +19,7 @@ const Case = () => {
         <img
           src={caseImage}
           alt=""
-          className="h-[15rem] max-w-full  md:h-[30rem] drop-shadow-2xl"
+          className="mx-auto max-w-full h-[15rem] md:h-[30rem] drop-shadow-2xl"
         />
         <div className="flex flex-col justify-center items-start p-[5rem]">
           <p className="leading-loose text-[1.3rem]">
@@ -28,7 +28,7 @@ const Case = () => {
             <br /> can store it whenever you
             <br /> want, and keep your durability <br /> forever.
           </p>
-          <button className="bg-[#f6e7e7] gap-1 flex mt-[2rem]  p-4 rounded-[3rem] drop-shadow-md">
+          <button className="bg-[#f6e7e7] dark:bg-[#191A1A] gap-1 flex mt-[2rem]  p-4 rounded-[3rem] drop-shadow-md md:hover:ml-3 hover:ease-in-out duration-500">
             <IoIosInformationCircleOutline size={24} />
             More Info
           </button>

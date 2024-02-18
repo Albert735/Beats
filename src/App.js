@@ -8,6 +8,7 @@ import Products from "./Pages/Products";
 import Audio from "./Pages/Audio";
 import Section4 from "./Pages/Section4";
 import Footer from "./Pages/Footer";
+import Bottom from "./Pages/Bottom";
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
       <Section4 />
       <Audio />
       <Footer />
+
+      <Bottom />
     </div>
   );
 }

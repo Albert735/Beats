@@ -9,7 +9,7 @@ const Section4 = () => {
       </div>
       <div className="flex-col">
         <h1 className="text-[3rem] font-semibold">REGISTER YOUR BEATS</h1>
-        <button className="bg-[#f6e7e7]  flex justify-center mt-[3rem]  p-3 rounded-[3rem] drop-shadow-md md:w-[12rem]">
+        <button className="bg-[#f6e7e7] dark:bg-[#191A1A]  flex justify-center mt-[3rem]  p-3 rounded-[3rem] drop-shadow-md md:w-[12rem]">
           Register Now
         </button>
       </div>

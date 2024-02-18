@@ -17,18 +17,19 @@ const Specs = () => {
       // data-aos-easing="ease-in-out"
       className="flex flex-col justify-center items-center  mx-auto  md:m-[10rem] "
     >
-      <h1 className="w-full text-center text-[4rem] font-bold">Specs</h1>
-
-      <div className="flex  justify-center items-center m-[5rem] gap-[6rem]">
-        <div>
-          <div className="flex justify-center items-center">
+      <h1 className="md:w-full text-center text-[2.5rem] md:text-[4rem] font-bold">
+        Specs
+      </h1>
+      <div className="flex  justify-center items-center m-[5rem] md:gap-[6rem]">
+        <div className="text-sm md:text-[1rem] font-light">
+          <div className="flex justify-center  items-center">
             <div className="flex flex-col justify-center items-start m-5">
               <IoIosBluetooth size={24} />
               <h3>Connectivity</h3>
               <span>Bluetooth</span>
             </div>
           </div>
-
+          
           <div className="flex-col m-5">
             <IoIosBatteryFull size={24} />
             <h3>Battery</h3>

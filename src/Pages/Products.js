@@ -12,7 +12,7 @@ const Products = () => {
       <h1 className="text-[4rem] font-bold text-center">Choose <br/> Your Style</h1>
       <div className="flex flex-col">
         <div className="flex flex-wrap gap-[4rem] mt-[5rem]">
-          <div className="flex relative flex-col justify-center items-center bg-[#F1E9E9] px-[2rem] py-5 rounded-lg h-fit drop-shadow-xl">
+          <div className="flex relative flex-col justify-center items-center bg-[#F1E9E9] dark:bg-[#191A1A] px-[2rem] py-5 rounded-lg h-fit drop-shadow-xl">
             <img
               src={productImage1}
               alt=""
@@ -29,7 +29,7 @@ const Products = () => {
             </div>
           </div>
 
-          <div className="flex relative flex-col   justify-center items-center bg-[#F1E9E9] px-[2rem] py-5 rounded-lg h-fit drop-shadow-xl">
+          <div className="flex relative flex-col   justify-center items-center bg-[#F1E9E9] dark:bg-[#191A1A] px-[2rem] py-5 rounded-lg h-fit drop-shadow-xl">
             <img
               src={productImage2}
               alt=""
@@ -46,7 +46,7 @@ const Products = () => {
             </div>
           </div>
 
-          <div className="flex relative flex-col justify-center items-center bg-[#F1E9E9] px-[2rem] py-5 rounded-lg h-fit drop-shadow-xl">
+          <div className="flex relative flex-col justify-center items-center bg-[#F1E9E9] dark:bg-[#191A1A] px-[2rem] py-5 rounded-lg h-fit drop-shadow-xl">
             <img
               src={productImage3}
               alt=""
@@ -63,7 +63,7 @@ const Products = () => {
             </div>
           </div>
 
-          <div className="flex relative flex-col justify-center items-center bg-[#F1E9E9] px-[2rem] py-5 rounded-lg h-fit drop-shadow-xl">
+          <div className="flex relative flex-col justify-center items-center bg-[#F1E9E9] dark:bg-[#191A1A] px-[2rem] py-5 rounded-lg h-fit drop-shadow-xl">
             <img
               src={productImage4}
               alt=""
@@ -81,7 +81,7 @@ const Products = () => {
             </div>
           </div>
 
-          <div className="flex relative  flex-col   justify-center items-center bg-[#F1E9E9] px-[2rem] py-5 rounded-lg h-fit drop-shadow-xl">
+          <div className="flex relative  flex-col   justify-center items-center bg-[#F1E9E9] dark:bg-[#191A1A] px-[2rem] py-5 rounded-lg h-fit drop-shadow-xl">
             <img
               src={productImage5}
               alt=""
