@@ -14,7 +14,7 @@ const Case = () => {
       // data-aos-easing="linear"
       className="flex flex-col justify-center items-center md:m-[10rem]"
     >
-      <h1 className="w-full text-center text-[4rem] font-bold">Case</h1>
+      <h1 className="w-full text-center text-[4rem] text-[#8d8485] font-bold">Case</h1>
       <div className="flex flex-col md:flex-row">
         <img
           src={caseImage}

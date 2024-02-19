@@ -12,7 +12,7 @@ const Section2 = () => {
   return (
     <div
       data-aos="fade-left"
-      data-aos-delay="300"
+      data-aos-delay="1000"
       data-aos-easing="ease-in-out"
       className="flex justify-between md:justify-center  mx-10 md:mx-auto items-center md:gap-[9rem]   md:m-[12rem] m-[5rem]  "
     >

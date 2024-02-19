@@ -4,20 +4,20 @@ import { IoIosBatteryFull } from "react-icons/io";
 import { MdOutlinePower } from "react-icons/md";
 import { HiOutlineMicrophone } from "react-icons/hi";
 import specImage from "../assets/images/specs.png";
-// import AOS from "aos";
-// import "aos/dist/aos.css"; // You can also use <link> for styles
-// // ..
-// AOS.init();
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+AOS.init();
 
 const Specs = () => {
   return (
     <div
-      // data-aos="fade-right"
-      // data-aos-delay="500"
-      // data-aos-easing="ease-in-out"
+      data-aos="fade-right"
+      data-aos-delay="1000"
+      data-aos-easing="ease-in-out"
       className="flex flex-col justify-center items-center  mx-auto  md:m-[10rem] "
     >
-      <h1 className="md:w-full text-center text-[2.5rem] md:text-[4rem] font-bold">
+      <h1 className="md:w-full text-center text-[2.5rem] md:text-[4rem] font-bold text-[#8d8485]">
         Specs
       </h1>
       <div className="flex  justify-center items-center m-[5rem] md:gap-[6rem]">

@@ -5,16 +5,26 @@ import productImage3 from "../assets/images/product3.png";
 import productImage4 from "../assets/images/product4.png";
 import productImage5 from "../assets/images/product5.png";
 import { GrShop } from "react-icons/gr";
+import AOS from "aos";
+
+import "aos/dist/aos.css";
+
+AOS.init();
 
 const Products = () => {
   return (
     <div className="flex flex-col justify-center items-center max-w-screen-xl mx-1 md:mx-auto my-11 md:m-[10rem]">
-      <h1 className="text-[4rem] font-bold text-center">
+      <h1 className="text-[4rem] font-bold text-center text-[#8d8485]">
         Choose <br /> Your Style
       </h1>
       <div className="flex flex-col">
         <div className="flex flex-wrap gap-[4rem] mt-[5rem]">
-          <div className="flex relative flex-col justify-center items-center bg-[#F1E9E9] dark:bg-[#191A1A] px-[2rem] py-5 rounded-lg h-fit drop-shadow-xl hover:scale-110 hover:ease-in-out duration-200">
+          <div
+            data-aos="fade-left"
+            data-aos-delay="1000"
+            data-aos-easing="ease-in-out"
+            className="flex relative flex-col justify-center items-center bg-[#F1E9E9] dark:bg-[#191A1A] px-[2rem] py-5 rounded-lg h-fit drop-shadow-xl hover:scale-110 hover:ease-in-out duration-200"
+          >
             <img
               src={productImage1}
               alt=""
@@ -31,7 +41,12 @@ const Products = () => {
             </div>
           </div>
 
-          <div className="flex relative flex-col   justify-center items-center bg-[#F1E9E9] dark:bg-[#191A1A] px-[2rem] py-5 rounded-lg h-fit drop-shadow-xl hover:scale-110 hover:ease-in-out duration-200">
+          <div
+            data-aos="fade-left"
+            data-aos-delay="1100"
+            data-aos-easing="ease-in-out"
+            className="flex relative flex-col   justify-center items-center bg-[#F1E9E9] dark:bg-[#191A1A] px-[2rem] py-5 rounded-lg h-fit drop-shadow-xl hover:scale-110 hover:ease-in-out duration-200"
+          >
             <img
               src={productImage2}
               alt=""
@@ -48,7 +63,12 @@ const Products = () => {
             </div>
           </div>
 
-          <div className="flex relative flex-col justify-center items-center bg-[#F1E9E9] dark:bg-[#191A1A] px-[2rem] py-5 rounded-lg h-fit drop-shadow-xl hover:scale-110 hover:ease-in-out duration-200">
+          <div
+            data-aos="fade-left"
+            data-aos-delay="1200"
+            data-aos-easing="ease-in-out"
+            className="flex relative flex-col justify-center items-center bg-[#F1E9E9] dark:bg-[#191A1A] px-[2rem] py-5 rounded-lg h-fit drop-shadow-xl hover:scale-110 hover:ease-in-out duration-200"
+          >
             <img
               src={productImage3}
               alt=""
@@ -65,7 +85,12 @@ const Products = () => {
             </div>
           </div>
 
-          <div className="flex relative flex-col justify-center items-center bg-[#F1E9E9] dark:bg-[#191A1A] px-[2rem] py-5 rounded-lg h-fit drop-shadow-xl hover:scale-110 hover:ease-in-out duration-200">
+          <div
+            data-aos="fade-left"
+            data-aos-delay="1300"
+            data-aos-easing="ease-in-out"
+            className="flex relative flex-col justify-center items-center bg-[#F1E9E9] dark:bg-[#191A1A] px-[2rem] py-5 rounded-lg h-fit drop-shadow-xl hover:scale-110 hover:ease-in-out duration-200"
+          >
             <img
               src={productImage4}
               alt=""
@@ -83,7 +108,12 @@ const Products = () => {
             </div>
           </div>
 
-          <div className="flex relative  flex-col   justify-center items-center bg-[#F1E9E9] dark:bg-[#191A1A] px-[2rem] py-5 rounded-lg h-fit drop-shadow-xl hover:scale-110 hover:ease-in-out duration-200">
+          <div
+            data-aos="fade-left"
+            data-aos-delay="1400"
+            data-aos-easing="ease-in-out"
+            className="flex relative  flex-col   justify-center items-center bg-[#F1E9E9] dark:bg-[#191A1A] px-[2rem] py-5 rounded-lg h-fit drop-shadow-xl hover:scale-110 hover:ease-in-out duration-200"
+          >
             <img
               src={productImage5}
               alt=""
