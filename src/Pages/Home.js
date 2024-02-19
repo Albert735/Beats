@@ -26,7 +26,7 @@ const Home = () => {
         </p>
         <button
           type="button"
-          className="bg-[#f6e7e7] dark:bg-[#28292B] hover:ml-5 md:gap-5 flex mt-[1rem] md:mt-[3rem] p-3 gap-3 md:p-4 rounded-[3rem] drop-shadow-md ease-in-out duration-500"
+          className="bg-[#f6e7e7] dark:bg-[#28292B]  md:gap-5 flex mt-[1rem] md:mt-[3rem] p-2 gap-2 md:p-4 rounded-[3rem] drop-shadow-md ease-in-out duration-500"
         >
           <p className=" text-sm p-1 md:p-1 md:text-[1rem]">Add to Bag</p>
           <p className="bg-white rounded-[2rem] text-sm md:px-1.5 p-1 md:text-[1rem] dark:text-black">

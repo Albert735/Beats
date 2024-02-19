@@ -16,17 +16,17 @@ const Section2 = () => {
       data-aos-easing="ease-in-out"
       className="flex justify-between md:justify-center  mx-10 md:mx-auto items-center md:gap-[9rem]   md:m-[12rem] m-[5rem]  "
     >
-      <div className="hover:mb-[2rem] hover:ease-in-out duration-500">
+      <div className=" hover:ease-in-out duration-500 hover:scale-150">
         <IoLogoApple className="w-11 h-[5rem] md:h-[5rem] md:w-[6rem]" />
       </div>
-      <div className="hover:mb-[2rem] hover:ease-in-out duration-500 ">
+      <div className=" hover:ease-in-out duration-500 hover:scale-150">
         <GrSpotify className="w-11 h-[5rem] md:h-[5rem] md:w-[6rem]" />
       </div>
 
-      <div className="hover:mb-[2rem] hover:ease-in-out duration-500 ">
+      <div className=" hover:ease-in-out duration-500 hover:scale-150">
         <ImAmazon className="w-11 h-[5rem] md:h-[5rem] md:w-[6rem]" />
       </div>
-      <div className="hover:mb-[2rem]  hover:ease-in-out duration-500 ">
+      <div className="  hover:ease-in-out duration-500 hover:scale-150">
         <FaYoutube className="w-11 h-[5rem] md:h-[5rem] md:w-[6rem]" />
       </div>
     </div>
