@@ -11,23 +11,23 @@ AOS.init();
 const Section2 = () => {
   return (
     <div
-      data-aos="fade-left"
-      data-aos-delay="1000"
-      data-aos-easing="ease-in-out"
-      className="flex justify-between md:justify-center  mx-10 md:mx-auto items-center md:gap-[9rem]   md:m-[12rem] m-[5rem]  "
+      // data-aos="zoom-in"
+      // data-aos-duration="1500"
+      // data-aos-easing="ease-in-out"
+      className="flex justify-center gap-[4rem]  mx-auto items-center  xl:gap-[9rem] md:gap-[10rem] md:py-11 md:my-[10rem]   xl:m-[8rem] m-[5rem]  "
     >
-      <div className=" hover:ease-in-out duration-500 hover:scale-150">
-        <IoLogoApple className="w-11 h-[5rem] md:h-[5rem] md:w-[6rem]" />
+      <div className=" hover:ease-in-out duration-500 hover:scale-125">
+        <IoLogoApple className="w-11 h-[5rem] md:h-[6rem] md:w-[5rem]  xl:h-[5rem] xl:w-[6rem]" />
       </div>
-      <div className=" hover:ease-in-out duration-500 hover:scale-150">
-        <GrSpotify className="w-11 h-[5rem] md:h-[5rem] md:w-[6rem]" />
+      <div className=" hover:ease-in-out duration-500 hover:scale-125">
+        <GrSpotify className="w-11 h-[5rem] md:h-[6rem] md:w-[5rem]  xl:h-[5rem] xl:w-[6rem]" />
       </div>
 
-      <div className=" hover:ease-in-out duration-500 hover:scale-150">
-        <ImAmazon className="w-11 h-[5rem] md:h-[5rem] md:w-[6rem]" />
+      <div className=" hover:ease-in-out duration-500 hover:scale-125">
+        <ImAmazon className="w-11 h-[5rem] md:h-[6rem] md:w-[5rem]  xl:h-[5rem] xl:w-[6rem]" />
       </div>
-      <div className="  hover:ease-in-out duration-500 hover:scale-150">
-        <FaYoutube className="w-11 h-[5rem] md:h-[5rem] md:w-[6rem]" />
+      <div className="  hover:ease-in-out duration-500 hover:scale-125">
+        <FaYoutube className="w-11 h-[5rem] md:h-[6rem] md:w-[5rem]  xl:h-[5rem] xl:w-[6rem]" />
       </div>
     </div>
   );

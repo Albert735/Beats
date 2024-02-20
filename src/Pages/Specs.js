@@ -12,42 +12,63 @@ AOS.init();
 const Specs = () => {
   return (
     <div
-      data-aos="fade-right"
-      data-aos-delay="1000"
-      data-aos-easing="ease-in-out"
-      className="flex flex-col justify-center items-center  mx-auto  md:m-[10rem] "
+      // data-aos="fade-right"
+      // data-aos-duration="1000"
+      // data-aos-easing="ease-in-out"
+      className="flex flex-col justify-center items-center  mx-auto  xl:m-[10rem] "
     >
-      <h1 className="md:w-full text-center text-[2.5rem] md:text-[4rem] font-bold text-[#8d8485]">
+      <h1 className="xl:w-full text-center text-[2.5rem] xl:text-[4rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#847B7C] to-[#A59F9F] dark:bg-gradient-to-b dark:from-[#323536] dark:to-[#1D1E1F]">
         Specs
       </h1>
-      <div className="flex  justify-center items-center m-[5rem] md:gap-[6rem]">
-        <div className="text-sm md:text-[1rem] font-light">
-          <div className="flex justify-center  items-center">
-            <div className="flex flex-col justify-center items-start m-5">
+      <div className="flex  justify-center items-center md:gap-[5rem] m-[5rem] xl:gap-[6rem]">
+        <div className=" flex flex-col md:flex-col justify-center items-start    text-sm xl:text-[1rem] font-light">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            className="f leading-loose "
+          >
+            <div className="flex flex-col justify-center items-start m-5 ">
               <IoIosBluetooth size={24} />
-              <h3>Connectivity</h3>
+              <h3 className="font-bold">Connectivity</h3>
               <span>Bluetooth</span>
             </div>
           </div>
-          
-          <div className="flex-col m-5">
+
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1500"
+            data-aos-easing="ease-in-out"
+            className="flex-col   leading-loose"
+          >
             <IoIosBatteryFull size={24} />
-            <h3>Battery</h3>
+            <h3 className="font-bold">Battery</h3>
             <span>Duration 40hrs</span>
           </div>
 
-          <div className="flex-col m-5">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="2000"
+            data-aos-easing="ease-in-out"
+            className="flex-col  leading-loose"
+          >
             <MdOutlinePower size={24} />
-            <h3>Power</h3>
+            <h3 className="font-bold">Power</h3>
             <span>Fast charge 4.2-AAC</span>
           </div>
 
-          <div className="flex justify-center items-center">
-            <div className="flex flex-col justify-center items-start m-5">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="2500"
+            data-aos-easing="ease-in-out"
+            className="flex justify-center items-center leading-loose"
+          >
+            <div className="flex flex-col justify-center items-startr m-5">
               <HiOutlineMicrophone size={24} />
-              <h3>Microphone</h3>
+              <h3 className="font-bold">Microphone</h3>
               <span>
-                Support Apple Siri and <br /> Google
+                Support Apple Siri and <br />
+                {/* Google */}
               </span>
             </div>
           </div>
@@ -56,7 +77,10 @@ const Specs = () => {
         <img
           src={specImage}
           alt=""
-          className="h-[11rem] md:h-[20rem] drop-shadow-2xl"
+          className="h-[11rem] md:h-[15rem] xl:h-[20rem] drop-shadow-2xl "
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
         />
       </div>
     </div>
