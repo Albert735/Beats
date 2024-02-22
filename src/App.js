@@ -19,12 +19,10 @@ function App() {
       <Specs />
       <Case />
       <Section3 />
-
       <Products />
       <Section4 />
       <Audio />
       <Footer />
-
       <Bottom />
     </div>
   );
