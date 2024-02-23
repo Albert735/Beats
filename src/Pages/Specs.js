@@ -67,8 +67,7 @@ const Specs = () => {
               <HiOutlineMicrophone size={24} />
               <h3 className="font-bold">Microphone</h3>
               <span>
-                Support Apple Siri and <br />
-                {/* Google */}
+                Support Apple Siri and  Google 
               </span>
             </div>
           </div>

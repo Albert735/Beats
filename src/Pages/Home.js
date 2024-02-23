@@ -29,7 +29,7 @@ const Home = () => {
         data-aos-delay="ease-in-out"
         className="xl:mt-9 m-11 xl:m-0  leading-loose"
       >
-        <h1 className="">
+        <h1 className="relative">
           <span className="xl:text-[5rem] md:text-[4rem] text-[2rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#847B7C] to-[#A59F9F] dark:bg-gradient-to-b dark:from-[#323536] dark:to-[#1D1E1F] ">
             Over Head
           </span>
