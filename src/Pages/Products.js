@@ -18,7 +18,13 @@ const Products = () => {
   const handleOnClose = () => setShow(false);
 
   return (
-    <div className="flex flex-col w-full justify-center items-center  max-w-screen-xl  mx-auto xl:mt-[10rem] md:mt-[5rem]">
+    <div
+      // data-aos="fade-left"
+      // data-aos-duration="1000"
+      // data-aos-easing="ease-in-out"
+      id="products"
+      className="flex flex-col  justify-center items-center xl:mt-[10rem] md:mt-[5rem] overflow-hidden"
+    >
       <h1 className="text-[4rem] font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-[#847B7C] to-[#A59F9F] dark:bg-gradient-to-b dark:from-[#323536] dark:to-[#1D1E1F]">
         Choose <br /> Your Style
       </h1>
@@ -28,7 +34,7 @@ const Products = () => {
             data-aos="fade-left"
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
-            className="flex relative flex-col justify-center items-center bg-[#F1E9E9] dark:bg-[#191A1A] px-[2rem] py-5 rounded-lg h-fit hover:scale-125 duration-100 hover:ease-in-out "
+            className="flex relative flex-col justify-center items-center bg-[#F1E9E9] dark:bg-[#191A1A] px-[2rem] py-5 rounded-lg h-fit hover:dark:bg-[#F1E9E9] duration-100 hover:ease-in-out "
           >
             <img
               src={productImage1}
@@ -56,7 +62,7 @@ const Products = () => {
             data-aos-duration="1100"
             data-aos-delay="100"
             data-aos-easing="ease-in-out"
-            className="flex relative flex-col   justify-center items-center bg-[#F1E9E9] dark:bg-[#191A1A] px-[2rem] py-5 rounded-lg h-fit hover:scale-110 hover:ease-in-out duration-200"
+            className="flex relative flex-col   justify-center items-center bg-[#F1E9E9] dark:bg-[#191A1A] px-[2rem] py-5 rounded-lg h-fit hover:dark:bg-[#F1E9E9] hover:ease-in-out duration-200"
           >
             <img
               src={productImage2}
@@ -83,7 +89,7 @@ const Products = () => {
             data-aos-duration="1200"
             data-aos-delay="200"
             data-aos-easing="ease-in-out"
-            className="flex relative flex-col justify-center items-center bg-[#F1E9E9] dark:bg-[#191A1A] px-[2rem] py-5 rounded-lg h-fit  hover:scale-110 hover:ease-in-out duration-200"
+            className="flex relative flex-col justify-center items-center bg-[#F1E9E9] dark:bg-[#191A1A] px-[2rem] py-5 rounded-lg h-fit  hover:dark:bg-[#F1E9E9] hover:ease-in-out duration-200"
           >
             <img
               src={productImage3}
@@ -110,7 +116,7 @@ const Products = () => {
             data-aos-duration="1300"
             data-aos-delay="300"
             data-aos-easing="ease-in-out"
-            className="flex relative flex-col justify-center items-center bg-[#F1E9E9] dark:bg-[#191A1A] px-[2rem] py-5 rounded-lg h-fit  hover:scale-110 hover:ease-in-out duration-200"
+            className="flex relative flex-col justify-center items-center bg-[#F1E9E9] dark:bg-[#191A1A] px-[2rem] py-5 rounded-lg h-fit hover:dark:bg-[#F1E9E9] scale-100 hover:ease-in-out duration-200"
           >
             <img
               src={productImage4}
@@ -138,7 +144,7 @@ const Products = () => {
             data-aos-duration="1400"
             data-aos-delay="400"
             data-aos-easing="ease-in-out"
-            className="flex relative  flex-col justify-center items-center bg-[#F1E9E9] dark:bg-[#191A1A] px-[2rem] py-5 rounded-lg h-fit  hover:scale-110 hover:ease-in-out duration-200"
+            className="flex relative  flex-col justify-center items-center bg-[#F1E9E9] dark:bg-[#191A1A] px-[2rem] py-5 rounded-lg h-fit hover:dark:bg-[#F1E9E9] hover:ease-in-out duration-200"
           >
             <img
               src={productImage5}

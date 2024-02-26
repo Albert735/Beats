@@ -9,7 +9,10 @@ AOS.init();
 
 const Home = () => {
   return (
-    <div className="flex justify-center items-center relative max-w-screen-xl mx-auto">
+    <div
+      id="home"
+      className="flex justify-center items-center relative max-w-screen-xl mx-auto overflow-hidden"
+    >
       <div
         data-aos="fade-down"
         data-aos-duration="1500"

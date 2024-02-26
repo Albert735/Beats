@@ -8,7 +8,9 @@ AOS.init();
 
 const Case = () => {
   return (
-    <div className="flex flex-col w-full justify-center items-center  max-w-screen-xl  mx-auto  xl:mb-[10rem] ">
+    <div 
+      id="case"
+    className="flex flex-col w-full justify-center items-center xl:mb-[10rem] ">
       <h1 className="w-full text-center text-[4rem] bg-clip-text text-transparent bg-gradient-to-b from-[#847B7C] to-[#A59F9F] dark:bg-gradient-to-b dark:from-[#323536] dark:to-[#1D1E1F] font-bold">
         Case
       </h1>

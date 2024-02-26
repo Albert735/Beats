@@ -32,16 +32,10 @@ const Audio = () => {
         <img
           src={audioImage}
           alt=""
-          className="h-[15rem]  xl:h-[20rem]    hover:scale-110 duration-500 hover:ease-in-out"
+          className="h-[15rem]  xl:h-[20rem] hover:scale-110 duration-500 hover:ease-in-out"
         />
       </div>
-      {/* <div className="dark">
-        <img
-          src={audioImage2}
-          alt=""
-          className="h-[10rem] xl:w-full xl:h-[20rem]  drop-shadow-2xl "
-        />
-      </div> */}
+   
     </div>
   );
 };

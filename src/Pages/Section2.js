@@ -14,7 +14,7 @@ const Section2 = () => {
       // data-aos="zoom-in"
       // data-aos-duration="1500"
       // data-aos-easing="ease-in-out"
-      className="flex justify-center gap-[4rem]  mx-auto items-center  xl:gap-[9rem] md:gap-[10rem] md:py-11 md:my-[10rem]   xl:m-[8rem] m-[5rem]  "
+      className="flex justify-center gap-[4rem] items-center  xl:gap-[9rem] md:gap-[10rem] md:py-11 md:my-[10rem]   xl:m-[8rem] overflow-hidden  "
     >
       <div className=" hover:ease-in-out duration-500 hover:scale-125">
         <IoLogoApple className="w-11 h-[5rem] md:h-[6rem] md:w-[5rem]  xl:h-[5rem] xl:w-[6rem]" />
