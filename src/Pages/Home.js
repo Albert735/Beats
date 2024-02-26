@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <div
       id="home"
-      className="flex justify-center items-center relative max-w-screen-xl mx-auto overflow-hidden"
+      className="flex justify-center items-center relative md:max-w-screen-xl md:mx-auto overflow-hidden"
     >
       <div
         data-aos="fade-down"
@@ -22,7 +22,7 @@ const Home = () => {
         <img
           src={logo}
           alt=""
-          className="h-[26.5rem]  min-top-[38rem] min-left-[18rem] absolute md:-top-[28rem] md:h-[43rem] md:left-[2rem] xl:-top-[29rem] -top-[29rem] xl:h-[43rem] max-w-[20rem]  left-[14rem]   drop-shadow-2xl"
+          className="h-[25rem] absolute md:-top-[28rem] md:h-[43rem] md:left-[2rem] xl:-top-[29rem] -top-[29rem] xl:h-[45rem] max-w-[20rem]  xl:left-[14rem]  left-[14rem]  drop-shadow-2xl"
         />
       </div>
 
