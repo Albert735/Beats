@@ -22,7 +22,7 @@ const Home = () => {
         <img
           src={logo}
           alt=""
-          className="h-[26.5rem]  min-top-[38rem] min-left-[18rem] absolute md:-top-[28rem] md:h-[43rem] md:left-[6rem] xl:-top-[29rem] -top-[29rem] xl:h-[43rem] max-w-[20rem]  left-[14rem]   drop-shadow-2xl"
+          className="h-[26.5rem]  min-top-[38rem] min-left-[18rem] absolute md:-top-[28rem] md:h-[43rem] md:left-[2rem] xl:-top-[29rem] -top-[29rem] xl:h-[43rem] max-w-[20rem]  left-[14rem]   drop-shadow-2xl"
         />
       </div>
 
@@ -30,14 +30,14 @@ const Home = () => {
         data-aos="fade-right"
         data-aos-duration="1500"
         data-aos-delay="ease-in-out"
-        className="xl:mt-9 m-11 xl:m-0  leading-loose"
+        className="xl:mt-9 m-11 xl:m-0 md:w-full leading-loose"
       >
         <h1 className="relative">
-          <span className="xl:text-[5rem] md:text-[4rem] text-[2rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#847B7C] to-[#A59F9F] dark:bg-gradient-to-b dark:from-[#323536] dark:to-[#1D1E1F] ">
+          <span className="xl:text-[5rem] md:text-[2.5rem] text-[2rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#847B7C] to-[#A59F9F] dark:bg-gradient-to-b dark:from-[#323536] dark:to-[#1D1E1F] ">
             Over Head
           </span>
           <br />
-          <span className="xl:text-[4rem] md:text-[4rem] text-[2rem] font-bold ">
+          <span className="xl:text-[4rem] md:text-[2.5rem] text-[2rem] font-bold ">
             Bagna Beats{" "}
           </span>
         </h1>

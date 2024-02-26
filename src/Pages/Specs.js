@@ -22,14 +22,14 @@ const Specs = () => {
         Specs
       </h1>
       <div className="flex flex-col-reverse md:flex-row justify-center items-center md:gap-[5rem] m-[5rem] xl:gap-[6rem]">
-        <div className="md:flex grid grid-cols-2 md:flex-col justify-center items-start    text-sm xl:text-[1rem] font-light">
+        <div className="md:flex grid grid-cols-2 md:flex-col justify-center items-start    text-sm xl:text-[1rem] font-light w-full">
           <div
             data-aos="fade-right"
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
-            className="leading-loose "
+            className="leading-loose md:flex md:justify-center w-full"
           >
-            <div className="flex flex-col justify-center items-start m-5 ">
+            <div className="flex flex-col justify-center items-start m-5">
               <IoIosBluetooth size={24} />
               <h3 className="font-bold">Connectivity</h3>
               <span>Bluetooth</span>
@@ -40,9 +40,9 @@ const Specs = () => {
             data-aos="fade-right"
             data-aos-duration="1500"
             data-aos-easing="ease-in-out"
-            className="flex-col   leading-loose"
+            className="flex-col leading-loose"
           >
-            <div className="flex flex-col justify-center items-start m-5">
+            <div className="flex flex-col  items-start m-5 md:flex-none">
               <IoIosBatteryFull size={24} />
               <h3 className="font-bold">Battery</h3>
               <span>Duration 40hrs</span>
@@ -55,7 +55,7 @@ const Specs = () => {
             data-aos-easing="ease-in-out"
             className="flex-col  leading-loose"
           >
-            <div className="flex flex-col justify-center items-start m-5">
+            <div className="flex flex-col items-start m-5">
               <MdOutlinePower size={24} />
               <h3 className="font-bold">Power</h3>
               <span>Fast charge 4.2-AAC</span>
@@ -66,12 +66,12 @@ const Specs = () => {
             data-aos="fade-right"
             data-aos-duration="2500"
             data-aos-easing="ease-in-out"
-            className="flex justify-center items-center leading-loose"
+            className="leading-loose md:flex md:justify-center w-full"
           >
-            <div className="flex flex-col justify-center items-startr m-5">
+            <div className="flex flex-col justify-center items-start m-5">
               <HiOutlineMicrophone size={24} />
               <h3 className="font-bold">Microphone</h3>
-              <span>Support Apple Siri and Google</span>
+              <span>Support Apple Siri and <br/> Google</span>
             </div>
           </div>
         </div>
