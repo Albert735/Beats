@@ -60,7 +60,10 @@ const Navbar = () => {
                 </li>
               </a>
               <li className="text-[1.3rem] font-bold  text-transparent   ">
-                <BsCart3 size={24} className="cursor-pointer" fill="white" />
+                <BsCart3
+                  size={24}
+                  className="cursor-pointer dark:text-white text-black font-bold"
+                />
               </li>
 
               <li className="cursor-pointer flex justify-center items-center gap-2">

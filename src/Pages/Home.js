@@ -8,6 +8,13 @@ import "aos/dist/aos.css";
 AOS.init();
 
 const Home = () => {
+  function handleClick (){
+    alert ('Added to cart')
+  }
+
+
+
+
   return (
     <div
       id="home"
@@ -48,6 +55,7 @@ const Home = () => {
           delivering first-rate playback.
         </p>
         <button
+        onClick={handleClick}
           type="button"
           className="bg-[#f6e7e7] dark:bg-[#28292B]  xl:gap-5 flex mt-[1rem] xl:mt-[3rem] p-2 gap-2 xl:p-4 rounded-[3rem] hover:scale-110 drop-shadow-md ease-in-out duration-500"
         >
