@@ -7,7 +7,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <div className="flex flex-wrap justify-center items-start py-[2rem]   xl:gap-[4rem]  bg-[#F1E9E9] dark:bg-[#191A1A]">
+    <div className="flex flex-col md:flex-row justify-center   py-[2rem] gap-6 xl:gap-[4rem] text-[#F1E9E9]  bg-[#F1E9E9] dark:bg-[#191A1A]">
       <div className=" flex justify-center items-center mx-5">
         <img
           src={logo}
@@ -16,10 +16,10 @@ const Footer = () => {
         />
       </div>
       <div className="flex xl:flex-row flex-col xl:gap-[4rem]  bg-[#F1E9E9] dark:bg-[#191A1A]">
-        <div className="flex justify-center items-center xl:gap-[4rem] md:gap-[4rem] gap-[2rem]">
+        <div className="flex justify-center items-center xl:gap-[4rem] md:gap-[4rem] gap-[4rem]">
           <div>
             <h1 className="font-semibold text-[1.3rem] my-2">Products</h1>
-            <ul>
+            <ul className="leading-loose">
               <li>Headphones</li>
               <li>Earphones</li>
               <li>Earbuds</li>
@@ -29,7 +29,7 @@ const Footer = () => {
 
           <div>
             <h1 className="font-semibold text-[1.3rem] my-2">Support</h1>
-            <ul>
+            <ul className="leading-loose">
               <li>Product help</li>
               <li>Register</li>
               <li>Updates</li>
@@ -38,7 +38,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div>
+        <div className="flex flex-col justify-center items-center py-6">
           <input
             type="text"
             placeholder="E-mail Subscription"

@@ -38,13 +38,13 @@ const Button = () => {
       </button>
 
       {isOpen && (
-        <div className="flex justify-end w-full relative inset-0 z-20 ">
-          <div className=" absolute">
-            <ul className=" text-black flex flex-col bg-white  p-[2rem] rounded-2xl  gap-4 font-bold">
+        <div className="flex justify-end w-full relative inset-0 z-20  ">
+          <div className=" absolute  justify-center items-center">
+            <ul className=" text-black flex flex-col justify-center items-center mt-6 bg-white  p-[2rem] rounded-2xl  gap-4 font-bold">
               <a href="#home">
                 <li
                   key="home"
-                  className="hover:text-bold hover:text-white scale-110"
+                  className="hover:text-bold hover:text-white  scale-110"
                 >
                   Home
                 </li>
@@ -74,7 +74,7 @@ const Button = () => {
                 </li>
               </a>
 
-              <li className="cursor-pointer flex justify-center items-center gap-2">
+              <li className="">
                 <IoMoon
                   size={24}
                   className=""

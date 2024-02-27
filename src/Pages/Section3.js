@@ -9,7 +9,7 @@ AOS.init();
 
 const Section3 = () => {
   return (
-    <div className="flex flex-col-reverse md:flex-row justify-center items-center max-w-screen-xl mx-auto py-[5rem] gap-8 md:gap-[5rem] dark:bg-[#191A1A] bg-[#F1E9E9] xl:rounded-lg">
+    <div className="flex flex-col-reverse md:flex-row justify-center items-center max-w-screen-xl mx-auto py-[5rem] gap-8 md:gap-0 xl:gap-[5rem] dark:bg-[#191A1A] bg-[#F1E9E9] xl:rounded-lg">
       <div className="flex flex-col gap-7 ">
         <div className="gap-4">
           <div>

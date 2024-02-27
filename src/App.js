@@ -9,6 +9,7 @@ import Audio from "./Pages/Audio";
 import Section4 from "./Pages/Section4";
 import Footer from "./Pages/Footer";
 import Bottom from "./Pages/Bottom";
+// import Section5 from "./Pages/Section5";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Section3 />
       <Products />
       <Section4 />
+      {/* <Section5/> */}
       <Audio />
       <Footer />
       <Bottom />

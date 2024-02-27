@@ -65,7 +65,7 @@ const Navbar = () => {
                   size={24}
                   className=""
                   onClick={handleThemeSwitch}
-                  fill="red"
+                  
                 />
                 {/* <LuSunMedium size={24} className="" /> */}
                 {/* <span>Dark Mode</span> */}
