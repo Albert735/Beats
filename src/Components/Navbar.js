@@ -1,5 +1,5 @@
 import React from "react";
-
+import { BsCart3 } from "react-icons/bs";
 import { IoMoon } from "react-icons/io5";
 // import { LuSunMedium } from "react-icons/lu";
 import logo from "../assets/images/beats-logo-161616.png";
@@ -42,31 +42,29 @@ const Navbar = () => {
           <Button />
           <div>
             <ul className="hidden xl:flex gap-[3rem] w-full xl:w-auto">
-              <li className="text-[1.3rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#847B7C] to-[#A59F9F] dark:bg-gradient-to-b dark:from-[#323536] dark:to-[#1D1E1F] hover:text-black dark:hover:text-white  hover:scale-125   duration-500 hover:ease-in">
+              <li className="text-[1.3rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#847B7C] to-[#A59F9F] dark:bg-gradient-to-b dark:from-[#323536] dark:to-[#1D1E1F] hover:text-black dark:hover:text-white  hover:scale-100   duration-500 hover:ease-in">
                 <a href="#home">Home</a>
               </li>
 
-              <li className="text-[1.3rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#847B7C] to-[#A59F9F] dark:bg-gradient-to-b dark:from-[#323536] dark:to-[#1D1E1F] hover:text-black dark:hover:text-white  hover:scale-125  duration-500 hover:ease-in">
+              <li className="text-[1.3rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#847B7C] to-[#A59F9F] dark:bg-gradient-to-b dark:from-[#323536] dark:to-[#1D1E1F] hover:text-black dark:hover:text-white  hover:scale-100  duration-500 hover:ease-in">
                 <a href="#specs">Specs</a>
               </li>
               <a href="#case">
-                <li className="text-[1.3rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#847B7C] to-[#A59F9F] dark:bg-gradient-to-b dark:from-[#323536] dark:to-[#1D1E1F] hover:text-black dark:hover:text-white  hover:scale-125  duration-500 hover:ease-in">
+                <li className="text-[1.3rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#847B7C] to-[#A59F9F] dark:bg-gradient-to-b dark:from-[#323536] dark:to-[#1D1E1F] hover:text-black dark:hover:text-white  hover:scale-100  duration-500 hover:ease-in">
                   Case
                 </li>
               </a>
               <a href="#products">
-                <li className="text-[1.3rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#847B7C] to-[#A59F9F] dark:bg-gradient-to-b dark:from-[#323536] dark:to-[#1D1E1F] hover:text-black dark:hover:text-white  hover:scale-125  duration-500 hover:ease-in">
+                <li className="text-[1.3rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#847B7C] to-[#A59F9F] dark:bg-gradient-to-b dark:from-[#323536] dark:to-[#1D1E1F] hover:text-black dark:hover:text-white  hover:scale-100  duration-500 hover:ease-in">
                   Poduct
                 </li>
               </a>
+              <li className="text-[1.3rem] font-bold  text-transparent   ">
+                <BsCart3 size={24} className="cursor-pointer" fill="white" />
+              </li>
 
               <li className="cursor-pointer flex justify-center items-center gap-2">
-                <IoMoon
-                  size={24}
-                  className=""
-                  onClick={handleThemeSwitch}
-                  
-                />
+                <IoMoon size={24} className="" onClick={handleThemeSwitch} />
                 {/* <LuSunMedium size={24} className="" /> */}
                 {/* <span>Dark Mode</span> */}
               </li>

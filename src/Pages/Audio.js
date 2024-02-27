@@ -1,15 +1,34 @@
-import React from "react";
+// import React, { useEffect, useState } from "react";
 import audioImage from "../assets/images/beatpods.png";
 // import audioImage2 from "../assets/images/low-poly-grid-haikei-2.png";
 import AOS from "aos";
 
 import "aos/dist/aos.css";
+// import { useState } from "react";
+// import { useEffect } from "react";
 
 AOS.init();
 
 const Audio = () => {
+  // const [background, setBackground] = useState("bg-light");
+
+  // useEffect(() => {
+  //   if (window.matchMedia("(prefers-color-scheme: dark").matches) {
+  //     //setBackground("bg-dark");
+  //     document.documentElement.classList.replace("bg-light", "bg-dark");
+  //   } else {
+  //     //setBackground("bg-light");
+  //     document.documentElement.classList.replace("bg-dark", "bg-light");
+  //   }
+
+  //   console.log("run");
+  // }, [window.matchMedia("(prefers-color-scheme: dark").matches]);
+
   return (
-    <div className="flex flex-col xl:flex-row justify-center items-center  bg-image p-[5rem] dark:text-[#191A1A]">
+    <div
+      id="newImage"
+      className={`flex flex-col xl:flex-row justify-center items-center  bg-light p-[5rem] dark:text-[#191A1A]`}
+    >
       <div
         //Animation On Scroll
         data-aos="fade-up"
@@ -35,7 +54,6 @@ const Audio = () => {
           className="h-[15rem]  xl:h-[20rem] hover:scale-110 duration-500 hover:ease-in-out"
         />
       </div>
-   
     </div>
   );
 };

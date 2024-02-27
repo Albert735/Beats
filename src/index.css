@@ -9,8 +9,11 @@
     scroll-behavior: smooth;
 }
 
-.bg-image {
+.bg-light {
     background-image: url('./assets/images/low-poly-grid-haikei.png');
+}
+.bg-dark {
+    background-image: url('./assets/images/low-poly-grid-haikei-2.png');
 }
 
 
