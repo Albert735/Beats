@@ -8,7 +8,9 @@ import Button from "../Pages/Button";
 
 const Navbar = () => {
   const [theme, setTheme] = useState(null);
+  const [scrolling, setScrolling] = useState(false);
 
+  //browser darkmode
   useEffect(() => {
     if (window.matchMedia("(prefers-color-scheme: dark").matches) {
       setTheme("dark");
@@ -17,6 +19,21 @@ const Navbar = () => {
     }
   }, []);
 
+  // Add scroll event listener to update scrolling state
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScrolling(window.scrollY > 0);
+    });
+
+    // Cleanup the event listener when the component is unmounted
+    return () => {
+      window.removeEventListener("scroll", () => {
+        setScrolling(window.scrollY > 0);
+      });
+    };
+  }, []);
+
+  //manual system darkmode
   useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
@@ -30,12 +47,18 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed bg-transparent z-20 w-full backdrop-blur-md ">
+    <div
+      className={`fixed z-20 w-full ${
+        scrolling
+          ? "dark:bg-[#0E0F10] bg-[#FFFAFA] backdrop-blur-md"
+          : "bg-transparent"
+      }`}
+    >
       <div className="flex max-w-screen-xl flex-wrap items-center justify-between mx-auto p-4  ">
         <img
           src={logo}
           alt=""
-          className="h-[3rem] drop-shadow-lg dark:bg-white dark:rounded-[2.2rem]"
+          className="h-[2rem] md:h-[3rem] drop-shadow-lg dark:bg-white dark:rounded-[2.2rem]"
         />
 
         <div className="flex  ">

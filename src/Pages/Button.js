@@ -34,7 +34,7 @@ const Button = () => {
   return (
     <div className="xl:hidden  relative flex flex-col">
       <button className="flex justify-end" onClick={toggling}>
-        <RiMenu4Line size={30} />
+        <RiMenu4Line size={26} />
       </button>
 
       {isOpen && (

@@ -30,7 +30,7 @@ const Section4 = () => {
         <h1 className="text-[2rem] font-semibold xl:text-[3rem]">
           Register Your Beats
         </h1>
-        <button className="dark:bg-[#f6e7e7] dark:text-black text-white bg-[#191A1A]  duration-500 hover:scale-110   flex justify-center my-5  p-3 rounded-[3rem]">
+        <button className="dark:bg-[#f6e7e7] dark:text-black text-white bg-[#191A1A]  duration-500 hover:scale-110   flex justify-center my-5  p-3 rounded-[3rem] font-bold">
           Register Now
         </button>
       </div>

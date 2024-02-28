@@ -8,12 +8,9 @@ import "aos/dist/aos.css";
 AOS.init();
 
 const Home = () => {
-  function handleClick (){
-    alert ('Added to cart')
+  function handleClick() {
+    alert("Added to cart");
   }
-
-
-
 
   return (
     <div
@@ -29,7 +26,7 @@ const Home = () => {
         <img
           src={logo}
           alt=""
-          className="h-[25rem] absolute md:-top-[28rem] md:h-[43rem] md:left-[2rem] xl:-top-[29rem] -top-[29rem] xl:h-[45rem] max-w-[20rem]  xl:left-[14rem]  left-[14rem]  drop-shadow-2xl"
+          className="h-[25rem] absolute md:-top-[28rem] md:h-[43rem] md:left-[2rem] xl:-top-[29rem] -top-[27rem] xl:h-[45rem] max-w-[20rem]  xl:left-[14rem]  left-[15rem]  drop-shadow-2xl"
         />
       </div>
 
@@ -49,18 +46,18 @@ const Home = () => {
           </span>
         </h1>
         <h2 className="xl:text-[1.5rem] text-semibold mb-5">Overview</h2>
-        <p className="leading-loose text-sm md:text-[1.3rem]">
+        <p className="leading-loose md:text-[1.3rem] font-light mt-[2rem]">
           Enjoy award-winning Beats sound with wireless listening freedom and a
           sleek, streamlined design with comfortable padded earphones,
           delivering first-rate playback.
         </p>
         <button
-        onClick={handleClick}
+          onClick={handleClick}
           type="button"
-          className="bg-[#f6e7e7] dark:bg-[#28292B]  xl:gap-5 flex mt-[1rem] xl:mt-[3rem] p-2 gap-2 xl:p-4 rounded-[3rem] hover:scale-110 drop-shadow-md ease-in-out duration-500"
+          className="bg-[#ffffff] dark:bg-[black]  xl:gap-5 flex my-[1rem] xl:mt-[2rem] p-2 gap-2 xl:p-4 rounded-lg hover:bg-[#FFF0EF] drop-shadow-sm ease-in-out duration-500"
         >
           <p className=" text-sm p-1 xl:p-1 xl:text-[1rem]">Add to Bag</p>
-          <p className="bg-white rounded-[2rem] text-sm xl:px-1.5 p-1 xl:text-[1rem] dark:text-black ">
+          <p className="bg-white rounded-lg text-sm xl:px-1.5 p-1 xl:text-[1rem] dark:text-black font-bold">
             {" "}
             GHC1,799
           </p>

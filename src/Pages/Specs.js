@@ -71,7 +71,7 @@ const Specs = () => {
             <div className="flex flex-col justify-center items-start m-5">
               <HiOutlineMicrophone size={24} />
               <h3 className="font-bold">Microphone</h3>
-              <span>Support Apple Siri and <br/> Google</span>
+              <span className="font-light">Support Apple Siri and <br/> Google</span>
             </div>
           </div>
         </div>

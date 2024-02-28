@@ -1,28 +1,19 @@
-// import React, { useEffect, useState } from "react";
 import audioImage from "../assets/images/beatpods.png";
-// import audioImage2 from "../assets/images/low-poly-grid-haikei-2.png";
 import AOS from "aos";
-
+// import { useState, useEffect } from "react";
 import "aos/dist/aos.css";
-// import { useState } from "react";
-// import { useEffect } from "react";
-
 AOS.init();
 
 const Audio = () => {
-  // const [background, setBackground] = useState("bg-light");
+  // const [isDarkMode, setIsDarkMode] = useState(false);
 
+  // Check and set dark mode on component mount
   // useEffect(() => {
-  //   if (window.matchMedia("(prefers-color-scheme: dark").matches) {
-  //     //setBackground("bg-dark");
-  //     document.documentElement.classList.replace("bg-light", "bg-dark");
-  //   } else {
-  //     //setBackground("bg-light");
-  //     document.documentElement.classList.replace("bg-dark", "bg-light");
-  //   }
-
-  //   console.log("run");
-  // }, [window.matchMedia("(prefers-color-scheme: dark").matches]);
+  //   const prefersDarkMode =
+  //     window.matchMedia &&
+  //     window.matchMedia("(prefers-color-scheme: dark)").matches;
+  //   setIsDarkMode(prefersDarkMode);
+  // }, []);
 
   return (
     <div
@@ -54,6 +45,8 @@ const Audio = () => {
           className="h-[15rem]  xl:h-[20rem] hover:scale-110 duration-500 hover:ease-in-out"
         />
       </div>
+
+      
     </div>
   );
 };
