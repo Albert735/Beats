@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import logo from "../assets/images/home-2.png";
 import AOS from "aos";
@@ -8,9 +8,15 @@ import "aos/dist/aos.css";
 AOS.init();
 
 const Home = () => {
-  function handleClick() {
-    alert("Added to cart");
-  }
+  const [count, setCount] = useState(0);
+
+  const handleButtonClick = () => {
+    setCount(count + 1);
+  };
+
+  // function handleClick() {
+  //   alert("Added to cart");
+  // }
 
   return (
     <div
@@ -37,7 +43,7 @@ const Home = () => {
         className="xl:mt-9 m-11 xl:m-0 md:w-full leading-loose"
       >
         <h1 className="relative">
-          <span className="xl:text-[5rem] md:text-[2.5rem] text-[2rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#847B7C] to-[#A59F9F] dark:bg-gradient-to-b dark:from-[#323536] dark:to-[#1D1E1F] ">
+          <span className="xl:text-[5rem] md:text-[2.5rem] text-[2rem] text-right font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#847B7C] to-[#A59F9F] dark:bg-gradient-to-b dark:from-[#323536] dark:to-[#1D1E1F] ">
             Over Head
           </span>
           <br />
@@ -52,7 +58,8 @@ const Home = () => {
           delivering first-rate playback.
         </p>
         <button
-          onClick={handleClick}
+          onClick={handleButtonClick}
+          // onClick={handleClick}
           type="button"
           className="bg-[#ffffff] dark:bg-[black]  xl:gap-5 flex my-[1rem] xl:mt-[2rem] p-2 gap-2 xl:p-4 rounded-lg hover:bg-[#FFF0EF] drop-shadow-sm ease-in-out duration-500"
         >

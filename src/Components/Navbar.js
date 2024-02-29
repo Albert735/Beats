@@ -82,7 +82,12 @@ const Navbar = () => {
                   Poduct
                 </li>
               </a>
-              <li className="text-[1.3rem] font-bold  text-transparent   ">
+              <li className="text-[1.3rem] font-bold  text-transparent flex relative">
+                <span className="relative flex h-5 w-5">
+                  <span className="absolute inline-flex rounded-full h-5 w-5 bg-sky-500 left-9 -top-3 text-black text-[10px] justify-center items-center">
+                    {count}
+                  </span>
+                </span>
                 <BsCart3
                   size={24}
                   className="cursor-pointer dark:text-white text-black font-bold"

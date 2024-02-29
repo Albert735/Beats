@@ -46,7 +46,7 @@ const Products = () => {
               <h2 className="font-bold">Black</h2>
               <button
                 onClick={() => setShow(true)}
-                className="flex justify-center items-center gap-5 bg-white hover:bg-[#F6E7E6] dark:bg-[#2E3132] p-3 rounded-lg "
+                className="flex justify-center items-center gap-5 bg-white hover:bg-[#F6E7E6] hover:dark:bg-[#2E2F30] dark:bg-black p-3 rounded-lg hover:text-black text-black dark:text-white "
               >
                 <p className="font-semi-bold">GHC1599</p>
                 <span>
@@ -73,7 +73,7 @@ const Products = () => {
               <h2 className="font-bold">Red & black</h2>
               <button
                 onClick={() => setShow(true)}
-                className="flex justify-center items-center gap-5 bg-white hover:bg-[#F6E7E6] dark:bg-[#2E3132] p-3 rounded-lg "
+                className="flex justify-center items-center gap-5 bg-white hover:bg-[#F6E7E6] hover:dark:bg-[#2E2F30] dark:bg-black p-3 rounded-lg  hover:text-black text-black dark:text-white"
               >
                 <p className="font-semi-bold">GHC1599</p>
                 <span>
@@ -100,7 +100,7 @@ const Products = () => {
               <h2 className="font-bold">Gold & Black</h2>
               <button
                 onClick={() => setShow(true)}
-                className="flex justify-center items-center gap-5 bg-white hover:bg-[#F6E7E6] dark:bg-[#2E3132] p-3 rounded-lg"
+                className="flex justify-center items-center gap-5 bg-white hover:bg-[#F6E7E6] hover:dark:bg-[#2E2F30] dark:bg-black p-3 rounded-lg hover:text-black text-black dark:text-white"
               >
                 <p className="font-semi-bold">GHC1599</p>
                 <span>
@@ -128,7 +128,7 @@ const Products = () => {
 
               <button
                 onClick={() => setShow(true)}
-                className="flex justify-center items-center gap-5 bg-white hover:bg-[#F6E7E6] dark:bg-[#2E3132] p-3 rounded-lg"
+                className="flex justify-center items-center gap-5 bg-white hover:bg-[#F6E7E6] hover:dark:bg-[#2E2F30] dark:bg-black p-3 rounded-lg hover:text-black text-black dark:text-white"
               >
                 <p className="font-semi-bold">GHC1599</p>
                 <span>
@@ -155,7 +155,7 @@ const Products = () => {
               <h2 className="font-bold">Cream & Black</h2>
               <button
                 onClick={() => setShow(true)}
-                className="flex justify-center items-center gap-5 bg-white hover:bg-[#F6E7E6] dark:bg-[#2E3132] p-3 rounded-lg"
+                className="flex justify-center items-center gap-5 bg-white hover:bg-[#F6E7E6] hover:dark:bg-[#2E2F30] dark:bg-black p-3 rounded-lg hover:text-black text-black dark:text-white"
               >
                 <p className="font-semi-bold">GHC1599</p>
                 <span>
