@@ -11,11 +11,11 @@ import Footer from "./Pages/Footer";
 import Bottom from "./Pages/Bottom";
 import Shopping from "./Pages/Shopping";
 
-
 function App() {
   return (
     <div className="bg-[#FFFAFA] dark:bg-[#0E0F10] dark:text-white ">
       <Navbar />
+
       <Home />
       <Section2 />
       <Specs />
@@ -23,7 +23,7 @@ function App() {
       <Section3 />
       <Products />
       <Section4 />
-      <Shopping/>
+      <Shopping />
       <Audio />
       <Footer />
       <Bottom />

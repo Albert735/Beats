@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import logo from "../assets/images/home-2.png";
 import AOS from "aos";
@@ -8,15 +8,9 @@ import "aos/dist/aos.css";
 AOS.init();
 
 const Home = () => {
-  const [count, setCount] = useState(0);
-
-  const handleButtonClick = () => {
-    setCount(count + 1);
-  };
-
-  // function handleClick() {
-  //   alert("Added to cart");
-  // }
+  function handleClick() {
+    alert("Added to cart");
+  }
 
   return (
     <div
@@ -58,8 +52,8 @@ const Home = () => {
           delivering first-rate playback.
         </p>
         <button
-          onClick={handleButtonClick}
-          // onClick={handleClick}
+          // onClick={handleButtonClick}
+          onClick={handleClick}
           type="button"
           className="bg-[#ffffff] dark:bg-[black]  xl:gap-5 flex my-[1rem] xl:mt-[2rem] p-2 gap-2 xl:p-4 rounded-lg hover:bg-[#FFF0EF] drop-shadow-sm ease-in-out duration-500"
         >
