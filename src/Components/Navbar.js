@@ -85,22 +85,21 @@ const Navbar = () => {
               </a>
               <li className="text-[1.3rem] font-bold  text-transparent flex relative">
                 <span className="relative flex h-5 w-5">
-                  <span className="absolute inline-flex rounded-full h-5 w-5 bg-[#DF1D3C] left-9 -top-3 text-white text-[10px] justify-center items-center">
+                  <span className="absolute inline-flex rounded-full h-3 w-3 bg-[#DF1D3C] left-3 -top-1 text-white text-[10px] justify-center items-center">
                     0
                   </span>
+                  <BsCart3
+                    size={24}
+                    className="cursor-pointer dark:text-white text-black font-bold"
+                  />
                 </span>
-                <BsCart3
-                  size={24}
-                  className="cursor-pointer dark:text-white text-black font-bold"
-                />
               </li>
 
-              
               <button onClick={handleThemeSwitch}>
                 {theme === "dark" ? (
                   <CiLight size={26} />
                 ) : (
-                 <IoMoon size={24}  />
+                  <IoMoon size={24} />
                 )}
               </button>
             </ul>

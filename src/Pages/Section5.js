@@ -4,7 +4,7 @@ import { IoLogoApple } from "react-icons/io5";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-AOS.init()
+AOS.init();
 
 const Section5 = () => {
   return (
@@ -18,7 +18,7 @@ const Section5 = () => {
       <p className="font-semi-bold md:text-[3rem] text-[1.5rem] text-center">
         <span className="font-extrabold">AppleCare+</span> for Headphones
       </p>
-      <button className="flex justify-center items-center text-white gap-3 bg-[#DF1D3C] p-[1rem] rounded-full">
+      <button className="flex justify-center items-center text-white gap-3 bg-[#DF1D3C] py-3 px-7 rounded-full">
         Learn More <IoLogoApple size={24} />
       </button>
     </div>

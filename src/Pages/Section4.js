@@ -8,7 +8,7 @@ AOS.init();
 
 const Section4 = () => {
   return (
-    <div className=" flex flex-col xl:flex-row justify-center items-center w-full overflow-hidden py-[3rem] xl:py-[10rem]">
+    <div className=" flex flex-col xl:flex-row justify-center items-center w-full overflow-hidden py-[3rem] xl:py-[5rem]">
       <div
         data-aos="fade-right"
         data-aos-duration="1000"
@@ -30,7 +30,7 @@ const Section4 = () => {
         <h1 className="text-[2rem] font-semibold xl:text-[3rem]">
           Register Your Beats
         </h1>
-        <button className="dark:bg-[#f6e7e7] dark:text-black text-white bg-[#191A1A]  duration-500 hover:scale-110   flex justify-center my-5  p-3 rounded-[3rem] font-bold">
+        <button className="dark:bg-[#f6e7e7] bg-gradient-to-r from-[#F88379] via-[#E9967A] to-[#FFA07A] duration-500 hover:scale-110   flex justify-center my-5  px-8 py-3 rounded-[3rem] font-bold">
           Register Now
         </button>
       </div>

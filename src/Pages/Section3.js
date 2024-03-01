@@ -24,7 +24,7 @@ const Section3 = () => {
         </div>
 
         <div className="flex justify-center items-center">
-          <button className="flex flex-row justify-center items-center dark:bg-[#f6e7e7] dark:text-black text-white  bg-[#191A1A] gap-2 p-[1rem] rounded-[3rem] drop-shadow-md xl:hover:ml-3 hover:scale-110 hover:ease-in-out duration-500">
+          <button className="flex flex-row justify-center items-center dark:bg-[#f6e7e7] dark:text-black text-white  bg-[#191A1A] gap-2 py-3 px-7  rounded-[3rem] drop-shadow-md xl:hover:ml-3 hover:scale-110 hover:ease-in-out duration-500">
             <GrShop />
             <span>Shop Now</span>
           </button>
