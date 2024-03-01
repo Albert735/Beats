@@ -19,9 +19,9 @@
 
 .bg-home {
     background-image: url('./assets/images/blob.png');
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 
    
 }

@@ -18,10 +18,13 @@ const Specs = () => {
       id="specs"
       className="flex flex-col justify-center items-center  mx-auto  xl:m-[10rem] overflow-hidden  my-[5rem] "
     >
-      <h1 className="xl:w-full text-center text-[2.5rem] xl:text-[4rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#847B7C] to-[#A59F9F] dark:bg-gradient-to-b dark:from-[#323536] dark:to-[#1D1E1F]">
-        Specs
-      </h1>
-      <div className="flex flex-col-reverse md:flex-row justify-center items-center md:gap-[5rem] m-[5rem] xl:gap-[6rem]">
+      <div>
+        <h1 className="xl:w-full text-center text-[2.5rem] xl:text-[4rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#847B7C] to-[#A59F9F] dark:bg-gradient-to-b dark:from-[#323536] dark:to-[#1D1E1F]">
+          Specs
+        </h1>
+      </div>
+
+      <div className="flex flex-col-reverse md:flex-row justify-center items-center md:gap-[rem] m-[5rem] xl:gap-[rem] overflow-hidden">
         <div className="md:flex grid grid-cols-2 md:flex-col justify-center items-start    text-sm xl:text-[1rem] font-light w-full">
           <div
             data-aos="fade-right"
@@ -71,21 +74,24 @@ const Specs = () => {
             <div className="flex flex-col justify-center items-start m-5">
               <HiOutlineMicrophone size={24} />
               <h3 className="font-bold">Microphone</h3>
-              <span className="font-light">
-                Support Apple Siri and <br /> Google
-              </span>
+              <span className="font-light">Support Apple Siri and Google</span>
             </div>
           </div>
         </div>
-
-        <img
-          src={specImage}
-          alt=""
-          className="h-[11rem] md:h-[15rem] xl:h-[20rem] drop-shadow-2xl "
-          data-aos="fade-left"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-        />
+        <div
+          // data-aos="fade-left"
+          // data-aos-duration="1000"
+          // data-aos-easing="ease-in-out"
+        >
+          <img
+            src={specImage}
+            alt=""
+            className="h-[15rem]  md:w-[20rem] xl:w-[40rem] md:h-[15rem] xl:h-[25rem] drop-shadow-2x"
+            // data-aos="fade-left"
+            // data-aos-duration="1000"
+            // data-aos-easing="ease-in-out"
+          />
+        </div>
       </div>
     </div>
   );

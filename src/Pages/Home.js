@@ -21,12 +21,12 @@ const Home = () => {
         data-aos="fade-down"
         data-aos-duration="1500"
         data-aos-delay="ease-in-out"
-        className="flex  justify-center items-center relative md:w-full xl:w-full "
+        className="flex  justify-center items-center relative md:w-full xl:w-full  "
       >
         <img
           src={logo}
           alt=""
-          className="h-[25rem] absolute md:-top-[28rem] md:h-[43rem] md:left-[2rem] xl:-top-[29rem] -top-[27rem] xl:h-[45rem] max-w-[20rem]  xl:left-[14rem]  left-[15rem]  drop-shadow-2xl"
+          className="h-[25rem] absolute md:-top-[28rem] md:h-[43rem] md:left-[2rem] xl:-top-[29rem] -top-[27rem] xl:h-[45rem] max-w-[20rem]  xl:left-[14rem]  left-[15rem]  drop-shadow-2xl "
         />
       </div>
 

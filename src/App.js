@@ -25,7 +25,7 @@ function App() {
       <Products />
       <Section4 />
       <Shopping />
-      <Section5/>
+      <Section5 />
       <Audio />
       <Footer />
       <Bottom />
