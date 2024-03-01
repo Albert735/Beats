@@ -21,7 +21,7 @@ const Shopping = () => {
         className="flex justify-center items-center"
       >
         <h1 className="font-semi-bold text-[1.5rem]  md:text-[2.5rem] text-center leading-loose">
-          Seamless Shopping Through{" "}
+          Seamless Shopping Through <br />
           <span className="font-extrabold underline">Apple</span>
         </h1>
       </div>

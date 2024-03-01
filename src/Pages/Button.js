@@ -77,9 +77,9 @@ const Button = () => {
 
               <button onClick={handleThemeSwitch}>
                 {theme === "dark" ? (
-                  <IoMoon size={24} className="" fill="" />
-                ) : (
                   <CiLight size={26} />
+                ) : (
+                  <IoMoon size={24} className="" fill="" />
                 )}
               </button>
             </ul>
