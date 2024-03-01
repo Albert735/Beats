@@ -12,11 +12,11 @@ AOS.init();
 const Specs = () => {
   return (
     <div
-      // data-aos="fade-right"
-      // data-aos-duration="1000"
-      // data-aos-easing="ease-in-out"
+      data-aos="fade-right"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
       id="specs"
-      className="flex flex-col justify-center items-center  mx-auto  xl:m-[10rem] overflow-hidden my-[5rem]"
+      className="flex flex-col justify-center items-center  mx-auto  xl:m-[10rem] overflow-hidden  my-[5rem] "
     >
       <h1 className="xl:w-full text-center text-[2.5rem] xl:text-[4rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#847B7C] to-[#A59F9F] dark:bg-gradient-to-b dark:from-[#323536] dark:to-[#1D1E1F]">
         Specs
@@ -71,7 +71,9 @@ const Specs = () => {
             <div className="flex flex-col justify-center items-start m-5">
               <HiOutlineMicrophone size={24} />
               <h3 className="font-bold">Microphone</h3>
-              <span className="font-light">Support Apple Siri and <br/> Google</span>
+              <span className="font-light">
+                Support Apple Siri and <br /> Google
+              </span>
             </div>
           </div>
         </div>

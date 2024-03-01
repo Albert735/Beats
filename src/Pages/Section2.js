@@ -11,9 +11,9 @@ AOS.init();
 const Section2 = () => {
   return (
     <div
-      // data-aos="zoom-in"
-      // data-aos-duration="1500"
-      // data-aos-easing="ease-in-out"
+      data-aos="zoom-in"
+      data-aos-duration="1500"
+      data-aos-easing="ease-in-out"
       className="flex justify-center gap-[3.5rem] items-center  xl:gap-[9rem] md:gap-[7rem] md:py-11 md:my-[5rem]   xl:m-[8rem] overflow-hidden  "
     >
       <div className=" hover:ease-in-out duration-500 hover:scale-125">

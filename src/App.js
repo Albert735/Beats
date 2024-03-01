@@ -10,6 +10,7 @@ import Section4 from "./Pages/Section4";
 import Footer from "./Pages/Footer";
 import Bottom from "./Pages/Bottom";
 import Shopping from "./Pages/Shopping";
+import Section5 from "./Pages/Section5";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Products />
       <Section4 />
       <Shopping />
+      <Section5/>
       <Audio />
       <Footer />
       <Bottom />

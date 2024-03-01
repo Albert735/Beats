@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <div
       id="home"
-      className="flex justify-center items-center relative md:max-w-screen-xl md:mx-auto overflow-hidden"
+      className="flex justify-center items-center relative md:max-w-screen-xl md:mx-auto overflow-hidden "
     >
       <div
         data-aos="fade-down"

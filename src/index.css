@@ -12,8 +12,18 @@
 .bg-light {
     background-image: url('./assets/images/low-poly-grid-haikei.png');
 }
+
 .bg-dark {
     background-image: url('./assets/images/low-poly-grid-haikei-2.png');
+}
+
+.bg-home {
+    background-image: url('./assets/images/blob.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+   
 }
 
 
