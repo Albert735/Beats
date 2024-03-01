@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { RiMenu4Line } from "react-icons/ri";
 import { IoMoon } from "react-icons/io5";
+import { CiLight } from "react-icons/ci";
 
 const Button = () => {
   //browser darkmode
@@ -74,14 +75,13 @@ const Button = () => {
                 </li>
               </a>
 
-              <li className="">
-                <IoMoon
-                  size={24}
-                  className=""
-                  onClick={handleThemeSwitch}
-                  fill=""
-                />
-              </li>
+              <button onClick={handleThemeSwitch}>
+                {theme === "dark" ? (
+                  <IoMoon size={24} className="" fill="" />
+                ) : (
+                  <CiLight size={26} />
+                )}
+              </button>
             </ul>
           </div>
         </div>

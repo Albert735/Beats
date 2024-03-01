@@ -18,7 +18,7 @@ const Audio = () => {
   return (
     <div
       id="newImage"
-      className={`flex flex-col xl:flex-row justify-center items-center    dark:bg-dark  p-[5rem] dark:text-[#191A1A]`}
+      className={`flex flex-col xl:flex-row justify-center items-center   bg-light  p-[5rem] dark:text-[#191A1A]`}
     >
       <div
         //Animation On Scroll

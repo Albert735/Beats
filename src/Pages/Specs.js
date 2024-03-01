@@ -25,7 +25,7 @@ const Specs = () => {
       </div>
 
       <div className="flex flex-col-reverse md:flex-row justify-center items-center md:gap-[rem] m-[5rem] xl:gap-[rem] overflow-hidden">
-        <div className="md:flex grid grid-cols-2 md:flex-col justify-center items-start    text-sm xl:text-[1rem] font-light w-full">
+        <div className="md:flex grid grid-cols-2 md:flex-col justify-center items-start    text-sm xl:text-[1rem] font-light ">
           <div
             data-aos="fade-right"
             data-aos-duration="1000"
@@ -74,19 +74,19 @@ const Specs = () => {
             <div className="flex flex-col justify-center items-start m-5">
               <HiOutlineMicrophone size={24} />
               <h3 className="font-bold">Microphone</h3>
-              <span className="font-light">Support Apple Siri and Google</span>
+              <span className="font-light">Support Apple <br /> Siri and Google</span>
             </div>
           </div>
         </div>
         <div
-          // data-aos="fade-left"
-          // data-aos-duration="1000"
-          // data-aos-easing="ease-in-out"
+        // data-aos="fade-left"
+        // data-aos-duration="1000"
+        // data-aos-easing="ease-in-out"
         >
           <img
             src={specImage}
             alt=""
-            className="h-[15rem]  md:w-[20rem] xl:w-[40rem] md:h-[15rem] xl:h-[25rem] drop-shadow-2x"
+            className="h-[15rem]  md:w-[20rem] object-contain md:h-[15rem] xl:h-[25rem] drop-shadow-2x"
             // data-aos="fade-left"
             // data-aos-duration="1000"
             // data-aos-easing="ease-in-out"

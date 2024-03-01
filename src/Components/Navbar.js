@@ -5,6 +5,7 @@ import { IoMoon } from "react-icons/io5";
 import logo from "../assets/images/beats-logo-161616.png";
 import { useState, useEffect } from "react";
 import Button from "../Pages/Button";
+import { CiLight } from "react-icons/ci";
 
 const Navbar = () => {
   const [theme, setTheme] = useState(null);
@@ -94,11 +95,14 @@ const Navbar = () => {
                 />
               </li>
 
-              <li className="cursor-pointer flex justify-center items-center gap-2">
-                <IoMoon size={24} className="" onClick={handleThemeSwitch} />
-                {/* <LuSunMedium size={24} className="" /> */}
-                {/* <span>Dark Mode</span> */}
-              </li>
+              
+              <button onClick={handleThemeSwitch}>
+                {theme === "dark" ? (
+                  <CiLight size={26} />
+                ) : (
+                 <IoMoon size={24}  />
+                )}
+              </button>
             </ul>
           </div>
         </div>

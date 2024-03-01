@@ -16,7 +16,7 @@ const Section5 = () => {
     >
       <img src={Applecare} alt="" className="h-[5rem] drop-shadow-md" />
       <p className="font-semi-bold md:text-[3rem] text-[1.5rem] text-center">
-        <span className="font-bold">AppleCare+</span> for Headphones
+        <span className="font-extrabold">AppleCare+</span> for Headphones
       </p>
       <button className="flex justify-center items-center text-white gap-3 bg-[#DF1D3C] p-[1rem] rounded-full">
         Learn More <IoLogoApple size={24} />
