@@ -67,7 +67,7 @@ const Button = () => {
               onClick={toggleDropdown}
             />
 
-            <ul className="text-black flex flex-col justify-center items-center gap-4 font-bold">
+            <ul className="text-black w-[10rem] flex flex-col justify-center items-center gap-4 font-bold">
               <a href="#home">
                 <li
                   key="home"
