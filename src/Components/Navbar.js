@@ -66,7 +66,7 @@ const Navbar = () => {
           <Button />
           <div>
             <ul className="hidden xl:flex gap-[3rem] w-full xl:w-auto">
-              <li className="text-[1.3rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#847B7C] to-[#A59F9F] dark:bg-gradient-to-b dark:from-[#323536] dark:to-[#1D1E1F] hover:text-black dark:hover:text-white  hover:scale-100   duration-500 hover:ease-in">
+              <li className="text-[1.3rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#847B7C] to-[#A59F9F] dark:bg-gradient-to-b dark:from-[#323536] dark:to-[#1D1E1F] hover:text-black dark:hover:text-white  hover:scale-100 active:bg-slate-400   duration-500 hover:ease-in">
                 <a href="#home">Home</a>
               </li>
 

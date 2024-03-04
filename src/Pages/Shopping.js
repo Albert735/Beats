@@ -10,10 +10,7 @@ AOS.init();
 
 const Shopping = () => {
   return (
-    <div
-      
-      className="flex  flex-col   justify-center items-center max-w-screen-xl mx-auto gap-[3rem] md:my-[6rem] gap"
-    >
+    <div className="flex flex-col  justify-center items-center max-w-screen-xl mx-auto gap-[3rem] md:my-[6rem] gap">
       <div
         // data-aos="fade-up-right"
         // data-aos-duration="500"
@@ -29,7 +26,7 @@ const Shopping = () => {
         data-aos="fade-up"
         data-aos-duration="500"
         data-aos-easing="ease-in-out"
-        className="flex md:flex-row flex-col gap-y-[2rem] gap-[4rem]"
+        className="flex md:flex-wrap  xl:flex-row flex-col gap-y-[2rem] gap-[4rem]"
       >
         <div className="flex flex-col justify-center items-center gap-y-[1rem]  dark:bg-white bg-[#F2EBEB] text-black p-8 rounded-xl drop-shadow-md">
           <img src={box} alt="" className="mix-blend-multiply h-[4rem] " />
