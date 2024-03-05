@@ -34,7 +34,7 @@ const Home = () => {
         data-aos="fade-right"
         data-aos-duration="1500"
         data-aos-delay="ease-in-out"
-        className="xl:mt-9 m-11 xl:m-0 md:w-full leading-loose"
+        className="xl:mt-9 m-11 xl:m-0 md:w-full leading-shrug"
       >
         <h1 className="relative">
           <span className="xl:text-[5rem] md:text-[2.5rem] text-[2rem] text-right font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#847B7C] to-[#A59F9F] dark:bg-gradient-to-b dark:from-[#323536] dark:to-[#1D1E1F] ">
