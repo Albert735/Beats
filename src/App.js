@@ -5,12 +5,12 @@ import Specs from "./Pages/Specs";
 import Case from "./Pages/Case";
 import Section3 from "./Pages/Section3";
 import Products from "./Pages/Products";
-import Audio from "./Pages/Audio";
 import Section4 from "./Pages/Section4";
 import Footer from "./Pages/Footer";
 import Bottom from "./Pages/Bottom";
 import Shopping from "./Pages/Shopping";
 import Section5 from "./Pages/Section5";
+import Testimonial from "./Pages/Testimonial";
 
 function App() {
   return (
@@ -25,8 +25,8 @@ function App() {
       <Products />
       <Section4 />
       <Shopping />
-      <Section5 />
-      <Audio />
+      {/* <Section5 /> */}
+      {/* <Testimonial/> */}
       <Footer />
       <Bottom />
     </div>
