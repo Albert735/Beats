@@ -5,29 +5,29 @@ const Testimonial = () => {
   const germanFlag = "🇩🇪";
   const unitedStates = "🇺🇸";
   return (
-    <div className="flex xl:relative  flex-col md:flex-col  justify-center  items-center max-w-screen-xl mx-auto md:my-[4rem]">
-      <div>
-        <h1 className="text-[2rem] ml-[3rem] md:ml-0 md:text-[4rem]  font-mono font-extralight leading-tight xl:leading-snug md:leading-tight ">
-          Our members' <br />
+    <div className="flex xl:relative flex-col md:flex-col justify-center  items-center max-w-screen-xl mx-auto md:my-[4rem] my-20">
+      <div className="flex justify-center items-start m-8">
+        <h1 className="text-[2rem] ml-[3rem] md:ml-0 md:text-[4rem]  font-mono font-extralight leading-tight xl:leading-normal md:leading-tight ">
+          Our members' <br />{" "}
           <span className="bg-clip-text text-transparent bg-gradient-to-b from-[#847B7C] to-[#A59F9F] ">
-            insight
-          </span>
-          and
+            insight{" "}
+          </span>{" "}
+          and{" "}
           <span className="bg-clip-text text-transparent bg-gradient-to-b from-[#847B7C] to-[#A59F9F] ">
             takeaways
           </span>
         </h1>
       </div>
-      <div className="flex-row-reverse xl:mb-[35rem] mb-8  ">
-        <div className="xl:absolute right-[15rem] xl:top-[13rem]">
+      <div className="xl:flex-row-reverse  xl:mb-[35rem] flex justify-center items-center flex-col   ">
+        <div className="xl:absolute right-[15rem] xl:top-[13rem] items-center justify-center flex">
           <img
             src={man}
             alt=""
-            className="xl:h-[30rem] md:h-[10rem] h-[15rem]  rounded-[1rem] brightness-125   "
+            className="xl:h-[30rem] md:h-[10rem]   md:rounded-[1rem] brightness-125   "
           />
         </div>
 
-        <div className="xl:space-y-5 xl:absolute xl:right-[30rem] xl:top-[23rem]  ">
+        <div className="xl:space-y-5 xl:absolute xl:right-[30rem] xl:top-[23rem]   flex justify-center items-center ">
           <div className=" px-7 py-5  bg-black/10 hover:text-gray-200 dark:bg-white/5 hover:bg-black/30 dark:hover:bg-gradient-to-r from-white/20 to-white/10 hover:delay-150  backdrop-blur-xl transition-all hover:ease-in-out hover:duration-200 rounded-[1rem] space-y-3">
             <div>
               <span className="text-[2rem] font-serif italic">"</span>
@@ -36,11 +36,8 @@ const Testimonial = () => {
             <div>
               <p className="font-sans md:text-[1.3rem] ">
                 I've learned a positively Immeasurable amount of things from{" "}
-                <br />
                 Timbaland and Natalie Portman. It gave me sense of possibility.{" "}
-                <br />
                 Like I can actually do it.I can get a billboard hit single, and{" "}
-                <br />
                 it's not far away."
               </p>
             </div>
@@ -49,7 +46,7 @@ const Testimonial = () => {
               <p className="font-sans text-[1rem] text-slate-700 dark:text-slate-400">
                 Music Producer
               </p>
-              <p className="font-sans md:text-[1.3rem] text-slate-700 dark:text-slate-400 ">
+              <p className="font-sans text-[1.3rem] text-slate-700 dark:text-slate-400 ">
                 Christian Hamilton{" "}
                 <span>
                   {germanFlag}/{unitedStates}
