@@ -4,10 +4,11 @@ import man from "../assets/images/man.jpeg";
 const Testimonial = () => {
   const germanFlag = "🇩🇪";
   const unitedStates = "🇺🇸";
+
   return (
-    <div className="flex relative flex-col md:flex-col justify-center  items-center max-w-screen-xl mx-auto md:my-[4rem] my-20">
+    <div className="flex md:relative flex-col md:flex-col justify-center  items-center max-w-screen-xl mx-auto">
       <div className="flex justify-center items-start ">
-        <h1 className="text-[2.5rem] ml-[3rem] md:ml-0 md:text-[4rem]  font-mono font-extralight leading-tight xl:leading-normal md:leading-tight ">
+        <h1 className="text-[1.5rem]  md:text-[3rem] xl:text-[4.5rem] font-mono font-extralight leading-tight xl:leading-normal md:leading-tight ">
           Our members' <br />{" "}
           <span className="bg-clip-text text-transparent bg-gradient-to-b from-[#847B7C] to-[#A59F9F] ">
             insight{" "}
@@ -18,28 +19,26 @@ const Testimonial = () => {
           </span>
         </h1>
       </div>
-      <div className="xl:flex-row-reverse  xl:mb-[35rem] flex justify-center items-center flex-col    ">
-        <div className="xl:absolute right-[15rem] xl:top-[13rem] items-center justify-center flex">
+      <div className="flex justify-center items-center flex-col md:flex-row-reverse xl:mb-[40rem] md:mb-[30rem]  my-[3rem] ">
+        <div className="flex justify-cneter items-center md:absolute md:right-[7rem] md:top-[9rem] lg:right-[14rem] lg:top-[9rem] xl:right-[15rem] xl:top-[13rem]">
           <img
             src={man}
             alt=""
-            className="xl:h-[30rem] md:h-[10rem] w-[23rem] rounded-[1rem] md:rounded-[1rem] brightness-125"
+            className="xl:h-[32rem] md:h-[25rem] md:w-[16.5rem] xl:w-[22rem] h-[20rem] rounded-[1rem] md:rounded-[1rem] brightness-125"
           />
         </div>
-
-        <div className="xl:space-y-5  absolute xl:right-[30rem]  xl:top-[23rem]   top-[27rem] flex justify-center items-center ">
-          <div className="px-7 py-5  bg-black/10 hover:text-gray-200 dark:bg-white/5 hover:bg-black/30 dark:hover:bg-gradient-to-r from-white/20 to-white/10 hover:delay-150  backdrop-blur-xl transition-all hover:ease-in-out hover:duration-200 rounded-[1rem] md:rounded-[1rem] space-y-3">
+        <div className="flex justify-center items-center lg:right-[27rem]  md:right-[20rem] xl:right-[41.5rem] md:bottom-[8rem] xl:bottom-[14rem] bottom-[3rem] md:absolute xl:w-[20rem] xl:space-y-5">
+          <div className="md:px-6 md:py-4 xl:px-7 xl:py-5 p-4 bg-black/10 hover:text-gray-200 dark:bg-white/5 hover:bg-black/30 dark:hover:bg-gradient-to-r from-white/20 to-white/10 hover:delay-150  backdrop-blur-xl transition-all hover:ease-in-out hover:duration-200 rounded-[1rem] md:rounded-[1rem] space-y-3 ">
             <div>
               <span className="text-[2rem] font-serif italic">"</span>
             </div>
-
             <div>
-              <div className="font-sans md:text-[1.3rem] md:w-[37rem] xl:w-[35rem] w-[20rem]">
-                I've learned a positively Immeasurable amount of things from{" "}
-                Timbaland and Natalie Portman. It gave me sense of possibility.{" "}
-                Like I can actually do it.I can get a billboard hit single, and{" "}
+              <p className="font-sans md:text-[1rem] xl:text-[1.3rem] md:w-[20rem] lg:w-[23rem]  leading-shrug  xl:w-[35rem] w-[20.5rem]">
+                I've learned a positively Immeasurable amount of things from
+                Timbaland and Natalie Portman. It gave me sense of possibility.
+                Like I can actually do it.I can get a billboard hit single, and
                 it's not far away."
-              </div>
+              </p>
             </div>
 
             <div className="gap-2">
