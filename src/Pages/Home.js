@@ -45,7 +45,7 @@ const Home = () => {
             Bagna Beats{" "}
           </span>
         </h1>
-        <h2 className="xl:text-[1.5rem] text-semibold mb-5">Overview</h2>
+        <h2 className="xl:text-[1.5rem] text-semibold font-serif italic mb-5">Overview</h2>
         <p className="leading-loose md:text-[1.3rem] font-light mt-[2rem]">
           Enjoy award-winning Beats sound with wireless listening freedom and a
           sleek, streamlined design with comfortable padded earphones,
