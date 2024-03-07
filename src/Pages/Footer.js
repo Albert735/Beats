@@ -52,18 +52,26 @@ const Footer = () => {
           />
 
           <div className="flex  my-3 gap-5 ">
-            <FaLinkedin
-              size={35}
-              className="bg-white dark:bg-transparent rounded-lg p-2"
-            />
-            <FaInstagram
-              size={35}
-              className="bg-white dark:bg-transparent rounded-lg p-2"
-            />
-            <FaXTwitter
-              size={35}
-              className="bg-white dark:bg-transparent rounded-lg p-2"
-            />
+            <a href="https://twitter.com/_Jaytee03">
+              <FaLinkedin
+                size={35}
+                className="bg-white dark:bg-transparent rounded-lg p-2"
+              />
+            </a>
+
+            <a href="https://twitter.com/_Jaytee03">
+              <FaInstagram
+                size={35}
+                className="bg-white dark:bg-transparent rounded-lg p-2"
+              />
+            </a>
+
+            <a href="https://twitter.com/_Jaytee03">
+              <FaXTwitter
+                size={35}
+                className="bg-white dark:bg-transparent rounded-lg p-2"
+              />
+            </a>
           </div>
         </div>
       </div>
