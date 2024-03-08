@@ -26,7 +26,7 @@ const Home = () => {
         <img
           src={logo}
           alt=""
-          className="h-[25rem] absolute md:-top-[28rem] md:h-[43rem] md:left-[2rem] xl:-top-[29rem] -top-[27.25rem] xl:h-[45rem] max-w-[20rem]  xl:left-[14rem]  left-[15rem]  drop-shadow-2xl "
+          className="h-[25rem] absolute md:-top-[28rem] md:h-[43rem] lg:h-[43rem] lg:left-[9rem] md:left-[2rem]  xl:-top-[29rem] -top-[27.25rem] xl:h-[45rem] max-w-[20rem]  xl:left-[14rem]  left-[15rem]  drop-shadow-2xl "
         />
       </div>
 
@@ -45,7 +45,9 @@ const Home = () => {
             Bagna Beats{" "}
           </span>
         </h1>
-        <h2 className="xl:text-[1.5rem] text-semibold font-serif italic mb-5">Overview</h2>
+        <h2 className="xl:text-[1.5rem] text-semibold font-serif italic mb-5">
+          Overview
+        </h2>
         <p className="leading-loose md:text-[1.3rem] font-light mt-[2rem]">
           Enjoy award-winning Beats sound with wireless listening freedom and a
           sleek, streamlined design with comfortable padded earphones,

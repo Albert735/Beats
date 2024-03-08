@@ -10,7 +10,7 @@ AOS.init();
 
 const Shopping = () => {
   return (
-    <div className="flex flex-col  justify-center items-center max-w-screen-xl mx-auto gap-[3rem] md:my-[6rem] gap">
+    <div className="flex flex-col  justify-center items-center max-w-screen-xl mx-auto gap-[3rem] md:my-[6rem] md:mb-[14rem] gap">
       <div
         // data-aos="fade-up-right"
         // data-aos-duration="500"

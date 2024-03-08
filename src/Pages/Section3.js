@@ -9,7 +9,12 @@ AOS.init();
 
 const Section3 = () => {
   return (
-    <div className="flex flex-col-reverse md:flex-row justify-center items-center max-w-screen-xl mx-auto py-[5rem] gap-8 md:gap-0 xl:gap-[5rem] dark:bg-[#191A1A] bg-[#F1E9E9] xl:rounded-lg">
+    <div
+      // data-aos="zoom-in"
+      // data-aos-duration="1500"
+      // data-aos-easing="ease-in-out"
+      className="flex flex-col-reverse md:flex-row justify-center items-center max-w-screen-xl mx-auto py-[5rem] md:mb-[10rem] gap-8 md:gap-0 xl:gap-[5rem] dark:bg-[#191A1A] bg-[#F1E9E9] xl:rounded-lg"
+    >
       <div className="flex flex-col gap-7 text-center ">
         <div className="gap-4">
           <div>
@@ -30,7 +35,11 @@ const Section3 = () => {
           </button>
         </div>
       </div>
-      <div>
+      <div
+        data-aos="zoom-in"
+        data-aos-duration="2000"
+        data-aos-easing="ease-in-out"
+      >
         <img src={discountImage} alt="" className="h-[13rem] md:h-[17rem]" />
       </div>
     </div>

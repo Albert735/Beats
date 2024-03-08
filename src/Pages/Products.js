@@ -23,7 +23,7 @@ const Products = () => {
       // data-aos-duration="1000"
       // data-aos-easing="ease-in-out"
       id="products"
-      className="flex flex-col  justify-center items-center xl:mt-[10rem] my-[5rem] md:mt-[5rem] overflow-hidden"
+      className="flex flex-col  justify-center items-center xl:mt-[10rem] my-[5rem] md:mt-[5rem] md:mb-[10rem] overflow-hidden"
     >
       <h1 className="text-[4rem] font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-[#847B7C] to-[#A59F9F] dark:bg-gradient-to-b dark:from-[#323536] dark:to-[#1D1E1F]">
         Choose <br /> Your Style

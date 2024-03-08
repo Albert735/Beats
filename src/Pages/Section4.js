@@ -8,7 +8,7 @@ AOS.init();
 
 const Section4 = () => {
   return (
-    <div className=" flex flex-col xl:flex-row justify-center items-center w-full overflow-hidden py-[3rem] xl:py-[5rem]">
+    <div className=" flex flex-col xl:flex-row justify-center items-center w-full overflow-hidden py-[3rem] xl:py-[5rem] md:mb-[10rem]">
       <div
         data-aos="fade-right"
         data-aos-duration="1000"

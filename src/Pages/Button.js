@@ -4,6 +4,11 @@ import { IoMoon } from "react-icons/io5";
 import { CiLight } from "react-icons/ci";
 import { BsCart3 } from "react-icons/bs";
 import { IoClose } from "react-icons/io5";
+import logo from "../assets/images/beats-logo-161616.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
+
 
 const Button = () => {
   //browser darkmode
@@ -58,19 +63,30 @@ const Button = () => {
       </div>
 
       {isOpen && (
-        <div className="fixed  top-0 left-0 w-full h-screen dark:bg-[#191A1A] bg-[#FFFAFA] p-10">
+        <div 
+        data-aos="fade-down"
+        data-aos-duration="1000"
+        data-aos-delay="ease-in-out"
+        
+        className="fixed  top-0 left-0 w-full h-screen dark:bg-[#191A1A] bg-[#FFFAFA] p-10">
           <div className="flex justify-center items-center  ">
+            <img
+              src={logo}
+              alt=""
+              className="h-[2rem] md:h-[3rem] m-2 drop-shadow-lg dark:bg-white dark:rounded-[2.2rem] absolute top-2 left-2"
+            />
             <IoClose
               size={35}
-              className="absolute top-2 right-2 cursor-pointer"
+              className="absolute m-2 top-2 right-2 cursor-pointer"
               onClick={toggleDropdown}
             />
 
-            <ul className="text-black w-[10rem] h-screen flex flex-col justify-center items-center gap-4 font-bold">
+            <ul className="text-black w-[10rem] h-screen flex flex-col justify-center items-center gap-4 font-semi-bold">
               <a href="#home">
                 <li
                   key="home"
-                  className="hover:text-bold hover:text-white dark:text-white scale-110 font-mono text-[1.5rem] leading-loose"
+                  onClick={toggleDropdown}
+                  className="hover:text-bold dark:hover:text-[#B1522E] hover:text-[#B1522E] dark:text-white scale-110 font-mono text-[1.5rem] leading-loose"
                 >
                   Home
                 </li>
@@ -78,15 +94,17 @@ const Button = () => {
               <a href="#specs">
                 <li
                   key="specs"
-                  className="hover:text-bold hover:text-white dark:text-white scale-110 font-mono text-[1.5rem] leading-loose"
+                  onClick={toggleDropdown}
+                  className="hover:text-bold dark:hover:text-[#B1522E] hover:text-[#B1522E] dark:text-white scale-110 font-mono text-[1.5rem] leading-loose"
                 >
-                  Specs
+                  <span>S</span><span>p</span><span>e</span><span>c</span><span>s</span>
                 </li>
               </a>
               <a href="#case">
                 <li
                   key="case"
-                  className="hover:text-bold hover:text-white dark:text-white scale-110 font-mono text-[1.5rem] leading-loose"
+                  onClick={toggleDropdown}
+                  className="hover:text-bold dark:hover:text-[#B1522E] hover:text-[#B1522E] dark:text-white scale-110 font-mono text-[1.5rem] leading-loose"
                 >
                   Case
                 </li>
@@ -94,7 +112,8 @@ const Button = () => {
               <a href="#products">
                 <li
                   key="product"
-                  className="hover:text-bold hover:text-white dark:text-white scale-110 font-mono text-[1.5rem] leading-loose"
+                  onClick={toggleDropdown}
+                  className="hover:text-bold dark:hover:text-[#B1522E] hover:text-[#B1522E] dark:text-white scale-110 font-mono text-[1.5rem] leading-loose"
                 >
                   Product
                 </li>
