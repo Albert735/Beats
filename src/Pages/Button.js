@@ -58,58 +58,56 @@ const Button = () => {
       </div>
 
       {isOpen && (
-        <div className="flex justify-end w-full relative inset-0 z-20 bg-white  space-y-[3rem]">
-          <div className="absolute top-0 right-0 mt-12 bg-white p-4 rounded-2xl shadow-lg space-y-[3rem]">
-            <IoClose
-              size={26}
-              fill="red"
-              className="absolute top-2 right-2 cursor-pointer"
-              onClick={toggleDropdown}
-            />
+        <div className="absolute top-0 right-0 mt-12 bg-white p-4 rounded-2xl shadow-lg space-y-[3rem]">
+          <IoClose
+            size={26}
+            fill="red"
+            className="absolute top-2 right-2 cursor-pointer"
+            onClick={toggleDropdown}
+          />
 
-            <ul className="text-black w-[10rem] flex flex-col justify-center items-center gap-4 font-bold">
-              <a href="#home">
-                <li
-                  key="home"
-                  className="hover:text-bold hover:text-white scale-110"
-                >
-                  Home
-                </li>
-              </a>
-              <a href="#specs">
-                <li
-                  key="specs"
-                  className="hover:text-bold hover:text-white scale-110"
-                >
-                  Specs
-                </li>
-              </a>
-              <a href="#case">
-                <li
-                  key="case"
-                  className="hover:text-bold hover:text-white scale-110"
-                >
-                  Case
-                </li>
-              </a>
-              <a href="#products">
-                <li
-                  key="product"
-                  className="hover:text-bold hover:text-white scale-110"
-                >
-                  Product
-                </li>
-              </a>
+          <ul className="text-black w-[10rem] flex flex-col justify-center items-center gap-4 font-bold">
+            <a href="#home">
+              <li
+                key="home"
+                className="hover:text-bold hover:text-white scale-110"
+              >
+                Home
+              </li>
+            </a>
+            <a href="#specs">
+              <li
+                key="specs"
+                className="hover:text-bold hover:text-white scale-110"
+              >
+                Specs
+              </li>
+            </a>
+            <a href="#case">
+              <li
+                key="case"
+                className="hover:text-bold hover:text-white scale-110"
+              >
+                Case
+              </li>
+            </a>
+            <a href="#products">
+              <li
+                key="product"
+                className="hover:text-bold hover:text-white scale-110"
+              >
+                Product
+              </li>
+            </a>
 
-              <button onClick={handleThemeSwitch}>
-                {theme === "dark" ? (
-                  <CiLight size={26} />
-                ) : (
-                  <IoMoon size={24} className="" fill="" />
-                )}
-              </button>
-            </ul>
-          </div>
+            <button onClick={handleThemeSwitch}>
+              {theme === "dark" ? (
+                <CiLight size={26} />
+              ) : (
+                <IoMoon size={24} className="" fill="" />
+              )}
+            </button>
+          </ul>
         </div>
       )}
     </div>
