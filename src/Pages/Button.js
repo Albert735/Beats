@@ -58,56 +58,57 @@ const Button = () => {
       </div>
 
       {isOpen && (
-        <div className="absolute top-0 right-0 mt-12 bg-white p-4 rounded-2xl shadow-lg space-y-[3rem]">
-          <IoClose
-            size={26}
-            fill="red"
-            className="absolute top-2 right-2 cursor-pointer"
-            onClick={toggleDropdown}
-          />
+        <div className="fixed  top-0 left-0 w-full h-screen dark:bg-[#191A1A] bg-[#FFFAFA] p-10">
+          <div className="flex justify-center items-center  ">
+            <IoClose
+              size={35}
+              className="absolute top-2 right-2 cursor-pointer"
+              onClick={toggleDropdown}
+            />
 
-          <ul className="text-black w-[10rem] flex flex-col justify-center items-center gap-4 font-bold">
-            <a href="#home">
-              <li
-                key="home"
-                className="hover:text-bold hover:text-white scale-110"
-              >
-                Home
-              </li>
-            </a>
-            <a href="#specs">
-              <li
-                key="specs"
-                className="hover:text-bold hover:text-white scale-110"
-              >
-                Specs
-              </li>
-            </a>
-            <a href="#case">
-              <li
-                key="case"
-                className="hover:text-bold hover:text-white scale-110"
-              >
-                Case
-              </li>
-            </a>
-            <a href="#products">
-              <li
-                key="product"
-                className="hover:text-bold hover:text-white scale-110"
-              >
-                Product
-              </li>
-            </a>
+            <ul className="text-black w-[10rem] h-screen flex flex-col justify-center items-center gap-4 font-bold">
+              <a href="#home">
+                <li
+                  key="home"
+                  className="hover:text-bold hover:text-white dark:text-white scale-110 font-mono text-[1.5rem] leading-loose"
+                >
+                  Home
+                </li>
+              </a>
+              <a href="#specs">
+                <li
+                  key="specs"
+                  className="hover:text-bold hover:text-white dark:text-white scale-110 font-mono text-[1.5rem] leading-loose"
+                >
+                  Specs
+                </li>
+              </a>
+              <a href="#case">
+                <li
+                  key="case"
+                  className="hover:text-bold hover:text-white dark:text-white scale-110 font-mono text-[1.5rem] leading-loose"
+                >
+                  Case
+                </li>
+              </a>
+              <a href="#products">
+                <li
+                  key="product"
+                  className="hover:text-bold hover:text-white dark:text-white scale-110 font-mono text-[1.5rem] leading-loose"
+                >
+                  Product
+                </li>
+              </a>
 
-            <button onClick={handleThemeSwitch}>
-              {theme === "dark" ? (
-                <CiLight size={26} />
-              ) : (
-                <IoMoon size={24} className="" fill="" />
-              )}
-            </button>
-          </ul>
+              <button onClick={handleThemeSwitch}>
+                {theme === "dark" ? (
+                  <CiLight size={26} fill="white" />
+                ) : (
+                  <IoMoon size={24} className="" />
+                )}
+              </button>
+            </ul>
+          </div>
         </div>
       )}
     </div>
