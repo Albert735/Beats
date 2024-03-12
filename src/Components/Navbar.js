@@ -1,11 +1,12 @@
 import React from "react";
-import { BsCart3 } from "react-icons/bs";
+// import { BsCart3 } from "react-icons/bs";
 import { IoMoon } from "react-icons/io5";
 // import { LuSunMedium } from "react-icons/lu";
 import logo from "../assets/images/beats-logo-161616.png";
 import { useState, useEffect } from "react";
 import Button from "../Pages/Button";
 import { CiLight } from "react-icons/ci";
+import CartModal from "../Pages/CartModal";
 
 const Navbar = () => {
   const [theme, setTheme] = useState(null);
@@ -88,10 +89,7 @@ const Navbar = () => {
                   <span className="absolute inline-flex rounded-full h-3 w-3 bg-[#DF1D3C] left-3 -top-1 text-white text-[10px] justify-center items-center">
                     0
                   </span>
-                  <BsCart3
-                    size={24}
-                    className="cursor-pointer dark:text-white text-black font-bold"
-                  />
+                  <CartModal />
                 </span>
               </li>
 

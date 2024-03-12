@@ -22,31 +22,21 @@ const Testimonial = () => {
           </span>
         </h1>
       </div>
-      <div className="flex justify-center items-center flex-col-reverse md:flex-row-reverse xl:mb-[40rem] md:mb-[30rem] mb-[30rem] my-[3rem]  ">
-        <div
-          data-aos="fade-down"
-          data-aos-duration="3000"
-          data-aos-delay="ease-in-out"
-          className="flex justify-cneter items-center absolute md:right-[7rem] right-[1rem] top-[4.5rem] md:top-[9rem] lg:right-[14rem] lg:top-[9rem] xl:right-[15rem] xl:top-[13rem] z-10 md:z-0"
-        >
+      <div className="flex justify-center items-center flex-col-reverse md:flex-row-reverse xl:mb-[40rem] md:mb-[30rem] mb-[15rem] my-[3rem]  ">
+        <div className="flex justify-cneter items-center md:absolute md:right-[7rem] right-[1rem] top-[4.5rem] md:top-[9rem] lg:right-[14rem] lg:top-[9rem] xl:right-[15rem] xl:top-[13rem] md:z-0">
           <img
             src={man}
             alt=""
-            className="xl:h-[30rem] md:h-[25rem] md:w-[16.5rem] xl:w-[20rem] h-[15rem] rounded-[1rem] md:rounded-[1rem] brightness-125"
+            className="xl:h-[30rem] md:h-[25rem] md:w-[16.5rem] xl:w-[20rem] h-[30rem] w-[20rem]  rounded-[1rem] md:rounded-[1rem] brightness-125"
           />
         </div>
-        <div
-          data-aos="fade-right"
-          data-aos-duration="3000"
-          data-aos-delay="ease-in-out"
-          className="flex justify-center items-center lg:right-[27rem] right-[6rem]  md:right-[20rem] xl:right-[40rem] md:bottom-[8rem] xl:bottom-[15rem] bottom-[3rem] absolute xl:w-[20rem] xl:space-y-5"
-        >
-          <div className="md:px-6 md:py-4 xl:px-7 xl:py-5 p-4 bg-black/10 hover:text-gray-200 dark:bg-white/5 hover:bg-black/30 dark:hover:bg-gradient-to-r from-white/20 to-white/10 hover:delay-150  backdrop-blur-xl transition-all hover:ease-in-out hover:duration-200 rounded-[1rem] md:rounded-[1rem] space-y-3 ">
+        <div className="flex justify-center items-center lg:right-[30rem]  md:right-[22rem] xl:right-[40rem] md:bottom-[8rem] xl:bottom-[15rem] bottom-[8rem] absolute  md:w-[20rem] w-[20rem] xl:space-y-5">
+          <div className=" md:px-6 md:py-4 xl:px-7 xl:py-5 p-4 bg-black/10 hover:text-gray-200 dark:bg-white/5 hover:bg-black/30 dark:hover:bg-gradient-to-r from-white/20 to-white/10 hover:delay-150  backdrop-blur-xl transition-all hover:ease-in-out hover:duration-200 rounded-[1rem] md:rounded-[1rem] space-y-3  ">
             <div>
               <span className="text-[2rem] font-serif italic">"</span>
             </div>
             <div>
-              <p className="font-sans md:text-[1rem] xl:text-[1.3rem] md:w-[20rem] lg:w-[23rem]  leading-shrug  xl:w-[33rem] w-[15rem]">
+              <p className="font-sans md:text-[1rem] xl:text-[1.3rem] md:w-[20rem] lg:w-[23rem]  leading-shrug  xl:w-[33rem] ">
                 I've learned a positively Immeasurable amount of things from
                 Timbaland and Natalie Portman. It gave me sense of possibility.
                 Like I can actually do it.I can get a billboard hit single, and

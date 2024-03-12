@@ -26,7 +26,7 @@ const Home = () => {
         <img
           src={logo}
           alt=""
-          className="h-[25rem] absolute md:-top-[28rem] md:h-[43rem] lg:h-[43rem] lg:left-[9rem] md:left-[2rem]  xl:-top-[29rem] -top-[27.25rem] xl:h-[45rem] max-w-[20rem]  xl:left-[14rem]  left-[15rem]  drop-shadow-2xl "
+          className="h-[25rem] absolute md:-top-[28rem] md:h-[43rem] lg:h-[43rem] lg:left-[9rem] md:left-[2rem]  xl:-top-[29rem] -top-[27.25rem] xl:h-[45rem] max-w-[20rem]  xl:left-[14rem]  left-[15rem]  drop-shadow-xl "
         />
       </div>
 

@@ -1,27 +1,24 @@
 import React, { useState } from "react";
 import productImage1 from "../assets/images/product1.png";
-import productImage2 from "../assets/images/product2.png";
-import productImage3 from "../assets/images/product3.png";
-import productImage4 from "../assets/images/product4.png";
-import productImage5 from "../assets/images/product5.png";
+// import productImage2 from "../assets/images/product2.png";
+// import productImage3 from "../assets/images/product3.png";
+// import productImage4 from "../assets/images/product4.png";
+// import productImage5 from "../assets/images/product5.png";
 import PopCard from "./PopCard";
-
 import { GrShop } from "react-icons/gr";
 import AOS from "aos";
-
 import "aos/dist/aos.css";
+import { product } from "../ProductArray";
 
 AOS.init();
 
-const Products = () => {
+const Products = ({ items }) => {
   const [show, setShow] = useState(false);
   const handleOnClose = () => setShow(false);
 
   return (
     <div
-      // data-aos="fade-left"
-      // data-aos-duration="1000"
-      // data-aos-easing="ease-in-out"
+      key={product.id}
       id="products"
       className="flex flex-col  justify-center items-center xl:mt-[10rem] my-[5rem] md:mt-[5rem] md:mb-[10rem] overflow-hidden"
     >
@@ -30,141 +27,37 @@ const Products = () => {
       </h1>
       <div className="flex flex-col ">
         <div className="flex flex-wrap  justify-center items-center gap-7 xl:gap-[4rem] mt-[7rem] gap-y-[4rem]">
-          <div
-            data-aos="fade-left"
-            data-aos-duration="1100"
-            data-aos-delay="100"
-            data-aos-easing="ease-in-out"
-            className="flex relative flex-col   justify-center items-center bg-[#F1E9E9] dark:bg-[#191A1A] px-[2rem] py-5 rounded-lg h-fit hover:dark:bg-[#F1E9E9] hover:bg-[#191A1A] hover:text-white hover:dark:text-black hover:delay-300  hover:ease-in-out duration-200"
-          >
-            <img
-              src={productImage1}
-              alt=""
-              className="h-[10rem] xl:h-[10rem] -top-[3rem] absolute"
-            />
-            <div className="flex flex-col gap-2 mt-28">
-              <h2 className="font-bold">Black</h2>
-              <button
-                onClick={() => setShow(true)}
-                className="flex justify-center items-center gap-5 bg-white hover:bg-[#F6E7E6] hover:dark:bg-[#2E2F30] dark:bg-black p-3 rounded-lg hover:text-black text-black dark:text-white "
-              >
-                <p className="font-semi-bold">GHC1599</p>
-                <span>
-                  <GrShop />
-                </span>
-              </button>
+          {product.map((product) => (
+            <div
+              data-aos="fade-left"
+              data-aos-duration="1100"
+              data-aos-delay="100"
+              data-aos-easing="ease-in-out"
+              className="flex relative flex-col   justify-center items-center bg-[#F1E9E9] dark:bg-[#191A1A] px-[2rem] py-5 rounded-lg h-fit hover:dark:bg-[#F1E9E9] hover:bg-[#191A1A] hover:text-white hover:dark:text-black hover:delay-300  hover:ease-in-out duration-200"
+            >
+              <img
+                src={product.image}
+                alt={product.title}
+                className="h-[10rem] xl:h-[10rem] -top-[3rem] absolute"
+              />
+              <div className="flex flex-col gap-2 mt-28">
+                <h2 className="font-bold">{product.title}</h2>
+                <button
+                  onClick={() => setShow(true)}
+                  className="flex justify-center items-center gap-5 bg-white hover:bg-[#F6E7E6] hover:dark:bg-[#2E2F30] dark:bg-black p-3 rounded-lg hover:text-black text-black dark:text-white "
+                >
+                  <p className="font-semi-bold">{product.price}</p>
+                  <span>
+                    <GrShop />
+                  </span>
+                </button>
+              </div>
             </div>
-          </div>
-          <PopCard onClose={handleOnClose} visible={show} />
+          ))}
 
-          <div
-            data-aos="fade-left"
-            data-aos-duration="1100"
-            data-aos-delay="100"
-            data-aos-easing="ease-in-out"
-            className="flex relative flex-col   justify-center items-center bg-[#F1E9E9] dark:bg-[#191A1A] px-[2rem] py-5 rounded-lg h-fit hover:dark:bg-[#F1E9E9] hover:bg-[#191A1A] hover:text-white hover:dark:text-black hover:delay-300   hover:ease-in-out duration-200"
-          >
-            <img
-              src={productImage2}
-              alt=""
-              className="h-[10rem] xl:h-[10rem] -top-[3rem] absolute"
-            />
-            <div className="flex flex-col gap-2 mt-28">
-              <h2 className="font-bold">Red & black</h2>
-              <button
-                onClick={() => setShow(true)}
-                className="flex justify-center items-center gap-5 bg-white hover:bg-[#F6E7E6] hover:dark:bg-[#2E2F30] dark:bg-black p-3 rounded-lg  hover:text-black text-black dark:text-white"
-              >
-                <p className="font-semi-bold">GHC1599</p>
-                <span>
-                  <GrShop />
-                </span>
-              </button>
-            </div>
-          </div>
-          <PopCard onClose={handleOnClose} visible={show} />
+          {/* <PopCard onClose={handleOnClose} visible={show} /> */}
 
-          <div
-            data-aos="fade-left"
-            data-aos-duration="1200"
-            data-aos-delay="200"
-            data-aos-easing="ease-in-out"
-            className="flex relative flex-col justify-center items-center bg-[#F1E9E9] dark:bg-[#191A1A] px-[2rem] py-5 rounded-lg h-fit hover:bg-[#191A1A] hover:text-white hover:dark:text-black hover:delay-300   hover:dark:bg-[#F1E9E9] hover:ease-in-out duration-200"
-          >
-            <img
-              src={productImage3}
-              alt=""
-              className="h-[10rem] xl:h-[10rem] -top-[3rem] absolute"
-            />
-            <div className="flex flex-col gap-2 mt-28">
-              <h2 className="font-bold">Gold & Black</h2>
-              <button
-                onClick={() => setShow(true)}
-                className="flex justify-center items-center gap-5 bg-white hover:bg-[#F6E7E6] hover:dark:bg-[#2E2F30] dark:bg-black p-3 rounded-lg hover:text-black text-black dark:text-white"
-              >
-                <p className="font-semi-bold">GHC1599</p>
-                <span>
-                  <GrShop />
-                </span>
-              </button>
-            </div>
-          </div>
-          <PopCard onClose={handleOnClose} visible={show} />
-
-          <div
-            data-aos="fade-left"
-            data-aos-duration="1300"
-            data-aos-delay="300"
-            data-aos-easing="ease-in-out"
-            className="flex relative flex-col justify-center items-center bg-[#F1E9E9] dark:bg-[#191A1A] px-[2rem] py-5 rounded-lg h-fit hover:dark:bg-[#F1E9E9] hover:bg-[#191A1A] hover:text-white hover:dark:text-black hover:delay-300  scale-100 hover:ease-in-out duration-200"
-          >
-            <img
-              src={productImage4}
-              alt=""
-              className="h-[10rem] xl:h-[10rem] -top-[3rem] absolute  "
-            />
-            <div className="flex flex-col gap-2 mt-28">
-              <h2 className="font-bold"> Blue</h2>
-
-              <button
-                onClick={() => setShow(true)}
-                className="flex justify-center items-center gap-5 bg-white hover:bg-[#F6E7E6] hover:dark:bg-[#2E2F30] dark:bg-black p-3 rounded-lg hover:text-black text-black dark:text-white"
-              >
-                <p className="font-semi-bold">GHC1599</p>
-                <span>
-                  <GrShop />
-                </span>
-              </button>
-            </div>
-          </div>
-          <PopCard onClose={handleOnClose} visible={show} />
-
-          <div
-            data-aos="fade-left"
-            data-aos-duration="1400"
-            data-aos-delay="400"
-            data-aos-easing="ease-in-out"
-            className="flex relative  flex-col justify-center items-center bg-[#F1E9E9] dark:bg-[#191A1A] px-[2rem] py-5 rounded-lg h-fit hover:dark:bg-[#F1E9E9] hover:bg-[#191A1A] hover:text-white hover:dark:text-black hover:delay-300  hover:ease-in-out duration-200"
-          >
-            <img
-              src={productImage5}
-              alt=""
-              className="h-[10rem] xl:h-[10rem] -top-[3rem] absolute"
-            />
-            <div className="flex flex-col gap-2 mt-28">
-              <h2 className="font-bold">Cream & Black</h2>
-              <button
-                onClick={() => setShow(true)}
-                className="flex justify-center items-center gap-5 bg-white hover:bg-[#F6E7E6] hover:dark:bg-[#2E2F30] dark:bg-black p-3 rounded-lg hover:text-black text-black dark:text-white"
-              >
-                <p className="font-semi-bold">GHC1599</p>
-                <span>
-                  <GrShop />
-                </span>
-              </button>
-            </div>
-          </div>
-          <PopCard onClose={handleOnClose} visible={show} />
+     
         </div>
       </div>
     </div>

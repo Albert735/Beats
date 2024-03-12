@@ -30,15 +30,15 @@ const Case = () => {
           data-aos="fade-up"
           data-aos-duration="1300"
           data-aos-easing="ease-in-out"
-          className="flex flex-col justify-center items-start p-[5rem]"
+          className="flex flex-col justify-center items-center md:items-start p-[5rem]"
         >
-          <p className="leading-loose text-[1.3rem]">
+          <p className="leading-normal md:text-[1.3rem] text-[1.2rem] md:text-start text-center ">
             With a comfortable and <br />
             adaptable case so that you
             <br /> can store it whenever you
             <br /> want, and keep your durability <br /> forever.
           </p>
-          <button className="dark:bg-[#f6e7e7] dark:text-black text-white bg-[#191A1A] gap-1 flex mt-[2rem]  py-3 px-7 rounded-[3rem] drop-shadow-md xl:hover:ml-3 hover:scale-110 hover:ease-in-out duration-500">
+          <button className="dark:bg-[#f6e7e7] dark:text-black text-white  bg-[#191A1A] gap-1 flex mt-[2rem]  py-3 px-7 rounded-[3rem] drop-shadow-md xl:hover:ml-3 hover:scale-110 hover:ease-in-out duration-500">
             <IoIosInformationCircleOutline size={24} />
             More Info
           </button>

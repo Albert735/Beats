@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import { RiMenu4Line } from "react-icons/ri";
 import { IoMoon } from "react-icons/io5";
 import { CiLight } from "react-icons/ci";
-import { BsCart3 } from "react-icons/bs";
+// import { BsCart3 } from "react-icons/bs";
 import { IoClose } from "react-icons/io5";
 import logo from "../assets/images/beats-logo-161616.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import CartModal from "./CartModal";
 AOS.init();
 
 
@@ -45,7 +46,7 @@ const Button = () => {
 
   return (
     <div className="xl:hidden relative flex gap-4 ">
-      <div className="">
+      {/* <div className="">
         <span className="relative flex h-5 w-5">
           <span className="absolute inline-flex rounded-full h-3 w-3 bg-[#DF1D3C] left-3 -top-1 text-white text-[10px] justify-center items-center">
             0
@@ -55,7 +56,8 @@ const Button = () => {
             className="cursor-pointer dark:text-white text-black font-bold"
           />
         </span>
-      </div>
+      </div> */}
+      <CartModal/>
       <div>
         <button className="flex justify-end" onClick={toggling}>
           <RiMenu4Line size={26} />
@@ -81,7 +83,7 @@ const Button = () => {
               onClick={toggleDropdown}
             />
 
-            <ul className="text-black w-[10rem] h-screen flex flex-col justify-center items-center gap-4 font-semi-bold">
+            <ul className="text-black w-[10rem] h-screen flex flex-col justify-center items-center gap-4 font-bold">
               <a href="#home">
                 <li
                   key="home"
