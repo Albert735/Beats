@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import productImage1 from "../assets/images/product1.png";
+// import React, { useState } from "react";
+// import productImage1 from "../assets/images/product1.png";
 // import productImage2 from "../assets/images/product2.png";
 // import productImage3 from "../assets/images/product3.png";
 // import productImage4 from "../assets/images/product4.png";
 // import productImage5 from "../assets/images/product5.png";
-import PopCard from "./PopCard";
+// import PopCard from "./PopCard";
 import { GrShop } from "react-icons/gr";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -13,8 +13,8 @@ import { product } from "../ProductArray";
 AOS.init();
 
 const Products = ({ items }) => {
-  const [show, setShow] = useState(false);
-  const handleOnClose = () => setShow(false);
+  // const [show, setShow] = useState(false);
+  // const handleOnClose = () => setShow(false);
 
   return (
     <div
@@ -43,7 +43,7 @@ const Products = ({ items }) => {
               <div className="flex flex-col gap-2 mt-28">
                 <h2 className="font-bold">{product.title}</h2>
                 <button
-                  onClick={() => setShow(true)}
+                  // onClick={() => setShow(true)}
                   className="flex justify-center items-center gap-5 bg-white hover:bg-[#F6E7E6] hover:dark:bg-[#2E2F30] dark:bg-black p-3 rounded-lg hover:text-black text-black dark:text-white "
                 >
                   <p className="font-semi-bold">{product.price}</p>
