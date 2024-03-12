@@ -29,10 +29,10 @@ const CartModal = () => {
           data-aos="fade-down"
           data-aos-duration="1000"
           data-aos-delay="ease-in-out"
-          className="flex justify-end fixed backdrop-blur-md h-screen w-screen  right-0 top-0 bg-opacity-10  bg-red-400 "
+          className="flex justify-end  fixed backdrop-blur-md h-screen w-screen  right-0 top-0 bg-opacity-10   "
         >
           <div className=" xl:w-[30rem] overflow-y-scroll relaive w-full bg-[#191A1A] dark:bg-[#FFFAFA]    dark:text-black text-white ">
-            <div className="flex fixed w-full justify-between items-center p-2 md:p-9">
+            <div className="flex w-full justify-between items-center p-2 md:p-9">
               <h1 className="font-sans  text-[20px] font-light m-2  dark:text-black text-white">
                 My Cart
               </h1>
@@ -42,13 +42,13 @@ const CartModal = () => {
                 onClick={toggleDropdown}
               />
             </div>
-            <div className="flex flex-col justify-center gap-10 items-center h-full mt-8">
+            <div className="flex flex-col justify-center items-center gap-10 ">
               {/* <TiShoppingCart size={50} />
               <p className="text-white dark:text-black">
                 Your shopping cart is empty
               </p> */}
               <CartItems />
-              <div className="flex flex-col justify-center items-center text-black text-[1rem] w-full p-2 gap-2 mb-5">
+              <div className="flex fixed  flex-col justify-center items-center text-black text-[1rem] w-full md:w-[30rem]  px-2 py-1 gap-2 mb-5 -bottom-5 dark:bg-[#FFFAFA] bg-[#191A1A]">
                 <button
                   type="button"
                   className="flex justify-between items-center w-full bg-gray-100 p-5 rounded-xl "
