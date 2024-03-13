@@ -2,7 +2,7 @@ import React from "react";
 import { FaMinus } from "react-icons/fa6";
 import { IoAdd } from "react-icons/io5";
 import productImage1 from "./assets/images/product1.png";
-import productImage2 from "./assets/images/product2.png";
+// import productImage2 from "./assets/images/product2.png";
 
 const CartItems = () => {
   return (
@@ -47,7 +47,7 @@ const CartItems = () => {
           </button>
         </div>
       </div>
-      <div className="flex w-full justify-between items-center p-4 rounded-lg">
+      {/* <div className="flex w-full justify-between items-center p-4 rounded-lg">
         <div className="flex justify-center items-start">
           <img src={productImage2} alt="" className="h-[8rem] md:h-[10rem]" />
         </div>
@@ -246,7 +246,7 @@ const CartItems = () => {
             Remove Item
           </button>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
