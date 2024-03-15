@@ -1,13 +1,14 @@
 import React from "react";
-import { FaMinus } from "react-icons/fa6";
-import { IoAdd } from "react-icons/io5";
-import productImage1 from "./assets/images/product1.png";
+// import { FaMinus } from "react-icons/fa6";
+// import { IoAdd } from "react-icons/io5";
+// import productImage1 from "./assets/images/product1.png";
 // import productImage2 from "./assets/images/product2.png";
 
 const CartItems = () => {
   return (
     <div className="flex relative flex-col justify-center items-center dark:text-black w-full md:w-[30rem] gap-y-7 md:font-light md:p-6">
-      <div className="flex w-full justify-between items-center p-4 rounded-lg">
+
+      {/* <div className="flex w-full justify-between items-center p-4 rounded-lg">
         <div className="flex justify-center items-start">
           <img src={productImage1} alt="" className="h-[8rem] md:h-[10rem]" />
         </div>
@@ -46,7 +47,7 @@ const CartItems = () => {
             Remove Item
           </button>
         </div>
-      </div>
+      </div> */}
       {/* <div className="flex w-full justify-between items-center p-4 rounded-lg">
         <div className="flex justify-center items-start">
           <img src={productImage2} alt="" className="h-[8rem] md:h-[10rem]" />

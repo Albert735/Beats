@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BsCart3 } from "react-icons/bs";
 import { TfiClose } from "react-icons/tfi";
-// import { TiShoppingCart } from "react-icons/ti";
+import { TiShoppingCart } from "react-icons/ti";
 import CartItems from "../CartItems";
 
 const CartModal = () => {
@@ -42,13 +42,16 @@ const CartModal = () => {
                 onClick={toggleDropdown}
               />
             </div>
-            <div className="flex flex-col justify-center items-center gap-10 ">
-              {/* <TiShoppingCart size={50} />
+            <div className="flex flex-col h-full justify-center items-center gap-2">
+              <TiShoppingCart size={50} />
               <p className="text-white dark:text-black">
                 Your shopping cart is empty
-              </p> */}
+              </p>
+              <a href="#products" onClick={toggleDropdown}>
+                <p className="underline font-light">Buy Now!</p>
+              </a>
               <CartItems />
-              <div className="flex fixed  flex-col justify-center items-center text-black text-[1rem] w-full md:w-[30rem]  px-2 py-1 gap-2 mb-5 -bottom-5 dark:bg-[#FFFAFA] bg-[#191A1A]">
+              {/* <div className="flex fixed  flex-col justify-center items-center text-black text-[1rem] w-full md:w-[30rem]  px-2 py-1 gap-2 mb-5 -bottom-5 dark:bg-[#FFFAFA] bg-[#191A1A]">
                 <button
                   type="button"
                   className="flex justify-between items-center w-full bg-gray-100 p-5 rounded-xl "
@@ -69,7 +72,7 @@ const CartModal = () => {
                 >
                   Buy Now
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
