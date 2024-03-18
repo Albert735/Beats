@@ -3,6 +3,8 @@ import { BsCart3 } from "react-icons/bs";
 import { TfiClose } from "react-icons/tfi";
 import { TiShoppingCart } from "react-icons/ti";
 import CartItems from "../CartItems";
+import { useStateContext } from "../Context/StateContext";
+// import { product } from "../ProductArray";
 
 const CartModal = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,6 +13,15 @@ const CartModal = () => {
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
+
+  const { cartItems } = useStateContext();
+
+  //  const [count, setCount] = useState()
+
+  //  handleClick (){
+  //   setCount(count + 1)
+  //  };
+   
 
   return (
     <div className=" relative  ">
@@ -43,14 +54,26 @@ const CartModal = () => {
               />
             </div>
             <div className="flex flex-col h-full justify-center items-center gap-2">
-              <TiShoppingCart size={50} />
-              <p className="text-white dark:text-black">
-                Your shopping cart is empty
-              </p>
-              <a href="#products" onClick={toggleDropdown}>
-                <p className="underline font-light">Buy Now!</p>
-              </a>
-              <CartItems />
+              {cartItems?.length === 0 ? (
+                <>
+                  <TiShoppingCart size={50} />
+                  <p className="text-white dark:text-black">
+                    Your shopping cart is empty
+                  </p>
+                  <a href="#products" onClick={toggleDropdown}>
+                    <p className="underline font-light">Buy Now!</p>
+                  </a>
+                </>
+              ) : (
+                cartItems.map((product) => (
+                  <CartItems
+                    key={product._id}
+                    productImage={product.image}
+                    productName={product.title}
+                    productPrice={product.price}
+                  />
+                ))
+              )}
               {/* <div className="flex fixed  flex-col justify-center items-center text-black text-[1rem] w-full md:w-[30rem]  px-2 py-1 gap-2 mb-5 -bottom-5 dark:bg-[#FFFAFA] bg-[#191A1A]">
                 <button
                   type="button"

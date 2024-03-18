@@ -9,16 +9,18 @@ import { GrShop } from "react-icons/gr";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { product } from "../ProductArray";
+import { useStateContext } from "../Context/StateContext";
 
 AOS.init();
 
 const Products = ({ items }) => {
+  const { addToCart } = useStateContext();
+
   // const [show, setShow] = useState(false);
   // const handleOnClose = () => setShow(false);
 
   return (
     <div
-      key={product.id}
       id="products"
       className="flex flex-col  justify-center items-center xl:mt-[10rem] my-[5rem] md:mt-[5rem] md:mb-[10rem] overflow-hidden"
     >
@@ -29,6 +31,7 @@ const Products = ({ items }) => {
         <div className="flex flex-wrap  justify-center items-center gap-7 xl:gap-[4rem] mt-[7rem] gap-y-[4rem]">
           {product.map((product) => (
             <div
+              key={product._id}
               data-aos="fade-left"
               data-aos-duration="1100"
               data-aos-delay="100"
@@ -43,7 +46,7 @@ const Products = ({ items }) => {
               <div className="flex flex-col gap-2 mt-28">
                 <h2 className="font-bold">{product.title}</h2>
                 <button
-                  // onClick={() => setShow(true)}
+                  onClick={() => addToCart({ ...product, quantity: 1 })}
                   className="flex justify-center items-center gap-5 bg-white hover:bg-[#F6E7E6] hover:dark:bg-[#2E2F30] dark:bg-black p-3 rounded-lg hover:text-black text-black dark:text-white "
                 >
                   <p className="font-semi-bold">{product.price}</p>
@@ -56,8 +59,6 @@ const Products = ({ items }) => {
           ))}
 
           {/* <PopCard onClose={handleOnClose} visible={show} /> */}
-
-     
         </div>
       </div>
     </div>

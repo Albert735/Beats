@@ -5,6 +5,7 @@ import productImage4 from "./assets/images/product4.png";
 import productImage5 from "./assets/images/product5.png"
 
 export const product = [
+  //keys: values
   {
     _id: "1",
     image: productImage1,
