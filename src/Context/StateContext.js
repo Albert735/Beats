@@ -8,7 +8,7 @@ export const StateContext = ({ children }) => {
   console.log({ cartItems });
 
   const addToCart = (product) => {
-    //create a variable to check if the item you are selecting is equal to the item in the cart
+    //create a variable to check if the item you are selecting is equal or id the same to the item in the cart
     const isProductInCart = cartItems.find((item) => item._id === product._id);
     //if the item you selected is already in cart it logs in message in the console that its already in cart
     if (isProductInCart) {
