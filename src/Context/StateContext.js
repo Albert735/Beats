@@ -8,15 +8,15 @@ export const StateContext = ({ children }) => {
   console.log({ cartItems });
 
   const addToCart = (product) => {
-    let currentArray = [...cartItems];
-    if (currentArray.includes(product))
-      console.log(product + "is already in cart");
-    else {
-      currentArray.push(product);
-      console.log(product + "added to cart");
-      console.log("Current cart item:", currentArray);
+    const isProductInCart = cartItems.find(item => item._id === product._id);
+    if (isProductInCart) {
+        console.log(product.title + " is already in the cart");
+    } else {
+        setCartItems([...cartItems, product]);
+        console.log(product.title + " added to cart");
+        console.log("Current cart items:", [...cartItems, product]);
     }
-  };
+};
 
   return (
     <Context.Provider
