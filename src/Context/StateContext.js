@@ -25,6 +25,19 @@ export const StateContext = ({ children }) => {
       console.log(product.title + " added to cart");
       //the current cart items logs a message to the console indicating the current item that is being logged to the console
       console.log("Current cart items:", [...cartItems, product]);
+
+      // if (isProductInCart) {
+      //   let updateArray;
+
+      //   updateArray = [...cartItems,product]
+
+      //   setTotalQuantity(totalQuantity + 1)   
+      // } else{
+      //   const updateProduct = cartItems.findIndex()
+      // }
+
+
+
     }
 
     // if (isProductInCart) {
@@ -57,7 +70,7 @@ export const StateContext = ({ children }) => {
         cartItems,
         setCartItems,
         addToCart,
-        removeFromCart,
+        removeFromCart
       }}
     >
       {children}
