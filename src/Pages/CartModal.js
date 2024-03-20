@@ -21,7 +21,6 @@ const CartModal = () => {
   //  handleClick (){
   //   setCount(count + 1)
   //  };
-   
 
   return (
     <div className=" relative  ">
@@ -67,13 +66,13 @@ const CartModal = () => {
               ) : (
                 cartItems.map((product) => (
                   <CartItems
+                    product={product}
                     key={product._id}
                     productImage={product.image}
                     productName={product.title}
                     productPrice={product.price}
                   />
                 ))
-                
               )}
               {/* <div className="flex fixed  flex-col justify-center items-center text-black text-[1rem] w-full md:w-[30rem]  px-2 py-1 gap-2 mb-5 -bottom-5 dark:bg-[#FFFAFA] bg-[#191A1A]">
                 <button

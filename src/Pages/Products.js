@@ -58,7 +58,7 @@ const Products = ({ items }) => {
             </div>
           ))}
 
-          {/* <PopCard onClose={handleOnClose} visible={show} /> */}
+     
         </div>
       </div>
     </div>

@@ -1,27 +1,20 @@
 import React from "react";
 import { FaMinus } from "react-icons/fa6";
 import { IoAdd } from "react-icons/io5";
+import { useStateContext } from "./Context/StateContext";
 // import { product } from "./ProductArray";
 // import { product } from "./ProductArray";
 // import { product } from "./ProductArray";
 // import productImage1 from "./assets/images/product1.png";
 // import productImage2 from "./assets/images/product2.png";
 
-const CartItems = ({ productImage, productName, productPrice }) => {
-  // const [count, setCount] = useState(0);
+const CartItems = ({ product, productImage, productName, productPrice }) => {
+  const { removeFromCart } = useStateContext();
+  // const { setTotalQuantity } = useStateContext();
 
-  // const handleIncrement = () => {
-  //   setCount(count + 1);
-  // };
-
-  // const handleDecrement = () => {
-  //   if (count > 0) {
-  //     setCount(count - 1);
-  //   }
-  // };
-
-
-
+  const handleRemoveFromCart = () => {
+    removeFromCart({ ...product._id });
+  };
 
   return (
     <div className="flex relative flex-col justify-center items-center dark:text-black w-full md:w-[30rem] gap-y-7 md:font-light md:p-6">
@@ -45,21 +38,20 @@ const CartItems = ({ productImage, productName, productPrice }) => {
               type="button"
               className="border border-gray-400 rounded-lg items-center"
             >
-              <FaMinus size={20} //onClick={handleDecrement} 
-              />
+              <FaMinus size={20} />
             </button>
             <span className="">
-              <p className=""> 0</p>
+              <p className="">0</p>
             </span>
             <button
               type="button"
               className="border border-gray-400 rounded-lg items-center"
             >
-              <IoAdd size={20} //onClick={handleIncrement} 
-              />
+              <IoAdd size={20} />
             </button>
           </div>
           <button
+            onClick={handleRemoveFromCart}
             type="button"
             className="hover:bg-red-400/10 text-red-400 w-full py-2 text-[18px] px-2 rounded-xl transition-all ease-in-out duration-200"
           >
