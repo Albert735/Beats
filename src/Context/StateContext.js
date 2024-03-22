@@ -20,16 +20,15 @@ export const StateContext = ({ children }) => {
       // Update quantity of existing product
       const updatedCartItems = cartItems.map((item) =>
         item._id === product._id
-          ? { ...item, quantity: item.quantity + 1 }
+          ? { ...item, quantity: item.quantity || 1 }
           : item
       );
       setCartItems(updatedCartItems);
       // Update total quantity
       setTotalQuantity(totalQuantity + 1);
-
       console.log(
-        `${product.title} quantity updated to ${item.quantity + 1} in cart.`
-      ); // Inside the map callback
+        `${product.title} quantity updated to ${product.quantity + 1} in cart.`
+      );
     } //else if its not in cart it therefor adds the cart item in the prodcut array  to cart
     else {
       setCartItems([...cartItems, product]);
@@ -49,10 +48,17 @@ export const StateContext = ({ children }) => {
     const updatedCartItems = cartItems.filter(
       (item) => item._id === product._id
     );
+      
+        // function removeItem (index) {
+        //   product.splice(index,1)
+          
+        // }
+
+
     //this update the cart items with new array of cart items, update cart items and sets the state to filter the spacific product id to be removed
     setCartItems(updatedCartItems);
     //this logs a message to the console telling you that the array if the item you've selected is removed from cart
-    console.log("Item removed from cart" + product._id);
+    console.log(product + "removed from cart" );
     //this also logs a mesaasge to the console to indicate that indeed the cart item has been removed
     console.log("Current cart items:", updatedCartItems);
   }

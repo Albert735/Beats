@@ -10,11 +10,15 @@ import { useStateContext } from "./Context/StateContext";
 
 const CartItems = ({ product, productImage, productName, productPrice }) => {
   const { removeFromCart } = useStateContext();
-  // const { setTotalQuantity } = useStateContext();
 
   const handleRemoveFromCart = () => {
     removeFromCart({ ...product._id });
+    console.log("Deleted product: " + productName);
   };
+  // function removeItem (index) {
+  //   product.splice(index,1)
+
+  // }
 
   return (
     <div className="flex relative flex-col justify-center items-center dark:text-black w-full md:w-[30rem] gap-y-7 md:font-light md:p-6">
