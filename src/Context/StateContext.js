@@ -37,17 +37,14 @@ export const StateContext = ({ children }) => {
       console.log("Current item in Cart:" + product.title);
     }
 
-    // const increment = (product) => {
-    //   const foundItemItem = cartItems.findIndex(
-    //     (item) => item._id === product._id
-    //   ); 
-    //  if (foundItemItem !== -1){
-    //   const updateCartItems = [...cartItems];
-    //   updateCartItems[foundItemItem].quantity++
-    //  }
-    //  isSelectedProductInCart(updateCartItems)
+    const increment = (product) => {
+      const foundItem = cartItems.findIndex(
+        (item) => item._id === product._id
+      ); 
+    let newArray= [...cartItems];
+
    
-    // };
+    };
   };
 
   //create a function and pass in the parameter productId
