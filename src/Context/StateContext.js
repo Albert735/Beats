@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState } from "react";
 // import { product } from "../ProductArray";
+// import { product } from "../ProductArray";
 
 const Context = createContext();
 
@@ -36,16 +37,34 @@ export const StateContext = ({ children }) => {
       console.log(product.title + ":added to cart");
       console.log("Current item in Cart:" + product.title);
     }
-
-    const increment = (product) => {
-      const foundItem = cartItems.findIndex(
-        (item) => item._id === product._id
-      ); 
-    let newArray= [...cartItems];
-
-   
-    };
   };
+
+  // const incrementCartItem = (product) => {
+  //   setCartItems(
+  //     cartItems.map((item) =>
+  //       item._id === product._id
+  //         ? { ...item, quantity: item.quantity + 1 }
+  //         : item
+  //     )
+  //   );
+  // };
+
+  // const decrementCartItem = (product) => {
+  //   const updateCartItems = cartItems
+  //     .map((item) => {
+  //       if (item._id === product._id) {
+  //         if (item.quantity > 1) {
+  //           return { ...item, quantity: item.quantity - 1 };
+  //         } else {
+  //           return null;
+  //         }
+  //       }
+  //       return item;
+  //     })
+  //     .filter(Boolean);
+  //   //filter to remove itme from the array
+  //   setCartItems(updateCartItems);
+  // };
 
   //create a function and pass in the parameter productId
   function removeFromCart(product) {
@@ -71,7 +90,8 @@ export const StateContext = ({ children }) => {
         setCartItems,
         addToCart,
         removeFromCart,
-    
+        incrementCartItem,
+        decrementCartItem,
       }}
     >
       {children}

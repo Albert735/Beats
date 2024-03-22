@@ -9,15 +9,12 @@ import { useStateContext } from "./Context/StateContext";
 // import productImage2 from "./assets/images/product2.png";
 
 const CartItems = ({ product, productImage, productName, productPrice }) => {
-  const { removeFromCart } = useStateContext();
- 
-  
+  const { removeFromCart, incrementCartItem, decrementCartItem } = useStateContext();
 
   const handleRemoveFromCart = () => {
     removeFromCart({ ...product._id });
     console.log("Deleted product: " + productName);
   };
-
 
   return (
     <div className="flex relative flex-col justify-center items-center dark:text-black w-full md:w-[30rem] gap-y-7 md:font-light md:p-6">
@@ -38,6 +35,7 @@ const CartItems = ({ product, productImage, productName, productPrice }) => {
           </div>
           <div className="flex gap-8 justify-center items-center p-2 rounded-lg">
             <button
+              onClick={() => decrementCartItem(product)}
               type="button"
               className="border border-gray-400 rounded-lg items-center"
             >
@@ -47,10 +45,11 @@ const CartItems = ({ product, productImage, productName, productPrice }) => {
               <p className="">{product.quantity}</p>
             </span>
             <button
+              onClick={() => incrementCartItem(product)}
               type="button"
               className="border border-gray-400 rounded-lg items-center"
             >
-              <IoAdd size={20} o/>
+              <IoAdd size={20} />
             </button>
           </div>
           <button
