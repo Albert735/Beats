@@ -9,12 +9,13 @@ import { useStateContext } from "./Context/StateContext";
 // import productImage2 from "./assets/images/product2.png";
 
 const CartItems = ({ product, productImage, productName, productPrice }) => {
-  const { removeFromCart, incrementCartItem, decrementCartItem } = useStateContext();
+  const { removeFromCart, incrementCartItem, decrementCartItem } =
+    useStateContext();
 
-  const handleRemoveFromCart = () => {
-    removeFromCart({ ...product._id });
-    console.log("Deleted product: " + productName);
-  };
+  // const handleRemoveFromCart = () => {
+  //   removeFromCart({ ...product._id });
+  //   console.log("Deleted product: " + productName);
+  // };
 
   return (
     <div className="flex relative flex-col justify-center items-center dark:text-black w-full md:w-[30rem] gap-y-7 md:font-light md:p-6">
@@ -53,7 +54,7 @@ const CartItems = ({ product, productImage, productName, productPrice }) => {
             </button>
           </div>
           <button
-            onClick={handleRemoveFromCart}
+            onClick={() => removeFromCart(product)}
             type="button"
             className="hover:bg-red-400/10 text-red-400 w-full py-2 text-[18px] px-2 rounded-xl transition-all ease-in-out duration-200"
           >

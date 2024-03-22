@@ -39,48 +39,48 @@ export const StateContext = ({ children }) => {
     }
   };
 
-  // const incrementCartItem = (product) => {
-  //   setCartItems(
-  //     cartItems.map((item) =>
-  //       item._id === product._id
-  //         ? { ...item, quantity: item.quantity + 1 }
-  //         : item
-  //     )
-  //   );
-  // };
+  const incrementCartItem = (product) => {
+    setCartItems(
+      cartItems.map((item) =>
+        item._id === product._id
+          ? { ...item, quantity: item.quantity + 1 }
+          : item
+      )
+    );
+  };
 
-  // const decrementCartItem = (product) => {
-  //   const updateCartItems = cartItems
-  //     .map((item) => {
-  //       if (item._id === product._id) {
-  //         if (item.quantity > 1) {
-  //           return { ...item, quantity: item.quantity - 1 };
-  //         } else {
-  //           return null;
-  //         }
-  //       }
-  //       return item;
-  //     })
-  //     .filter(Boolean);
-  //   //filter to remove itme from the array
-  //   setCartItems(updateCartItems);
-  // };
+  const decrementCartItem = (product) => {
+    const updateCartItems = cartItems
+      .map((item) => {
+        if (item._id === product._id) {
+          if (item.quantity > 1) {
+            return { ...item, quantity: item.quantity - 1 };
+          } else {
+            return null;
+          }
+        }
+        return item;
+      })
+      .filter(Boolean);
+    //filter to remove itme from the array
+    setCartItems(updateCartItems);
+  };
 
-  //create a function and pass in the parameter productId
+  //create a function and pass in the parameter product
   function removeFromCart(product) {
-    //this tells you that the product is being removed  alog with the productId
+    //this tells you that the product is being removed  along with the productId
     console.log("Removing item productId:", product._id);
-    //this line creates a new array called the updateCartItems by filtering the cartItems array.
-    //It  keeps the product which id matches the product to be passed
+    //created a new function called the updateCartItems by filtering out the cartItems array.
     const updatedCartItems = cartItems.filter(
-      (item) => item._id === product._id
+      //the filter function filters out the product id to be removed
+      (item) => item._id !== product._id
     );
     //this update the cart items with new array of cart items, update cart items and sets the state to filter the spacific product id to be removed
     setCartItems(updatedCartItems);
     //this logs a message to the console telling you that the array if the item you've selected is removed from cart
-    console.log(product + "removed from cart");
+    console.log(product.title + ":removed from cart");
     //this also logs a mesaasge to the console to indicate that indeed the cart item has been removed
-    console.log("Current cart items:", updatedCartItems);
+    console.log("Current cart items :", updatedCartItems);
   }
 
   return (
