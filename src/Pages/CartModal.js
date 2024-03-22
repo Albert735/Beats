@@ -16,17 +16,12 @@ const CartModal = () => {
 
   const { cartItems } = useStateContext();
 
-  //  const [count, setCount] = useState()
-
-  //  handleClick (){
-  //   setCount(count + 1)
-  //  };
 
   return (
     <div className=" relative  ">
       <span className="relative flex h-5 w-5">
         <span className="absolute inline-flex rounded-full h-3 w-3 bg-[#DF1D3C] left-3 -top-1 text-white text-[10px] justify-center items-center">
-          0
+          {/* {product.quantity} */}0
         </span>
         <BsCart3
           size={24}

@@ -5,38 +5,49 @@ const Context = createContext();
 
 export const StateContext = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
-  const [totalQuantity, setTotalQuantity] = useState(0);
+  // const [count, setCount] = useState;
 
   console.log({ cartItems });
 
   const addToCart = (product) => {
-    //create a variable to check if the item you are selecting is equal or id the same to the item in the cart
-    const isProductInCart = cartItems.find((item) => item._id === product._id)
-      ? true
-      : false;
-    console.log({ isProductInCart });
-    //if the item you selected is already in cart it logs in message in the console that its already in cart
-    if (isProductInCart) {
-      // Update quantity of existing product
-      const updatedCartItems = cartItems.map((item) =>
-        item._id === product._id
-          ? { ...item, quantity: item.quantity || 1 }
-          : item
-      );
-      setCartItems(updatedCartItems);
-      // Update total quantity
-      setTotalQuantity(totalQuantity + 1);
-      console.log(
-        `${product.title} quantity updated to ${product.quantity + 1} in cart.`
-      );
-    } //else if its not in cart it therefor adds the cart item in the prodcut array  to cart
-    else {
-      setCartItems([...cartItems, product]);
-      //so here we log the message the product title and added to cart string to the console
-      console.log(product.title + " added to cart");
-      //the current cart items logs a message to the console indicating the current item that is being logged to the console
-      console.log("Current cart items:", [...cartItems, product]);
+    const isSelectedProductInCart = cartItems.findIndex(
+      (item) => item._id === product._id
+    );
+
+    let isInCart;
+    if (isSelectedProductInCart >= 0) {
+      isInCart = true;
+    } else {
+      isInCart = false;
     }
+    console.log({ isSelectedProductInCart });
+    console.log({ isInCart });
+
+    if (isSelectedProductInCart >= 0) {
+      const updateCartItems = cartItems.map((item) => {
+        if (item._id === product._id) {
+          return { ...item, quantity: item.quantity + 1 };
+        }
+        return item;
+      });
+      setCartItems(updateCartItems);
+    } else {
+      setCartItems([...cartItems, product]);
+      console.log(product.title + ":added to cart");
+      console.log("Current item in Cart:" + product.title);
+    }
+
+    // const increment = (product) => {
+    //   const foundItemItem = cartItems.findIndex(
+    //     (item) => item._id === product._id
+    //   ); 
+    //  if (foundItemItem !== -1){
+    //   const updateCartItems = [...cartItems];
+    //   updateCartItems[foundItemItem].quantity++
+    //  }
+    //  isSelectedProductInCart(updateCartItems)
+   
+    // };
   };
 
   //create a function and pass in the parameter productId
@@ -48,17 +59,10 @@ export const StateContext = ({ children }) => {
     const updatedCartItems = cartItems.filter(
       (item) => item._id === product._id
     );
-      
-        // function removeItem (index) {
-        //   product.splice(index,1)
-          
-        // }
-
-
     //this update the cart items with new array of cart items, update cart items and sets the state to filter the spacific product id to be removed
     setCartItems(updatedCartItems);
     //this logs a message to the console telling you that the array if the item you've selected is removed from cart
-    console.log(product + "removed from cart" );
+    console.log(product + "removed from cart");
     //this also logs a mesaasge to the console to indicate that indeed the cart item has been removed
     console.log("Current cart items:", updatedCartItems);
   }
@@ -70,6 +74,7 @@ export const StateContext = ({ children }) => {
         setCartItems,
         addToCart,
         removeFromCart,
+    
       }}
     >
       {children}

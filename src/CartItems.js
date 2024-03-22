@@ -10,6 +10,8 @@ import { useStateContext } from "./Context/StateContext";
 
 const CartItems = ({ product, productImage, productName, productPrice }) => {
   const { removeFromCart } = useStateContext();
+ 
+  
 
   const handleRemoveFromCart = () => {
     removeFromCart({ ...product._id });
@@ -42,13 +44,13 @@ const CartItems = ({ product, productImage, productName, productPrice }) => {
               <FaMinus size={20} />
             </button>
             <span className="">
-              <p className="">0</p>
+              <p className="">{product.quantity}</p>
             </span>
             <button
               type="button"
               className="border border-gray-400 rounded-lg items-center"
             >
-              <IoAdd size={20} />
+              <IoAdd size={20} o/>
             </button>
           </div>
           <button
