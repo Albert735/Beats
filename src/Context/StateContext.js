@@ -40,13 +40,14 @@ export const StateContext = ({ children }) => {
   };
 
   const incrementCartItem = (product) => {
-    setCartItems(
-      cartItems.map((item) =>
-        item._id === product._id
-          ? { ...item, quantity: item.quantity + 1 }
-          : item
-      )
-    );
+    const updateCartItems = cartItems.map((item) => {
+      if (item._id === product._id) {
+        return { ...item, quantity: item.quantity + 1 };
+      } else {
+        return item;
+      }
+    });
+    setCartItems(updateCartItems);
   };
 
   const decrementCartItem = (product) => {
