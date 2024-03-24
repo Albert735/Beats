@@ -6,6 +6,7 @@ const Context = createContext();
 
 export const StateContext = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
+  // const [totalPrice, talPrice] = useState(0);
   // const [count, setCount] = useState;
 
   console.log({ cartItems });
@@ -48,6 +49,7 @@ export const StateContext = ({ children }) => {
       }
     });
     setCartItems(updateCartItems);
+    // setTotalPrice(totalPrice + product.price);
   };
 
   const decrementCartItem = (product) => {
@@ -66,6 +68,20 @@ export const StateContext = ({ children }) => {
     //filter to remove itme from the array
     setCartItems(updateCartItems);
   };
+
+  // const totalPrice = (product) => {
+  //   let totalPrice = 0;
+  //   const updateCartItems = cartItems.map((item) => {
+  //     if (item._id === product._id) {
+  //       totalPrice += product.price + 1;
+  //       return { ...item, price: item.price + 1 };
+  //     } else {
+  //       totalPrice += product.price;
+  //       return item;
+  //     }
+  //   });
+  //  return  totalPrice(updateCartItems);
+  // };
 
   //create a function and pass in the parameter product
   function removeFromCart(product) {
@@ -93,6 +109,7 @@ export const StateContext = ({ children }) => {
         removeFromCart,
         incrementCartItem,
         decrementCartItem,
+        // totalPrice,
       }}
     >
       {children}

@@ -12,25 +12,22 @@ const CartItems = ({ product, productImage, productName, productPrice }) => {
   const { removeFromCart, incrementCartItem, decrementCartItem } =
     useStateContext();
 
-  // const handleRemoveFromCart = () => {
-  //   removeFromCart({ ...product._id });
-  //   console.log("Deleted product: " + productName);
-  // };
+
 
   return (
-    <div className="flex relative flex-col justify-center items-center dark:text-black w-full md:w-[30rem] gap-y-7 md:font-light md:p-6">
+    <div className="flex relative flex-col justify-center items-center bg-slate-100 rounded-2xl dark:text-black text-black w-[24rem] md:w-[28rem] gap-y-10 md:font-light md:p-6 mb-[1rem] ">
       <div className="flex w-full justify-between items-center p-4 rounded-lg">
         <div className="flex justify-center items-start">
           <img src={productImage} alt="" className="h-[8rem] md:h-[10rem]" />
         </div>
         <div className="w-[13rem] space-y-5 ">
-          <div className="flex  justify-between items-center w-full">
-            <div className="flex flex-col justify-between items-start w-full">
-              <h1>Product</h1>
-              <h1>Price</h1>
-            </div>
-            <div className="flex flex-col justify-center items-end w-full">
+          <div className="flex flex-col justify-center items-center  ">
+            <div className="flex  justify-between  w-full">
+              <h1 className="font-bold">Product</h1>
               <h1>{productName}</h1>
+            </div>
+            <div className="flex justify-between  w-full">
+              <h1 className="font-bold">Price</h1>
               <p>{productPrice}</p>
             </div>
           </div>
