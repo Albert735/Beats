@@ -14,13 +14,13 @@ const CartModal = () => {
     setIsOpen(!isOpen);
   };
 
-  const { cartItems,} = useStateContext();
+  const { cartItems,totalQuantity,} = useStateContext();
 
   return (
     <div className=" relative  ">
       <span className="relative flex h-5 w-5">
-        <span className="absolute inline-flex rounded-full h-3 w-3 bg-[#DF1D3C] left-3 -top-1 text-white text-[10px] justify-center items-center">
-          {/* {product.quantity} */}0
+        <span className="absolute inline-flex rounded-full h-4 w-4 bg-[#DF1D3C] left-3 -top-1 text-white text-[10px] justify-center items-center">
+       {totalQuantity}
         </span>
         <BsCart3
           size={24}
@@ -59,7 +59,7 @@ const CartModal = () => {
                 </div>
               ) : (
                 cartItems.map((product) => (
-                  <>
+                  
                     <CartItems
                       product={product}
                       key={product._id}
@@ -67,31 +67,31 @@ const CartModal = () => {
                       productName={product.title}
                       productPrice={product.price}
                     />
-                    <>
-                      <div className="flex fixed  flex-col justify-center items-center text-black text-[1rem] w-full md:w-[30rem]  px-2 py-1 gap-2 mb-5 -bottom-5 dark:bg-[#FFFAFA] bg-[#191A1A]">
-                        <button
-                          type="button"
-                          className="flex justify-between items-center w-full bg-gray-100 p-5 rounded-xl "
-                        >
-                          <span>Sub total</span>
-                          <span>Ghc 800</span>
-                        </button>
-                        <button
-                          type="button"
-                          className="flex justify-between items-center w-full bg-gray-100 p-5 rounded-xl font-bold"
-                        >
-                          <span>Total</span>
-                          <span>{product.quantity}</span>
-                        </button>
-                        <button
-                          type="button"
-                          className="flex justify-center items-center w-full bg-[#000000] p-5 rounded-xl text-white font-bold"
-                        >
-                          Buy Now
-                        </button>
-                      </div>
-                    </>
-                  </>
+                   
+                      //* <div className="flex fixed  flex-col justify-center items-center text-black text-[1rem] w-full md:w-[30rem]  px-2 py-1 gap-2 mb-5 -bottom-5 dark:bg-[#FFFAFA] bg-[#191A1A]">
+                      //   <button
+                      //     type="button"
+                      //     className="flex justify-between items-center w-full bg-gray-100 p-5 rounded-xl "
+                      //   >
+                      //     <span>Sub total</span>
+                      //     <span>Ghc 800</span>
+                      //   </button>
+                      //   <button
+                      //     type="button"
+                      //     className="flex justify-between items-center w-full bg-gray-100 p-5 rounded-xl font-bold"
+                      //   >
+                      //     <span>Total</span>
+                      //     <span>0</span>
+                      //   </button>
+                      //   <button
+                      //     type="button"
+                      //     className="flex justify-center items-center w-full bg-[#000000] p-5 rounded-xl text-white font-bold"
+                      //   >
+                      //     Buy Now
+                      //   </button>
+                      // </div> *
+                   
+              
                 ))
               )}
             </div>

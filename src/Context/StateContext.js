@@ -1,13 +1,14 @@
 import React, { createContext, useContext, useState } from "react";
 // import { product } from "../ProductArray";
 // import { product } from "../ProductArray";
+// import { product } from "../ProductArray";
 
 const Context = createContext();
 
 export const StateContext = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
-  // const [totalPrice, talPrice] = useState(0);
-  // const [count, setCount] = useState;
+  const [totalQuantity, setTotalQuantity] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   console.log({ cartItems });
 
@@ -34,10 +35,26 @@ export const StateContext = ({ children }) => {
       });
       setCartItems(updateCartItems);
     } else {
+      // setTotalPrice(totalPrice + updateCartItems)
       setCartItems([...cartItems, product]);
       console.log(product.title + ":added to cart");
       console.log("Current item in Cart:" + product.title);
     }
+
+    const totalQuantity = cartItems.reduce((total, item) => {
+      return total + item.quantity;
+    }, 1);
+    setTotalQuantity(totalQuantity);
+
+    const totalPrice = cartItems.reduce((total, item) => {
+      if (item._id === product._id) {
+        return item.price * item.quantity;
+      } else {
+        return total;
+      }
+    },0);
+    console.log(totalPrice)
+    setTotalPrice(totalPrice)
   };
 
   const incrementCartItem = (product) => {
@@ -49,7 +66,21 @@ export const StateContext = ({ children }) => {
       }
     });
     setCartItems(updateCartItems);
-    // setTotalPrice(totalPrice + product.price);
+    const totalQuantity = cartItems.reduce((total, item) => {
+      return total + item.quantity;
+    }, 1);
+
+    setTotalQuantity(totalQuantity);
+    const totalPrice = cartItems.reduce((total, item) => {
+      if (item._id === product._id) {
+        return total + (item?.price || 0);
+      } else {
+        return total;
+      }
+    }, 0);
+    console.log("heyyyy" + totalPrice);
+
+    setTotalPrice((prevTotalPrice) => prevTotalPrice + totalPrice);
   };
 
   const decrementCartItem = (product) => {
@@ -65,23 +96,26 @@ export const StateContext = ({ children }) => {
         return item;
       })
       .filter(Boolean);
-    //filter to remove itme from the array
+    //filter to remove item from the array
     setCartItems(updateCartItems);
-  };
 
-  // const totalPrice = (product) => {
-  //   let totalPrice = 0;
-  //   const updateCartItems = cartItems.map((item) => {
-  //     if (item._id === product._id) {
-  //       totalPrice += product.price + 1;
-  //       return { ...item, price: item.price + 1 };
-  //     } else {
-  //       totalPrice += product.price;
-  //       return item;
-  //     }
-  //   });
-  //  return  totalPrice(updateCartItems);
-  // };
+    const totalQuantity = cartItems.reduce((total, item) => {
+      return total + item.quantity;
+    }, -1);
+    setTotalQuantity(totalQuantity);
+
+    setTotalQuantity(totalQuantity);
+    const totalPrice = cartItems.reduce((total, item) => {
+      if (item._id === product._id) {
+        return total + item.price;
+      } else {
+        return total;
+      }
+    }, 0);
+    console.log("heyyyy" + totalPrice);
+
+    setTotalPrice((prevTotalPrice) => prevTotalPrice - totalPrice);
+  };
 
   //create a function and pass in the parameter product
   function removeFromCart(product) {
@@ -98,6 +132,14 @@ export const StateContext = ({ children }) => {
     console.log(product.title + ":removed from cart");
     //this also logs a mesaasge to the console to indicate that indeed the cart item has been removed
     console.log("Current cart items :", updatedCartItems);
+
+    const removedProduct = cartItems.find((item) => item._id === product._id);
+
+    if (removedProduct) {
+      setTotalQuantity(
+        (prevTotalQuantity) => prevTotalQuantity - removedProduct?.quantity
+      );
+    }
   }
 
   return (
@@ -109,7 +151,9 @@ export const StateContext = ({ children }) => {
         removeFromCart,
         incrementCartItem,
         decrementCartItem,
-        // totalPrice,
+        totalQuantity,
+        // subTotalPrice,
+        totalPrice,
       }}
     >
       {children}

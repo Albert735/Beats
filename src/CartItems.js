@@ -9,10 +9,8 @@ import { useStateContext } from "./Context/StateContext";
 // import productImage2 from "./assets/images/product2.png";
 
 const CartItems = ({ product, productImage, productName, productPrice }) => {
-  const { removeFromCart, incrementCartItem, decrementCartItem } =
+  const { removeFromCart, incrementCartItem, decrementCartItem ,totalPrice} =
     useStateContext();
-
-
 
   return (
     <div className="flex relative flex-col justify-center items-center bg-slate-100 rounded-2xl dark:text-black text-black w-[24rem] md:w-[28rem] gap-y-10 md:font-light md:p-6 mb-[1rem] ">
@@ -29,6 +27,10 @@ const CartItems = ({ product, productImage, productName, productPrice }) => {
             <div className="flex justify-between  w-full">
               <h1 className="font-bold">Price</h1>
               <p>{productPrice}</p>
+            </div>
+            <div className="flex justify-between items-center w-full border-t-4">
+              <h1>Total</h1>
+              <h1>{totalPrice}</h1>
             </div>
           </div>
           <div className="flex gap-8 justify-center items-center p-2 rounded-lg">

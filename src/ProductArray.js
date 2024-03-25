@@ -10,31 +10,31 @@ export const product = [
     _id: "1",
     image: productImage1,
     title: "Black",
-    price: 'Ghc 1,599' ,
+    price:  1599 ,
   },
   {
     _id: "2",
     image: productImage2,
     title: "Red & black",
-    price: 'Ghc 1,399',
+    price:  1399,
   },
   {
     _id: "3",
     image: productImage3,
     title: "Gold & black",
-    price: 'Ghc 2,000',
+    price:  2000,
   },
   {
     _id: "4",
     image: productImage4,
     title: "Blue",
-    price: 'Ghc 1,765',
+    price: 1765,
   },
 
   {
     _id: "5",
     image: productImage5,
     title: "Cream and black",
-    price: 'Ghc 800',
+    price: 800,
   }
 ];

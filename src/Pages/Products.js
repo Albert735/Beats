@@ -49,7 +49,7 @@ const Products = ({ items }) => {
                   onClick={() => addToCart({ ...product, quantity: 1 })}
                   className="flex justify-center items-center gap-5 bg-white hover:bg-[#F6E7E6] hover:dark:bg-[#2E2F30] dark:bg-black p-3 rounded-lg hover:text-black text-black dark:text-white "
                 >
-                  <p className="font-semi-bold">{product.price}</p>
+                  <p className="font-semi-bold">Ghc {product.price}</p>
                   <span>
                     <GrShop />
                   </span>
@@ -57,8 +57,6 @@ const Products = ({ items }) => {
               </div>
             </div>
           ))}
-
-     
         </div>
       </div>
     </div>
