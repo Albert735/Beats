@@ -52,9 +52,9 @@ export const StateContext = ({ children }) => {
       } else {
         return total;
       }
-    },0);
-    console.log(totalPrice)
-    setTotalPrice(totalPrice)
+    }, 0);
+    console.log(totalPrice);
+    setTotalPrice(totalPrice);
   };
 
   const incrementCartItem = (product) => {

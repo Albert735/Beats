@@ -9,7 +9,7 @@ import { useStateContext } from "./Context/StateContext";
 // import productImage2 from "./assets/images/product2.png";
 
 const CartItems = ({ product, productImage, productName, productPrice }) => {
-  const { removeFromCart, incrementCartItem, decrementCartItem ,totalPrice} =
+  const { removeFromCart, incrementCartItem, decrementCartItem, totalPrice } =
     useStateContext();
 
   return (
@@ -30,7 +30,7 @@ const CartItems = ({ product, productImage, productName, productPrice }) => {
             </div>
             <div className="flex justify-between items-center w-full border-t-4">
               <h1>Total</h1>
-              <h1>{totalPrice}</h1>
+              <h1>Ghc {totalPrice}</h1>
             </div>
           </div>
           <div className="flex gap-8 justify-center items-center p-2 rounded-lg">
