@@ -13,22 +13,26 @@ const CartItems = ({ product, productImage, productName, productPrice }) => {
     useStateContext();
 
   return (
-    <div className="flex relative flex-col justify-center items-center bg-slate-100 rounded-2xl dark:text-black text-black w-[24rem] md:w-[28rem] gap-y-10 md:font-light md:p-6 mb-[1rem] ">
-      <div className="flex w-full justify-between items-center p-4 rounded-lg">
-        <div className="flex justify-center items-start">
-          <img src={productImage} alt="" className="h-[8rem] md:h-[10rem]" />
+    <div className="flex relative flex-col justify-center items-center bg-slate-100 rounded-2xl dark:text-black text-black w-[24rem] md:w-[35rem] xl:w-[25rem]  gap-y-10 md:font-light md:p-6 mb-[1rem] ">
+      <div className="flex md:flex-row w-full  justify-between md:justify-center xl:justify-between xl:gap-[2rem] md:gap-[8rem] items-center p-4 rounded-lg">
+        <div className="flex justify-start items-start w-full">
+          <img
+            src={productImage}
+            alt=""
+            className="h-[8rem] md:h-[10rem] xl:h-[9rem] "
+          />
         </div>
-        <div className="w-[13rem] space-y-5 ">
-          <div className="flex flex-col justify-center items-center  ">
-            <div className="flex  justify-between  w-full">
+        <div className="md:flex-row xl:flex-none w-[13rem] xl:w-[11rem]  space-y-5 ">
+          <div className="flex flex-col md:flex-row justify-center items-start md:gap-[2rem] xl:gap-1 gap-y-2 xl:flex-col  ">
+            <div className="flex md:flex-col xl:flex-row  justify-between  w-full">
               <h1 className="font-bold">Product</h1>
               <h1>{productName}</h1>
             </div>
-            <div className="flex justify-between  w-full">
+            <div className="flex  md:flex-col  xl:flex-row justify-between w-full">
               <h1 className="font-bold">Price</h1>
               <p>{productPrice}</p>
             </div>
-            <div className="flex justify-between items-center w-full border-t-4">
+            <div className="flex md:flex-col  xl:flex-row justify-between items-center w-full ">
               <h1>Total</h1>
               <h1>Ghc {totalPrice}</h1>
             </div>

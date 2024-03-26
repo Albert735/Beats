@@ -9,14 +9,15 @@ export const StateContext = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
   const [totalQuantity, setTotalQuantity] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [totalTax, setTotalTax] = useState(0);
 
-  console.log({ cartItems });
+  // console.log({ cartItems });
 
   const addToCart = (product) => {
     const isSelectedProductInCart = cartItems.findIndex(
       (item) => item._id === product._id
     );
-
+    //check if item is in the cart
     let isInCart;
     if (isSelectedProductInCart >= 0) {
       isInCart = true;
@@ -25,7 +26,7 @@ export const StateContext = ({ children }) => {
     }
     console.log({ isSelectedProductInCart });
     console.log({ isInCart });
-
+    // if iteem is not then its supposed to add it
     if (isSelectedProductInCart >= 0) {
       const updateCartItems = cartItems.map((item) => {
         if (item._id === product._id) {
@@ -35,17 +36,18 @@ export const StateContext = ({ children }) => {
       });
       setCartItems(updateCartItems);
     } else {
-      // setTotalPrice(totalPrice + updateCartItems)
       setCartItems([...cartItems, product]);
       console.log(product.title + ":added to cart");
       console.log("Current item in Cart:" + product.title);
     }
 
+    /////////////////total quantity on addition////////////////////////
     const totalQuantity = cartItems.reduce((total, item) => {
-      return total + item.quantity;
+      return total + item.quantity ;
     }, 1);
     setTotalQuantity(totalQuantity);
 
+    //////////////tottal price of each item on addition////////////////
     const totalPrice = cartItems.reduce((total, item) => {
       if (item._id === product._id) {
         return item.price * item.quantity;
@@ -55,8 +57,19 @@ export const StateContext = ({ children }) => {
     }, 0);
     console.log(totalPrice);
     setTotalPrice(totalPrice);
-  };
 
+    ////////////tax on addition///////////////
+    const totalTax = cartItems.reduce((total, item) => {
+      if (item._id === product._id) {
+        return total + item.price * 0.2; // Assuming tax rate is 20% (0.2)
+      } else {
+        return total;
+      }
+    }, 0);
+
+    setTotalTax(totalTax);
+  };
+  ///////////////////increment sign//////////////////////////
   const incrementCartItem = (product) => {
     const updateCartItems = cartItems.map((item) => {
       if (item._id === product._id) {
@@ -71,18 +84,29 @@ export const StateContext = ({ children }) => {
     }, 1);
 
     setTotalQuantity(totalQuantity);
+
     const totalPrice = cartItems.reduce((total, item) => {
       if (item._id === product._id) {
-        return total + (item?.price || 0);
+        return item.price * item.quantity;
       } else {
         return total;
       }
     }, 0);
-    console.log("heyyyy" + totalPrice);
+    console.log(totalPrice);
+    setTotalPrice(totalPrice);
 
-    setTotalPrice((prevTotalPrice) => prevTotalPrice + totalPrice);
+
+    const totalTax = cartItems.reduce((total, item) => {
+      if (item._id === product._id) {
+        return total + item.price * 0.2; // Assuming tax rate is 20% (0.2)
+      } else {
+        return total;
+      }
+    }, 0);
+
+    setTotalTax(totalTax);
   };
-
+  //////////////////////decrement sign///////////////////////
   const decrementCartItem = (product) => {
     const updateCartItems = cartItems
       .map((item) => {
@@ -117,6 +141,7 @@ export const StateContext = ({ children }) => {
     setTotalPrice((prevTotalPrice) => prevTotalPrice - totalPrice);
   };
 
+  ///////////////////////rmove from cart//////////////////
   //create a function and pass in the parameter product
   function removeFromCart(product) {
     //this tells you that the product is being removed  along with the productId
@@ -131,7 +156,7 @@ export const StateContext = ({ children }) => {
     //this logs a message to the console telling you that the array if the item you've selected is removed from cart
     console.log(product.title + ":removed from cart");
     //this also logs a mesaasge to the console to indicate that indeed the cart item has been removed
-    console.log("Current cart items :", updatedCartItems);
+    console.log("Current cart item removed :", product.title);
 
     const removedProduct = cartItems.find((item) => item._id === product._id);
 
@@ -154,6 +179,7 @@ export const StateContext = ({ children }) => {
         totalQuantity,
         // subTotalPrice,
         totalPrice,
+        totalTax,
       }}
     >
       {children}
