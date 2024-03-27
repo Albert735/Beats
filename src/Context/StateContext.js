@@ -1,15 +1,11 @@
 import React, { createContext, useContext, useState } from "react";
-// import { product } from "../ProductArray";
-// import { product } from "../ProductArray";
-// import { product } from "../ProductArray";
-
 const Context = createContext();
 
 export const StateContext = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
   const [totalQuantity, setTotalQuantity] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
-  const [totalTax, setTotalTax] = useState(0);
+  // const [totalTax, setTotalTax] = useState(0);
 
   // console.log({ cartItems });
 
@@ -26,7 +22,7 @@ export const StateContext = ({ children }) => {
     }
     console.log({ isSelectedProductInCart });
     console.log({ isInCart });
-    // if iteem is not then its supposed to add it
+    // if item is not there then its supposed to add it
     if (isSelectedProductInCart >= 0) {
       const updateCartItems = cartItems.map((item) => {
         if (item._id === product._id) {
@@ -40,35 +36,22 @@ export const StateContext = ({ children }) => {
       console.log(product.title + ":added to cart");
       console.log("Current item in Cart:" + product.title);
     }
+    ///////Total Quantity///////////////
+    setTotalQuantity((prev) => prev + product?.quantity);
+    console.log(totalQuantity);
 
-    /////////////////total quantity on addition////////////////////////
-    const totalQuantity = cartItems.reduce((total, item) => {
-      return total + item.quantity ;
-    }, 1);
-    setTotalQuantity(totalQuantity);
-
-    //////////////tottal price of each item on addition////////////////
+    /////////totalPrice/////////
     const totalPrice = cartItems.reduce((total, item) => {
       if (item._id === product._id) {
-        return item.price * item.quantity;
+        return total += item?.price;
       } else {
         return total;
       }
-    }, 0);
-    console.log(totalPrice);
-    setTotalPrice(totalPrice);
-
-    ////////////tax on addition///////////////
-    const totalTax = cartItems.reduce((total, item) => {
-      if (item._id === product._id) {
-        return total + item.price * 0.2; // Assuming tax rate is 20% (0.2)
-      } else {
-        return total;
-      }
-    }, 0);
-
-    setTotalTax(totalTax);
+    },0);
+    console.log(totalPrice)
+    setTotalPrice( (prev) => prev + product?.price);
   };
+
   ///////////////////increment sign//////////////////////////
   const incrementCartItem = (product) => {
     const updateCartItems = cartItems.map((item) => {
@@ -77,35 +60,21 @@ export const StateContext = ({ children }) => {
       } else {
         return item;
       }
-    });
+    },0);
     setCartItems(updateCartItems);
-    const totalQuantity = cartItems.reduce((total, item) => {
-      return total + item.quantity;
-    }, 1);
-
-    setTotalQuantity(totalQuantity);
+    setTotalQuantity((prev) => prev + 1);
 
     const totalPrice = cartItems.reduce((total, item) => {
       if (item._id === product._id) {
-        return item.price * item.quantity;
+        return total += item?.price;
       } else {
         return total;
       }
-    }, 0);
-    console.log(totalPrice);
-    setTotalPrice(totalPrice);
-
-
-    const totalTax = cartItems.reduce((total, item) => {
-      if (item._id === product._id) {
-        return total + item.price * 0.2; // Assuming tax rate is 20% (0.2)
-      } else {
-        return total;
-      }
-    }, 0);
-
-    setTotalTax(totalTax);
+    },0);
+    console.log(totalPrice)
+    setTotalPrice( (prev) => prev + product?.price);
   };
+
   //////////////////////decrement sign///////////////////////
   const decrementCartItem = (product) => {
     const updateCartItems = cartItems
@@ -120,51 +89,41 @@ export const StateContext = ({ children }) => {
         return item;
       })
       .filter(Boolean);
-    //filter to remove item from the array
     setCartItems(updateCartItems);
+    setTotalQuantity((prev) => prev - 1);
 
-    const totalQuantity = cartItems.reduce((total, item) => {
-      return total + item.quantity;
-    }, -1);
-    setTotalQuantity(totalQuantity);
-
-    setTotalQuantity(totalQuantity);
     const totalPrice = cartItems.reduce((total, item) => {
       if (item._id === product._id) {
-        return total + item.price;
+        return total -= item?.price;
       } else {
         return total;
       }
-    }, 0);
-    console.log("heyyyy" + totalPrice);
-
-    setTotalPrice((prevTotalPrice) => prevTotalPrice - totalPrice);
+    },0);
+    console.log(totalPrice)
+    setTotalPrice( (prev) => prev - product?.price);
   };
 
-  ///////////////////////rmove from cart//////////////////
-  //create a function and pass in the parameter product
+  ////////////removeFromCart///////
   function removeFromCart(product) {
-    //this tells you that the product is being removed  along with the productId
-    console.log("Removing item productId:", product._id);
-    //created a new function called the updateCartItems by filtering out the cartItems array.
-    const updatedCartItems = cartItems.filter(
-      //the filter function filters out the product id to be removed
+    console.log("removing from cart product id", product._id);
+    const updateCartItems = cartItems.filter(
       (item) => item._id !== product._id
     );
-    //this update the cart items with new array of cart items, update cart items and sets the state to filter the spacific product id to be removed
-    setCartItems(updatedCartItems);
-    //this logs a message to the console telling you that the array if the item you've selected is removed from cart
-    console.log(product.title + ":removed from cart");
-    //this also logs a mesaasge to the console to indicate that indeed the cart item has been removed
-    console.log("Current cart item removed :", product.title);
+    setCartItems(updateCartItems);
 
-    const removedProduct = cartItems.find((item) => item._id === product._id);
+    const removedFromCart = cartItems.find((item) => item._id === product._id);
+    setTotalQuantity((prev) => prev - removedFromCart.quantity);
+    console.log(removedFromCart.quantity, product.title + ":has been removed");
 
-    if (removedProduct) {
-      setTotalQuantity(
-        (prevTotalQuantity) => prevTotalQuantity - removedProduct?.quantity
-      );
-    }
+    const totalPrice = cartItems.reduce((total, item) => {
+      if (item._id === product._id) {
+        return total + item?.price;
+      } else {
+        return total;
+      }
+    },0);
+    console.log(totalPrice)
+    setTotalPrice(prev => prev - (product?.price * product.quantity));
   }
 
   return (
@@ -177,9 +136,8 @@ export const StateContext = ({ children }) => {
         incrementCartItem,
         decrementCartItem,
         totalQuantity,
-        // subTotalPrice,
         totalPrice,
-        totalTax,
+        // totalTax,
       }}
     >
       {children}
