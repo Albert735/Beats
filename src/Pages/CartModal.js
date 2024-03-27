@@ -14,7 +14,7 @@ const CartModal = () => {
     setIsOpen(!isOpen);
   };
 
-  const { cartItems, totalQuantity } = useStateContext();
+  const { cartItems, totalQuantity, totalPrice } = useStateContext();
 
   return (
     <div className=" relative  ">
@@ -33,33 +33,36 @@ const CartModal = () => {
           data-aos="fade-left"
           data-aos-duration="1000"
           data-aos-delay="ease-in-out"
-          className="flex justify-end fixed backdrop-blur-md h-screen w-screen  right-0 top-0 bg-opacity-10   "
+          className="fixed top-0 left-0 w-full h-screen dark:bg-[#191A1A] bg-[#FFFAFA]"
         >
-          <div className=" xl:w-[30rem] overflow-y-scroll relaive w-full bg-[#191A1A] dark:bg-[#FFFAFA] dark:text-black text-white ">
-            <div className="flex w-full justify-between items-center p-2 md:p-9">
-              <h1 className="font-sans  text-[20px] font-light m-2  dark:text-black text-white">
-                My Cart
-              </h1>
-              <TfiClose
-                size={24}
-                className=" m-2  cursor-pointer"
-                onClick={toggleDropdown}
-              />
-            </div>
-            <div className=" flex flex-col h-full justify-start items-center gap-2">
-              {cartItems?.length === 0 ? (
-                <div className="fixed top-[23rem] flex flex-col justify-center items-center">
-                  <TiShoppingCart size={50} />
-                  <p className=" text-white dark:text-black ">
-                    Your shopping cart is empty
-                  </p>
-                  <a href="#products" onClick={toggleDropdown}>
-                    <p className="underline font-light">Buy Now!</p>
-                  </a>
-                </div>
-              ) : (
-                cartItems.map((product) => (
-                  
+          <div className="flex justify-between items-center w-full p-2 md:p-9">
+            <h1 className="font-sans  text-[20px] font-light m-2  dark:text-white ">
+              My Cart
+            </h1>
+            <TfiClose
+              size={24}
+              className=" m-2  cursor-pointer"
+              onClick={toggleDropdown}
+            />
+          </div>
+
+          <div className=" flex flex-col gap-2 bg-green-400 p-5">
+            {cartItems?.length === 0 ? (
+              <div className="flex justify-center items-center flex-col bg-red-300 p-5 rounded-xl">
+                <TiShoppingCart size={50} />
+                <p className=" text-white dark:text-black ">
+                  Your shopping cart is empty
+                </p>
+                <a href="#products" onClick={toggleDropdown}>
+                  <p className="underline font-light">Buy Now!</p>
+                </a>
+              </div>
+            ) : (
+              cartItems.map((product) => (
+                <>
+                  {" "}
+                  <>
+                    {" "}
                     <CartItems
                       product={product}
                       key={product._id}
@@ -67,11 +70,34 @@ const CartModal = () => {
                       productName={product.title}
                       productPrice={product.price}
                     />
-                  
-                      
-                ))
-              )}
-            </div>
+                  </>
+                  <>
+                    <div className="flex flex-col justify-end items-center text-black text-[1rem] w-full md:w-[30rem]  px-2 py-1 gap-2 mb-5 -bottom-5 dark:bg-[#FFFAFA] bg-[#191A1A]">
+                      <button
+                        type="button"
+                        className="flex justify-between items-center w-full bg-gray-100 p-5 rounded-xl "
+                      >
+                        <span>Tax</span>
+                        <span>Ghc 0</span>
+                      </button>
+                      <button
+                        type="button"
+                        className="flex justify-between items-center w-full bg-gray-100 p-5 rounded-xl font-bold"
+                      >
+                        <span>Total</span>
+                        <span>Ghc {totalPrice}</span>
+                      </button>
+                      <button
+                        type="button"
+                        className="flex justify-center items-center w-full bg-[#000000] p-5 rounded-xl text-white font-bold"
+                      >
+                        Buy Now
+                      </button>
+                    </div>
+                  </>
+                </>
+              ))
+            )}
           </div>
         </div>
       )}
