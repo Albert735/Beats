@@ -5,7 +5,7 @@ import OrderSection from "../Sections/OrderSection";
 
 const CheckOut = () => {
   return (
-    <div className="flex justify-center items-center max-w-screen-xl mx-auto gap-[6rem] ">
+    <div className="flex flex-col-reverse  md:flex-row justify-center items-start  md:p-[4rem] gap-3 md:gap-[5rem] w-full">
       <div>
         <FormSection />
       </div>
