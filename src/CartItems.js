@@ -2,14 +2,10 @@ import React from "react";
 import { FaMinus } from "react-icons/fa6";
 import { IoAdd } from "react-icons/io5";
 import { useStateContext } from "./Context/StateContext";
-// import { product } from "./ProductArray";
-// import { product } from "./ProductArray";
-// import { product } from "./ProductArray";
-// import productImage1 from "./assets/images/product1.png";
-// import productImage2 from "./assets/images/product2.png";
+
 
 const CartItems = ({ product, productImage, productName, productPrice }) => {
-  const { removeFromCart, incrementCartItem, decrementCartItem } =
+  const {  removeFromCart, incrementCartItem, decrementCartItem } =
     useStateContext();
 
   return (

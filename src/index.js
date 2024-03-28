@@ -1,16 +1,22 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
 import { StateContext } from "./Context/StateContext";
-// import { MyContextProvider } from "./Pages/Context";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./Router";
+import App from "./App";
+import { BrowserRouter as Router } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <StateContext>
-      <App />
-    </StateContext>
+    <RouterProvider router={router}>
+      <StateContext>
+        <Router>
+          <App />
+        </Router>
+      </StateContext>
+    </RouterProvider>
   </React.StrictMode>
 );
 

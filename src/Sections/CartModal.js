@@ -4,7 +4,7 @@ import { TfiClose } from "react-icons/tfi";
 import { TiShoppingCart } from "react-icons/ti";
 import CartItems from "../CartItems";
 import { useStateContext } from "../Context/StateContext";
-// import { product } from "../ProductArray";
+import { Link } from "react-router-dom";
 
 const CartModal = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -88,12 +88,14 @@ const CartModal = () => {
                     <span>Tax</span>
                     <span>Ghc 20%</span>
                   </button>
-                  <button
-                    type="button"
-                    className="flex justify-center items-center w-full bg-[#000000] p-5 rounded-xl text-white font-bold"
-                  >
-                    Checkout
-                  </button>
+                  <Link to="/checkout">
+                    <button
+                      type="button"
+                      className="flex justify-center items-center w-full bg-[#000000] p-5 rounded-xl text-white font-bold"
+                    >
+                      Checkout
+                    </button>
+                  </Link>
                 </div>
               </div>
             )}

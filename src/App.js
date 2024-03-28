@@ -1,16 +1,16 @@
 import Navbar from "./Components/Navbar";
-import Home from "./Pages/Home";
-import Section2 from "./Pages/Section2";
-import Specs from "./Pages/Specs";
-import Case from "./Pages/Case";
-import Section3 from "./Pages/Section3";
-import Products from "./Pages/Products";
-import Section4 from "./Pages/Section4";
-import Footer from "./Pages/Footer";
-import Bottom from "./Pages/Bottom";
-import Shopping from "./Pages/Shopping";
-import Section5 from "./Pages/Section5";
-import Testimonial from "./Pages/Testimonial";
+import Home from "./Sections/Home";
+import Section2 from "./Sections/Section2";
+import Specs from "./Sections/Specs";
+import Case from "./Sections/Case";
+import Section3 from "./Sections/Section3";
+import Products from "./Sections/Products";
+import Section4 from "./Sections/Section4";
+import Footer from "./Sections/Footer";
+import Bottom from "./Sections/Bottom";
+import Shopping from "./Sections/Shopping";
+import Section5 from "./Sections/Section5";
+import Testimonial from "./Sections/Testimonial";
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
       <Section4 />
       <Shopping />
       <Section5 />
-      <Testimonial/>
+      <Testimonial />
       <Footer />
       <Bottom />
     </div>

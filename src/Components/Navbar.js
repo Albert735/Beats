@@ -4,9 +4,9 @@ import { IoMoon } from "react-icons/io5";
 // import { LuSunMedium } from "react-icons/lu";
 import logo from "../assets/images/beats-logo-161616.png";
 import { useState, useEffect } from "react";
-import Button from "../Pages/Button";
+import Button from "../Sections/Button";
 import { CiLight } from "react-icons/ci";
-import CartModal from "../Pages/CartModal";
+import CartModal from "../Sections/CartModal";
 
 const Navbar = () => {
   const [theme, setTheme] = useState(null);
