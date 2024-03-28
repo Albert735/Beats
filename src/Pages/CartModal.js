@@ -33,70 +33,69 @@ const CartModal = () => {
           data-aos="fade-left"
           data-aos-duration="1000"
           data-aos-delay="ease-in-out"
-          className="fixed top-0 left-0 w-full h-screen dark:bg-[#191A1A] bg-[#FFFAFA]"
+          className="flex flex-col fixed justify-end items-end top-0 right-0 w-screen backdrop-blur-md bg-opacity-5  h-screen "
         >
-          <div className="flex justify-between items-center w-full p-2 md:p-9">
-            <h1 className="font-sans  text-[20px] font-light m-2  dark:text-white ">
-              My Cart
-            </h1>
-            <TfiClose
-              size={24}
-              className=" m-2  cursor-pointer"
-              onClick={toggleDropdown}
-            />
-          </div>
+          <div className="xl:w-[30rem] relaive w-full h-screen overflow-y-scroll scroll-mb-[90rem] bg-white">
+            <div className="flex relative inset-0 z-20 justify-between items-center p-2 text-black md:p-9">
+              <h1 className=" text-[20px]  m-2  ">My cart</h1>
+              <TfiClose
+                size={24}
+                className=" m-2 cursor-pointer border-2 border-slate-400 rounded-full p-1 "
+                onClick={toggleDropdown}
+              />
+            </div>
 
-          <div className=" flex flex-col gap-2 bg-green-400 p-5">
+            <div className=" flex justify-center items-center  flex-col gap-2   p-5 ">
+              {cartItems?.length === 0 ? (
+                <div className="flex absolute top-[25rem] justify-center items-center text-black flex-col p-5  border-2 rounded-xl">
+                  <TiShoppingCart size={50} />
+                  <p className="">Your shopping cart is empty</p>
+                  <a href="#products" onClick={toggleDropdown}>
+                    <p className="underline font-light">Buy Now!</p>
+                  </a>
+                </div>
+              ) : (
+                cartItems.map((product) => (
+                  <CartItems
+                    product={product}
+                    key={product._id}
+                    productImage={product.image}
+                    productName={product.title}
+                    productPrice={product.price}
+                    className="m-[8rem]"
+                  />
+                ))
+              )}
+            </div>
+          </div>
+          <div className="bg-white xl:w-[30rem] w-screen  md:w-full flex justify-center items-center border-none">
             {cartItems?.length === 0 ? (
-              <div className="flex justify-center items-center flex-col bg-red-300 p-5 rounded-xl">
-                <TiShoppingCart size={50} />
-                <p className=" text-white dark:text-black ">
-                  Your shopping cart is empty
-                </p>
-                <a href="#products" onClick={toggleDropdown}>
-                  <p className="underline font-light">Buy Now!</p>
-                </a>
-              </div>
+              <div></div>
             ) : (
-              cartItems.map((product) => (
-                <>
-                  {" "}
-                  <>
-                    {" "}
-                    <CartItems
-                      product={product}
-                      key={product._id}
-                      productImage={product.image}
-                      productName={product.title}
-                      productPrice={product.price}
-                    />
-                  </>
-                  <>
-                    <div className="flex flex-col justify-end items-center text-black text-[1rem] w-full md:w-[30rem]  px-2 py-1 gap-2 mb-5 -bottom-5 dark:bg-[#FFFAFA] bg-[#191A1A]">
-                      <button
-                        type="button"
-                        className="flex justify-between items-center w-full bg-gray-100 p-5 rounded-xl "
-                      >
-                        <span>Tax</span>
-                        <span>Ghc 0</span>
-                      </button>
-                      <button
-                        type="button"
-                        className="flex justify-between items-center w-full bg-gray-100 p-5 rounded-xl font-bold"
-                      >
-                        <span>Total</span>
-                        <span>Ghc {totalPrice}</span>
-                      </button>
-                      <button
-                        type="button"
-                        className="flex justify-center items-center w-full bg-[#000000] p-5 rounded-xl text-white font-bold"
-                      >
-                        Buy Now
-                      </button>
-                    </div>
-                  </>
-                </>
-              ))
+              <div className="flex  flex-col justify-between items-center xl:w-36">
+                <div className="flex flex-col justify-start items-center text-black text-[1rem]  w-screen md:w-[38rem] xl:w-[28rem] p-5 py-1 gap-2   ">
+                  <button
+                    type="button"
+                    className="flex justify-between items-center w-full bg-gray-100 p-5 rounded-xl "
+                  >
+                    <span>Total</span>
+                    <span>Ghc {totalPrice}</span>
+                  </button>
+                  <button
+                    type="button"
+                    className="flex justify-between items-center w-full bg-gray-100 p-5 rounded-xl font-bold"
+                  >
+                    <span>Tax</span>
+                    <span>Ghc 20%</span>
+                  </button>
+                  <button
+                    type="button"
+                    className="flex justify-center items-center w-full bg-[#000000] p-5 rounded-xl text-white font-bold"
+                  >
+                    Checkout
+                  </button>
+                </div>
+              </div>
             )}
           </div>
         </div>

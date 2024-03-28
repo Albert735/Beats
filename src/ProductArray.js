@@ -34,7 +34,7 @@ export const product = [
   {
     _id: "5",
     image: productImage5,
-    title: "Cream and black",
-    price: 800,
+    title: "Cream & black",
+    price: 1800,
   }
 ];
