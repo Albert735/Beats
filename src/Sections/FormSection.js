@@ -6,7 +6,7 @@ import bitcoin from "../assets/Svg/bitcoin-cryptocurrency.svg";
 
 const FormSection = () => {
   return (
-    <div className="flex flex-col justify-start items-start md:gap-y-5  w-full   h-screen  md:rounded-3xl font-sans ">
+    <div className="flex flex-col justify-start items-start md:gap-y-5 xl:w-[35rem]  h-screen  md:rounded-3xl font-sans ">
       <h1 className="text-[2rem]">Payment</h1>
       <div className="flex flex-col gap-y-[1rem]">
         <div className="flex flex-col gap-y-2">

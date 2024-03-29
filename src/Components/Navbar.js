@@ -95,7 +95,7 @@ const Navbar = () => {
 
               <button onClick={handleThemeSwitch}>
                 {theme === "dark" ? (
-                  <CiLight size={26} />
+                  <CiLight size={26} fill="white" />
                 ) : (
                   <IoMoon size={24} />
                 )}
