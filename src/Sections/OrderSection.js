@@ -9,7 +9,7 @@ const OrderSection = ({ product, productImage, productName, productPrice }) => {
   const { totalPrice, removeFromCart, incrementCartItem, decrementCartItem } =
     useStateContext();
   return (
-    <div className="flex flex-col  items-centerp-[3rem] h-screene w-full  md:rounded-3xl">
+    <div className="flex flex-col  items-centerp-[3rem] h-screene w-[30rem]  md:rounded-3xl">
       <h1 className="text-start text-[2rem] w-full"> Order summary</h1>
 
       <div className="md:flex grid  grid-cols-3 gap-5 justify-between items-center w-full border-b-2 p-5">
@@ -20,18 +20,25 @@ const OrderSection = ({ product, productImage, productName, productPrice }) => {
         />
         <div>
           <p>{productName}</p>
-          <p>{productPrice}</p>
+          <p>Ghc {productPrice}</p>
         </div>
 
-        <span className="flex flex-row gap-3 justify-center items-center bg-white p-3 rounded-lg text-black ring ring">
+        <span className="flex flex-row gap-3 justify-center items-center bg-white p-3 rounded-lg text-black  ring">
           <p>{product.quantity}</p>
           <span>
-            <IoIosArrowUp onClick={() => incrementCartItem(product)} />
-            <IoIosArrowDown onClick={() => decrementCartItem(product)} />
+            <IoIosArrowUp
+              onClick={() => incrementCartItem(product)}
+              className="cursor-pointer"
+            />
+            <IoIosArrowDown
+              onClick={() => decrementCartItem(product)}
+              className="cursor-pointer"
+            />
           </span>
         </span>
         <span className="flex flex-row-reverse md:flex gap-3">
           <IoIosCloseCircleOutline
+            className="cursor-pointer"
             size={26}
             onClick={() => removeFromCart(product)}
           />
@@ -41,17 +48,17 @@ const OrderSection = ({ product, productImage, productName, productPrice }) => {
 
       <div className="w-full space-y-[3rem] p-5 border-b-2">
         <span className="flex justify-between">
-          <h1>Subtotal</h1>
+          <h1 className="font-bold">Subtotal</h1>
           <p>Ghc 1200</p>
         </span>
         <span className="flex justify-between">
-          <h1>Subtotal</h1>
+          <h1 className="font-bold">Shipping</h1>
           <p>Ghc 1200</p>
         </span>
       </div>
       <div className="flex justify-between w-full p-5">
         <span>
-          <p>Total</p>
+          <p className="font-bold">Total</p>
         </span>
         <span>
           <p>Ghc{totalPrice}</p>

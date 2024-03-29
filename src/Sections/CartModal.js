@@ -88,14 +88,13 @@ const CartModal = () => {
                     <span>Tax</span>
                     <span>Ghc 20%</span>
                   </button>
-                  <Link to="/checkout">
-                    <button
-                      type="button"
-                      className="flex justify-center items-center bg-[#000000] p-5 rounded-xl text-white font-bold"
-                    >
-                      Checkout
-                    </button>
-                  </Link>
+
+                  <button
+                    type="button"
+                    className="flex justify-center items-center bg-[#000000] p-5 rounded-xl w-full text-white font-bold"
+                  >
+                    <Link to="/checkoutpage">Checkout </Link>
+                  </button>
                 </div>
               </div>
             )}

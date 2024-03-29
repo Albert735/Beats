@@ -3,10 +3,11 @@ import visa from "../assets/Svg/visa-2.svg";
 import mastercard from "../assets/Svg/mastercard.svg";
 import Paypal from "../assets/Svg/paypal.svg";
 import bitcoin from "../assets/Svg/bitcoin-cryptocurrency.svg";
+import { Link } from "react-router-dom";
 
 const FormSection = () => {
   return (
-    <div className="flex flex-col justify-start items-start md:gap-y-5 xl:w-[35rem]  h-screen  md:rounded-3xl font-sans ">
+    <div className="flex flex-col  md:gap-y-5 w-[35rem] h-full  font-sans ">
       <h1 className="text-[2rem]">Payment</h1>
       <div className="flex flex-col gap-y-[1rem]">
         <div className="flex flex-col gap-y-2">
@@ -121,7 +122,9 @@ const FormSection = () => {
         </div>
       </div>
       <button className=" bg-blue-600 w-full rounded-lg ring">
-        <p className="p-3 text-white">Pay Now</p>
+        <Link to="/thankyoupage">
+          <p className="p-3 text-white">Pay Now</p>
+        </Link>
       </button>
     </div>
   );
