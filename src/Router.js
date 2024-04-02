@@ -43,7 +43,7 @@ export const router = createBrowserRouter([
     element:<Products/>
   },
   {
-     path:'/case',
+     path:'/#case',
      element:<Case/>
   }
 ]);

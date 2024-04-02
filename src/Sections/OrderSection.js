@@ -6,11 +6,11 @@ import { IoIosCloseCircleOutline } from "react-icons/io";
 import { useStateContext } from "../Context/StateContext";
 
 const OrderSection = ({ product, productImage, productName, productPrice }) => {
-  const { totalPrice, removeFromCart, incrementCartItem, decrementCartItem } =
+  const {  removeFromCart, incrementCartItem, decrementCartItem } =
     useStateContext();
   return (
     <div className="flex flex-col  items-centerp-[3rem] h-screene w-[30rem]  md:rounded-3xl">
-      <h1 className="text-start text-[2rem] w-full"> Order summary</h1>
+   
 
       <div className="md:flex grid  grid-cols-3 gap-5 justify-between items-center w-full border-b-2 p-5">
         <img
@@ -46,7 +46,7 @@ const OrderSection = ({ product, productImage, productName, productPrice }) => {
         </span>
       </div>
 
-      <div className="w-full space-y-[3rem] p-5 border-b-2">
+      {/* <div className="w-full space-y-[3rem] p-5 border-b-2">
         <span className="flex justify-between">
           <h1 className="font-bold">Subtotal</h1>
           <p>Ghc 1200</p>
@@ -74,7 +74,7 @@ const OrderSection = ({ product, productImage, productName, productPrice }) => {
         <button className=" bg-blue-600 w-full rounded-lg ring">
           <p className="p-3 text-white">Apply</p>
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };
