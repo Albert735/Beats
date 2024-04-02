@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const ThankYouSection = () => {
   return (
-    <div className="flex flex-col md:flex-row  gap-y-7 justify-center items-center h-screen gap-[2rem]">
+    <div className="flex flex-col md:flex-row  gap-y-7 justify-center items-center  gap-[2rem]">
       <img
         src={beathead}
         alt=""

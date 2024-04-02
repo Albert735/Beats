@@ -5,6 +5,9 @@ import Page404 from "./Components/Page404";
 import CheckOutPage from "./Pages/CheckOutPage";
 import ThankYouPage from "./Pages/ThankYouPage";
 import Home from "./Sections/Home";
+import Specs from "./Sections/Specs";
+import Products from "./Sections/Products";
+import Case from "./Sections/Case";
 
 export const router = createBrowserRouter([
   {
@@ -26,5 +29,21 @@ export const router = createBrowserRouter([
   {
     path:"/home",
     element:<Home/>
+  },
+  {
+    path:'/specs',
+    element:<Specs/>
+  },
+  {
+    path:'/home',
+    element:<Home/>
+  },
+  {
+    path:'/product',
+    element:<Products/>
+  },
+  {
+     path:'/case',
+     element:<Case/>
   }
 ]);
