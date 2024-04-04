@@ -56,7 +56,7 @@ const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="flex max-w-screen-xl flex-wrap items-center justify-between mx-auto p-4  ">
+      <div className="flex px-10 flex-wrap items-center justify-between  p-4  ">
         <img
           src={logo}
           alt=""

@@ -2,22 +2,19 @@ import { createBrowserRouter } from "react-router-dom";
 // import CheckOut from "../src/Pages/CheckOut";
 import App from "./App";
 import Page404 from "./Components/Page404";
-import CheckOutPage from "./Pages/CheckOutPage";
 import ThankYouPage from "./Pages/ThankYouPage";
 import Home from "./Sections/Home";
 import Specs from "./Sections/Specs";
 import Products from "./Sections/Products";
 import Case from "./Sections/Case";
+import CheckOut from "./Pages/CheckOut";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
   },
-  {
-    path: "/checkoutpage",
-    element: <CheckOutPage />,
-  },
+
   {
     path:'*',
     element:<Page404/>,
@@ -37,6 +34,10 @@ export const router = createBrowserRouter([
   {
     path:'/home',
     element:<Home/>
+  },
+  {
+    path:'/checkout',
+    element:<CheckOut/>
   },
   {
     path:'/product',

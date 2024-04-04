@@ -93,7 +93,7 @@ const CartModal = () => {
                     type="button"
                     className="flex justify-center items-center bg-[#000000] p-5 rounded-xl w-full text-white font-bold"
                   >
-                    <Link to="/checkoutpage">Checkout </Link>
+                    <Link to='/checkout'>Checkout </Link>
                   </button>
                 </div>
               </div>
