@@ -8,10 +8,10 @@ import Navbar2 from "../Components/Navbar2";
 
 const CheckOut = () => {
   return (
-    <div > 
+    <div className="">
       <Navbar2 />
-      <div className="flex flex-col md:flex-row justify-center items-start  h-[100vh]  ">
-        <div className="flex flex-col justify-start items-center xl:w-[100rem] h-[100vh] ">
+      <div className="flex flex-col md:flex-col xl:flex-row justify-center items-center   md:gap-11 xl:gap-0  ">
+        <div className="flex flex-col justify-start items-center xl:w-[100rem] w-full  ">
           <div className="flex flex-col justify-start items-start space-y-12 xl:w-[35rem]">
             <span>
               <h1 className="font-bold text-[1.5rem]">Summary Order</h1>
@@ -21,7 +21,7 @@ const CheckOut = () => {
               </p>
             </span>
 
-            <div className="flex flex-col border-2 xl:w-[35rem] rounded-lg gap-y-5 ">
+            <div className="flex flex-col border-2 md:w-[35rem]  rounded-lg gap-y-5 ">
               <div className="flex  justify-between  p-[1rem] w-full">
                 <span className="flex gap-6">
                   <img
@@ -87,9 +87,9 @@ const CheckOut = () => {
                   <h2 className="font-bold">Available Shipping Method</h2>{" "}
                   <IoInformationCircleSharp fill="gray" />
                 </div>
-                <div className="flex border-2 justify-between rounded-lg px-[1.5rem] py-[0.5rem] xl:w-[35rem]">
+                <div className="flex border-2 justify-between rounded-lg px-[1.5rem] py-[0.5rem] md:w-[35rem]">
                   <span className="flex justify-start items-center gap-4">
-                    <img src={FedEx} alt="" className="xl:h-[5rem] h-[3rem]" />
+                    <img src={FedEx} alt="" className="md:h-[5rem] h-[3rem]" />
                     <span>
                       <h3 className="font-bold">Fedex Delivery</h3>
                       <p className="font-light text-slate-500">
@@ -110,9 +110,9 @@ const CheckOut = () => {
                   Available International Shipping:
                 </h2>
               </div>
-              <div className="flex border-2 justify-between rounded-lg px-[1.5rem] py-[0.5rem] xl:w-[35rem]">
+              <div className="flex border-2 justify-between rounded-lg px-[1.5rem] py-[0.5rem] md:w-[35rem]">
                 <span className="flex justify-start items-center gap-4">
-                  <img src={DHL} alt="" className="xl:h-[5rem] h-[3rem]" />
+                  <img src={DHL} alt="" className="md:h-[5rem] h-[3rem]" />
                   <span>
                     <h3 className="font-bold">DHL Delivery</h3>
                     <p className="font-light text-slate-500">
@@ -128,8 +128,8 @@ const CheckOut = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col justify-start items-center xl:w-[100rem] h-[100vh] bg-[#F9FAFB] space-y-12">
-          <div className="flex justify-start items-start xl:w-[35rem] w-full">
+        <div className="flex flex-col justify-start items-center w-full xl:w-[100rem] bg-[#F9FAFB] space-y-12 p-11">
+          <div className="flex justify-start items-start md:w-[35rem] w-full">
             <span>
               <h1 className="font-bold text-[1.5rem]">Information</h1>
               <p className="font-light">
@@ -139,15 +139,15 @@ const CheckOut = () => {
             </span>
           </div>
           <div className="flex justify-start items-start flex-col w-[35rem] gap-12 ">
-            <form action="" className="flex flex-col gap-7">
+            <form action="" className="flex flex-col gap-7 w-full ">
               <span className="flex flex-col gap-5">
-                <span className="flex w-[30rem] gap-[2rem]">
+                <span className="flex justify-between w-full gap-[2rem]">
                   <span>
                     <h1 className="font-bold">First Name</h1>
                     <input
                       type="text"
                       placeholder="Albert"
-                      className="w-[14rem] bg-transparent rounded-lg p-[0.7rem] border-2 border-gray-300"
+                      className=" bg-transparent w-[15rem]  rounded-lg p-[0.7rem] border-2 border-gray-300"
                     />
                   </span>
                   <span>
@@ -155,7 +155,7 @@ const CheckOut = () => {
                     <input
                       type="text"
                       placeholder="Fletcher"
-                      className="w-[14rem] bg-transparent rounded-lg p-[0.7rem] border-2 border-gray-300"
+                      className=" bg-transparent w-[15rem]  rounded-lg p-[0.7rem] border-2 border-gray-300"
                     />
                   </span>
                 </span>{" "}
@@ -164,7 +164,7 @@ const CheckOut = () => {
                   <input
                     type="text"
                     placeholder="example@gmail.com"
-                    className="w-[30rem] bg-transparent rounded-lg p-[0.7rem] border-2 border-gray-300"
+                    className=" bg-transparent w-full rounded-lg p-[0.7rem] border-2 border-gray-300"
                   />
                 </span>
                 <span>
@@ -172,7 +172,7 @@ const CheckOut = () => {
                   <input
                     type="number"
                     placeholder="+233"
-                    className="w-[30rem] bg-transparent rounded-lg p-[0.7rem] border-2 border-gray-300"
+                    className=" bg-transparent w-full rounded-lg p-[0.7rem] border-2 border-gray-300"
                   />
                 </span>
               </span>
@@ -217,7 +217,7 @@ const CheckOut = () => {
                 </span>
               </span>
             </form>
-            <button className=" bg-black text-white w-[30rem] rounded-lg flex justify-center items-center">
+            <button className=" bg-black text-white w-full rounded-lg flex justify-center items-center">
               <p className="p-5 font-bold "> Next</p>
               <GrLinkNext />
             </button>
