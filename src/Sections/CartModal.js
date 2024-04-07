@@ -10,9 +10,16 @@ const CartModal = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggling = () => setIsOpen(!isOpen);
 
+
   const toggleDropdown = () => {
-    setIsOpen(!isOpen);
+    if (isOpen !== null) {
+      setIsOpen(!isOpen);
+    } else {
+      console.error('toggleDropdown encountered null isOpen value');
+    }
+
   };
+
 
   const { cartItems, totalQuantity, totalPrice } = useStateContext();
 

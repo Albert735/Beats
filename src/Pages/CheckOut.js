@@ -1,11 +1,12 @@
 import React from "react";
-import product1 from "../assets//images/product1.png";
 import { IoInformationCircleSharp } from "react-icons/io5";
 import FedEx from "../assets/Svg/FedEx.svg";
 import { GrLinkNext } from "react-icons/gr";
 import DHL from "../assets/Svg/DHL.svg";
 import Navbar2 from "../Components/Navbar2";
 import { useForm } from "react-hook-form";
+import { useStateContext } from "../Context/StateContext";
+import CheckOutItem from "../CheckOutItem";
 
 const CheckOut = () => {
   const {
@@ -13,13 +14,14 @@ const CheckOut = () => {
     handleSubmit,
     formState: { errors, isSubmitting },
   } = useForm();
+  const { cartItems } = useStateContext();
 
   return (
     <div className="">
       <Navbar2 />
-      <div className="flex flex-col md:flex-col xl:flex-row justify-center items-center   md:gap-11 xl:gap-0  ">
-        <div className="flex flex-col justify-start items-center xl:w-[100rem] w-full  ">
-          <div className="flex flex-col justify-start items-start space-y-12 xl:w-[35rem]">
+      <div className="flex flex-col md:flex-col xl:flex-row justify-center items-start h-screen   md:gap-11 xl:gap-0  ">
+        <div className="flex flex-col justify-start items-center xl::w-[100rem] w-full h-full  space-y-8">
+          <div className="flex justify-start items-start md:w-[35rem] w-full">
             <span>
               <h1 className="font-bold text-[1.5rem]">Summary Order</h1>
               <p className="font-light text-slate-500">
@@ -27,67 +29,21 @@ const CheckOut = () => {
                 experience order item.
               </p>
             </span>
+          </div>
 
-            <div className="flex flex-col border-2 md:w-[35rem]  rounded-lg gap-y-5 ">
-              <div className="flex  justify-between  p-[1rem] w-full">
-                <span className="flex gap-6">
-                  <img
-                    src={product1}
-                    alt=""
-                    className="xl:h-[5rem] h-[3rem] xl:w-[4rem] "
-                  />
-                  <span className="space-y-3">
-                    <h2 className="font-bold ">
-                      Beats Studio Pro{" "}
-                      <span className="font-semibold text-slate-400">
-                        (Black)
-                      </span>{" "}
-                    </h2>
-                    <p className="font-extrabold">Ghc 1200</p>
-                  </span>{" "}
-                </span>{" "}
-                <p className="text-slate-500"> 42 EU - 8.5 US</p>
-              </div>
-              <div className="flex  justify-between  p-[1rem] w-full">
-                <span className="flex gap-6">
-                  <img
-                    src={product1}
-                    alt=""
-                    className="xl:h-[5rem] h-[3rem] xl:w-[4rem]"
-                  />
-                  <span className="space-y-3">
-                    <h2 className="font-bold ">
-                      Beats Studio Pro{" "}
-                      <span className="font-semibold text-slate-400">
-                        (Black)
-                      </span>
-                    </h2>
-                    <p className="font-extrabold">Ghc 1200</p>
-                  </span>{" "}
-                </span>{" "}
-                <p className="text-slate-500"> 42 EU - 8.5 US</p>
-              </div>
-              <div className="flex  justify-between  p-[1rem] w-full">
-                <span className="flex gap-6">
-                  <img
-                    src={product1}
-                    alt=""
-                    className="xl:h-[5rem] h-[3rem] xl:w-[4rem]"
-                  />
-                  <span className="space-y-3">
-                    <h2 className="font-bold ">
-                      Beats Studio Pro{" "}
-                      <span className="font-semibold text-slate-400">
-                        (Black)
-                      </span>
-                    </h2>
-                    <p className="font-extrabold">Ghc 1200</p>
-                  </span>{" "}
-                </span>{" "}
-                <p className="text-slate-500"> 42 EU - 8.5 US</p>
-              </div>
-            </div>
+          <div className="flex flex-col border-2 md:w-[35rem]  px-[2rem] py-[1rem]   rounded-lg gap-y-7 ">
+            {cartItems.map((product) => (
+              <CheckOutItem
+                product={product}
+                key={product._id}
+                productImage={product.image}
+                productName={product.title}
+                productPrice={product.price}
+              />
+            ))}
+          </div>
 
+          <div className="pb-[2rem] space-y-4">
             <div className=" flex flex-col justify-start items-center  ">
               <div className="space-y-2">
                 <div className="flex justify-start items-center gap-2">
@@ -111,7 +67,7 @@ const CheckOut = () => {
                 </div>
               </div>
             </div>
-            <div className="space-y-2">
+            <div className="space-y-2 ">
               <div>
                 <h2 className="font-light text-slate-600">
                   Available International Shipping:
@@ -135,7 +91,8 @@ const CheckOut = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col justify-start items-center w-full xl:w-[100rem] bg-[#F9FAFB] space-y-12 p-11">
+
+        <div className="flex flex-col justify-start items-center w-full xl:w-[100rem] h-full  bg-[#F9FAFB] space-y-12 ">
           <div className="flex justify-start items-start md:w-[35rem] w-full">
             <span>
               <h1 className="font-bold text-[1.5rem]">Information</h1>
@@ -149,7 +106,7 @@ const CheckOut = () => {
             <form
               action=""
               className="flex flex-col gap-7 w-full "
-              onSubmit={handleSubmit( async  (data) => {
+              onSubmit={handleSubmit(async (data) => {
                 await new Promise((resolve) => setTimeout(resolve, 1000));
                 console.log(data);
               })}
@@ -220,8 +177,8 @@ const CheckOut = () => {
                       required: "Telephone is required",
                       minLength: {
                         value: 10,
-                        message: "Telephone must be 10 digits", 
-                      }
+                        message: "Telephone must be 10 digits",
+                      },
                     })}
                     className=" bg-transparent w-full rounded-lg p-[0.7rem] border-2 border-gray-300"
                   />
@@ -277,7 +234,7 @@ const CheckOut = () => {
                           minLength: {
                             value: 4,
                             message: "Zip Code must be 4 digits",
-                          }
+                          },
                         })}
                       />
                       {errors.zipCode && (
@@ -306,11 +263,11 @@ const CheckOut = () => {
                 </span>
               </span>{" "}
               <button
-              disabled={isSubmitting}
+                disabled={isSubmitting}
                 type="submit"
                 className=" bg-black text-white w-full rounded-lg flex justify-center items-center"
               >
-                <p className="p-5 font-bold "> 
+                <p className="p-5 font-bold ">
                   {isSubmitting ? "Loading..." : "Next"}
                 </p>
                 <GrLinkNext />
