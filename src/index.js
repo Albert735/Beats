@@ -1,13 +1,13 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import "./index.css";
 import { StateContext } from "./Context/StateContext";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./Router";
 import App from "./App";
+import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router } from "react-router-dom";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <StateContext>
