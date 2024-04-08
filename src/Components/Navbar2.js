@@ -9,7 +9,7 @@ const Navbar2 = () => {
         <div className="p-0 border-2 h-8"></div>
         <p className="font-bold text-gray-500">Order Overview</p>
       </div>
-      <div className="flex justify-center items-center gap-2">
+      <div className="hidden md:flex justify-center items-center gap-2">
         <div className="flex items-center gap-2">
           <div className="rounded-full bg-lime-200 w-6 h-6"></div>
           <h1>Information</h1>
