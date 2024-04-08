@@ -43,13 +43,13 @@ export const StateContext = ({ children }) => {
     /////////totalPrice/////////
     const totalPrice = cartItems.reduce((total, item) => {
       if (item._id === product._id) {
-        return total += item?.price;
+        return (total += item?.price);
       } else {
         return total;
       }
-    },0);
-    console.log(totalPrice)
-    setTotalPrice( (prev) => prev + product?.price);
+    }, 0);
+    console.log(totalPrice);
+    setTotalPrice((prev) => prev + product?.price);
   };
 
   ///////////////////increment sign//////////////////////////
@@ -60,19 +60,19 @@ export const StateContext = ({ children }) => {
       } else {
         return item;
       }
-    },0);
+    }, 0);
     setCartItems(updateCartItems);
     setTotalQuantity((prev) => prev + 1);
 
     const totalPrice = cartItems.reduce((total, item) => {
       if (item._id === product._id) {
-        return total += item?.price;
+        return (total += item?.price);
       } else {
         return total;
       }
-    },0);
-    console.log(totalPrice)
-    setTotalPrice( (prev) => prev + product?.price);
+    }, 0);
+    console.log(totalPrice);
+    setTotalPrice((prev) => prev + product?.price);
   };
 
   //////////////////////decrement sign///////////////////////
@@ -94,13 +94,13 @@ export const StateContext = ({ children }) => {
 
     const totalPrice = cartItems.reduce((total, item) => {
       if (item._id === product._id) {
-        return total -= item?.price;
+        return (total -= item?.price);
       } else {
         return total;
       }
-    },0);
-    console.log(totalPrice)
-    setTotalPrice( (prev) => prev - product?.price);
+    }, 0);
+    console.log(totalPrice);
+    setTotalPrice((prev) => prev - product?.price);
   };
 
   ////////////removeFromCart///////
@@ -121,10 +121,18 @@ export const StateContext = ({ children }) => {
       } else {
         return total;
       }
-    },0);
-    console.log(totalPrice)
-    setTotalPrice(prev => prev - (product?.price * product.quantity));
+    }, 0);
+    console.log(totalPrice);
+    setTotalPrice((prev) => prev - product?.price * product.quantity);
   }
+  const [step, setStep] = useState(1);
+  const nextStep = () => {
+    setStep(step + 1);
+  };
+
+  const prevStep = () => {
+    setStep(step - 1);
+  };
 
   return (
     <Context.Provider
@@ -137,7 +145,9 @@ export const StateContext = ({ children }) => {
         decrementCartItem,
         totalQuantity,
         totalPrice,
-        // totalTax,
+        nextStep,
+        setStep,
+        prevStep,
       }}
     >
       {children}

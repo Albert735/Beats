@@ -1,28 +1,28 @@
 import React from "react";
 import { IoInformationCircleSharp } from "react-icons/io5";
 import FedEx from "../assets/Svg/FedEx.svg";
-import { GrLinkNext } from "react-icons/gr";
 import DHL from "../assets/Svg/DHL.svg";
 import Navbar2 from "../Components/Navbar2";
-import { useForm } from "react-hook-form";
 import { useStateContext } from "../Context/StateContext";
 import CheckOutItem from "../CheckOutItem";
+import { GrLinkNext } from "react-icons/gr";
+import { useForm } from "react-hook-form";
 
 const CheckOut = () => {
+  const { cartItems, totalQuantity } = useStateContext();
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
   } = useForm();
-  const { cartItems } = useStateContext();
 
   return (
     <div className="">
       <Navbar2 />
-      <div className="flex flex-col md:flex-col xl:flex-row justify-center items-start h-screen   md:gap-11 xl:gap-0  ">
-        <div className="flex flex-col justify-start items-center xl::w-[100rem] w-full h-full  space-y-8">
-          <div className="flex justify-start items-start md:w-[35rem] w-full">
-            <span>
+      <div className="flex flex-col md:flex-col xl:flex-row justify-center items-start h-full   md:gap-11 xl:gap-0  ">
+        <div className="flex flex-col justify-center items-center xl:w-[100rem] md:w-full w-[35rem] p-3 ">
+          <div className="flex flex-col justify-center items-center xl:w-full md:w-full w-[30rem] ">
+            <span className="w-full md:w-[35rem]">
               <h1 className="font-bold text-[1.5rem]">Summary Order</h1>
               <p className="font-light text-slate-500">
                 Check your item and select your shipping for better <br />{" "}
@@ -31,27 +31,35 @@ const CheckOut = () => {
             </span>
           </div>
 
-          <div className="flex flex-col border-2 md:w-[35rem]  px-[2rem] py-[1rem]   rounded-lg gap-y-7 ">
-            {cartItems.map((product) => (
-              <CheckOutItem
-                product={product}
-                key={product._id}
-                productImage={product.image}
-                productName={product.title}
-                productPrice={product.price}
-              />
-            ))}
+          <div className="flex flex-col justify-center items-center  w-full xl:w-full p-3">
+            <span className="md:w-[35rem] w-[30rem]">
+              <p className="text-start">
+                <span className="font-bold ">Total Quantity: </span>
+                <span className="Font-light">{totalQuantity}</span>
+              </p>
+            </span>
+            <div className="flex flex-col  border-2  md:w-[35rem] h-[27rem]  px-[2rem] py-[1rem] w-[30rem]   rounded-lg gap-y-7 overflow-y-auto ">
+              {cartItems.map((product) => (
+                <CheckOutItem
+                  product={product}
+                  key={product._id}
+                  productImage={product.image}
+                  productName={product.title}
+                  productPrice={product.price}
+                />
+              ))}
+            </div>
           </div>
 
-          <div className="pb-[2rem] space-y-4">
-            <div className=" flex flex-col justify-start items-center  ">
+          <div className="pb-[1rem] flex flex-col justify-center items-center  w-full gap-4 p-5">
+            <div className=" flex flex-col justify-center items-start ">
               <div className="space-y-2">
                 <div className="flex justify-start items-center gap-2">
                   <h2 className="font-bold">Available Shipping Method</h2>{" "}
                   <IoInformationCircleSharp fill="gray" />
                 </div>
-                <div className="flex border-2 justify-between rounded-lg px-[1.5rem] py-[0.5rem] md:w-[35rem]">
-                  <span className="flex justify-start items-center gap-4">
+                <div className="flex border-2 justify-between rounded-lg px-[1.5rem] py-[0.5rem] md:w-[35rem] w-[30rem]">
+                  <span className="flex justify-center items-center gap-4">
                     <img src={FedEx} alt="" className="md:h-[5rem] h-[3rem]" />
                     <span>
                       <h3 className="font-bold">Fedex Delivery</h3>
@@ -73,7 +81,7 @@ const CheckOut = () => {
                   Available International Shipping:
                 </h2>
               </div>
-              <div className="flex border-2 justify-between rounded-lg px-[1.5rem] py-[0.5rem] md:w-[35rem]">
+              <div className="flex border-2 justify-between rounded-lg px-[1.5rem] py-[0.5rem] md:w-[35rem] w-[30rem]">
                 <span className="flex justify-start items-center gap-4">
                   <img src={DHL} alt="" className="md:h-[5rem] h-[3rem]" />
                   <span>
@@ -92,9 +100,9 @@ const CheckOut = () => {
           </div>
         </div>
 
-        <div className="flex flex-col justify-start items-center w-full xl:w-[100rem] h-full  bg-[#F9FAFB] space-y-12 ">
-          <div className="flex justify-start items-start md:w-[35rem] w-full">
-            <span>
+        <div className="flex flex-col justify-center  items-center xl:w-[100rem] md:w-full w-[35rem]  bg-[#F9FAFB] p-3">
+          <div className="flex justify-center  items-center md:w-full ">
+            <span className="w-[30rem]  md:w-[35rem]  ">
               <h1 className="font-bold text-[1.5rem]">Information</h1>
               <p className="font-light">
                 Complete your purchase item by providing your <br /> payment
@@ -102,17 +110,17 @@ const CheckOut = () => {
               </p>
             </span>
           </div>
-          <div className="flex justify-start items-start flex-col w-[35rem] gap-12 ">
+          <div className="flex justify-center items-center flex-col md:w-full gap-0 ">
             <form
               action=""
-              className="flex flex-col gap-7 w-full "
+              className="flex justify-center items-center flex-col md:w-full  gap-7  "
               onSubmit={handleSubmit(async (data) => {
                 await new Promise((resolve) => setTimeout(resolve, 1000));
                 console.log(data);
               })}
             >
-              <span className="flex flex-col gap-5">
-                <span className="flex justify-between w-full gap-[2rem]">
+              <span className="flex flex-col justify-center items-center md:w-full w-[30rem]  gap-5  p-5">
+                <span className="flex justify-between w-[30rem]   md:w-[35rem] gap-[2rem]">
                   <span>
                     <h1 className="font-bold">First Name</h1>
                     <input
@@ -121,7 +129,7 @@ const CheckOut = () => {
                       {...register("firstName", {
                         required: "First Name is required ",
                       })}
-                      className=" bg-transparent w-[15rem]  rounded-lg p-[0.7rem] border-2 border-gray-300"
+                      className=" bg-transparent   rounded-lg p-[0.7rem] border-2 border-gray-300"
                     />
                     {errors.firstName && (
                       <div className="text-red-500 text-[12px]">
@@ -137,7 +145,7 @@ const CheckOut = () => {
                       {...register("lastName", {
                         required: "Last Name is required",
                       })}
-                      className=" bg-transparent w-[15rem]  rounded-lg p-[0.7rem] border-2 border-gray-300"
+                      className=" bg-transparent rounded-lg p-[0.7rem] border-2 border-gray-300"
                     />
                     {errors.lastName && (
                       <div className="text-red-500 text-[12px]">
@@ -160,7 +168,7 @@ const CheckOut = () => {
                         return true;
                       },
                     })}
-                    className=" bg-transparent w-full rounded-lg p-[0.7rem] border-2 border-gray-300"
+                    className=" bg-transparent md:w-[35rem] w-[30rem] rounded-lg p-[0.7rem] border-2 border-gray-300"
                   />
                   {errors.email && (
                     <div className="text-red-500 text-[12px]">
@@ -180,7 +188,7 @@ const CheckOut = () => {
                         message: "Telephone must be 10 digits",
                       },
                     })}
-                    className=" bg-transparent w-full rounded-lg p-[0.7rem] border-2 border-gray-300"
+                    className=" bg-transparent md:w-[35rem] w-[30rem]  rounded-lg p-[0.7rem] border-2 border-gray-300"
                   />
                   {errors.telephone && (
                     <div className="text-red-500 text-[12px]">
@@ -189,7 +197,7 @@ const CheckOut = () => {
                   )}
                 </span>
               </span>
-              <span>
+              <span className="lex justify-between w-[30rem]  md:w-[35rem] gap-[2rem]">
                 <h1 className="font-bold text-[1.2rem]">Billing Address</h1>
                 <span className="flex flex-col gap-y-4">
                   <span>
@@ -265,7 +273,7 @@ const CheckOut = () => {
               <button
                 disabled={isSubmitting}
                 type="submit"
-                className=" bg-black text-white w-full rounded-lg flex justify-center items-center"
+                className=" bg-black text-white md:w-[35rem] w-[30rem] rounded-lg flex justify-center items-center"
               >
                 <p className="p-5 font-bold ">
                   {isSubmitting ? "Loading..." : "Next"}
