@@ -11,11 +11,12 @@ const CheckOut = () => {
   const { cartItems, totalQuantity } = useStateContext();
 
   return (
-    <div className="">
+    <div> 
       <Navbar2 />
       <div className="flex flex-col md:flex-col xl:flex-row justify-center items-start h-full   md:gap-11 xl:gap-0  ">
-        <div className="flex flex-col justify-center items-center xl:w-[100rem] md:w-full w-[35rem] p-3 ">
-          <div className="flex flex-col justify-center items-center xl:w-full md:w-full w-[30rem] ">
+        <div className="flex flex-col justify-center items-center xl:w-[100rem] md:w-full w-full ">
+
+          <div className="flex flex-col justify-center items-center  w-full p-3 ">
             <span className="w-full md:w-[35rem]">
               <h1 className="font-bold text-[1.5rem]">Summary Order</h1>
               <p className="font-light text-slate-500">
@@ -26,13 +27,13 @@ const CheckOut = () => {
           </div>
 
           <div className="flex flex-col justify-center items-center  w-full xl:w-full p-3">
-            <span className="md:w-[35rem] w-[30rem]">
+            <span className="md:w-[35rem] w-full">
               <p className="text-start">
                 <span className="font-bold ">Total Quantity: </span>
                 <span className="Font-light">{totalQuantity}</span>
               </p>
             </span>
-            <div className="flex flex-col  border-2  md:w-[35rem] h-[27rem]  px-[2rem] py-[1rem] w-[30rem]   rounded-lg gap-y-7 overflow-y-auto ">
+            <div className="flex flex-col  border-2  md:w-[35rem] h-[27rem]  px-[2rem] py-[1rem] w-full  rounded-lg gap-y-7 overflow-y-auto ">
               {cartItems.map((product) => (
                 <CheckOutItem
                   product={product}
@@ -45,14 +46,14 @@ const CheckOut = () => {
             </div>
           </div>
 
-          <div className="pb-[1rem] flex flex-col justify-center items-center  w-full gap-4 p-5">
-            <div className=" flex flex-col justify-center items-start ">
-              <div className="space-y-2">
+          <div className="pb-[1rem] flex flex-col justify-center items-center  w-full gap-4 p-3">
+            <div className=" flex flex-col justify-center items-start w-full md:w-[35rem]">
+              <div className="w-full ">
                 <div className="flex justify-start items-center gap-2">
                   <h2 className="font-bold">Available Shipping Method</h2>{" "}
                   <IoInformationCircleSharp fill="gray" />
                 </div>
-                <div className="flex border-2 justify-between rounded-lg px-[1.5rem] py-[0.5rem] md:w-[35rem] w-[30rem]">
+                <div className="flex border-2 justify-between rounded-lg px-[1.5rem] py-[0.5rem] md:w-[35rem] w-full">
                   <span className="flex justify-center items-center gap-4">
                     <img src={FedEx} alt="" className="md:h-[5rem] h-[3rem]" />
                     <span>
@@ -69,13 +70,13 @@ const CheckOut = () => {
                 </div>
               </div>
             </div>
-            <div className="space-y-2 ">
+            <div className="w-full md:w-[35rem]">
               <div>
                 <h2 className="font-light text-slate-600">
                   Available International Shipping:
                 </h2>
               </div>
-              <div className="flex border-2 justify-between rounded-lg px-[1.5rem] py-[0.5rem] md:w-[35rem] w-[30rem]">
+              <div className="flex border-2 justify-between rounded-lg px-[1.5rem] py-[0.5rem] md:w-[35rem] w-full">
                 <span className="flex justify-start items-center gap-4">
                   <img src={DHL} alt="" className="md:h-[5rem] h-[3rem]" />
                   <span>
@@ -94,7 +95,7 @@ const CheckOut = () => {
           </div>
         </div>
 
-        <div className="flex flex-col justify-center  items-center xl:w-[100rem] md:w-full w-[35rem]  bg-[#F9FAFB] p-3">
+        <div className="flex flex-col justify-center  items-center xl:w-[100rem] md:w-full w-full  bg-[#F9FAFB] p-3">
           <StepForm />
         </div>
       </div>

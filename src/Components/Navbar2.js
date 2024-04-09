@@ -3,7 +3,7 @@ import logo from "../assets/images/beats-logo-161616.png";
 
 const Navbar2 = () => {
   return (
-    <div className="flex justify-between items-center px-10 pb-6 pt-3">
+    <div className="flex justify-between items-center px-10 pb-6 pt-3 w-full">
       <div className="flex justify-center items-center gap-8 ">
         <img src={logo} alt="" className="md:h-[3rem] h-[2rem]" />
         <div className="p-0 border-2 h-8"></div>
