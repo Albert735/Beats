@@ -2,8 +2,8 @@ import React from "react";
 
 const CheckOutItem = ({ product }) => {
   return (
-    <div className="flex  justify-between  w-full">
-      <span className="flex gap-6">
+    <div className="flex  justify-between w-full">
+      <span className="flex gap-3 md:gap-6 ">
         <img
           src={product.image}
           alt=""
@@ -20,10 +20,10 @@ const CheckOutItem = ({ product }) => {
         </span>{" "}
       </span>{" "}
       <span className="space-y-3 ">
-        <p className="text-slate-500"> 42 EU - 8.5 US</p>
-        <span className="flex justify-between">
-          <p className="font-light">Quantity</p>
-          <p className="text-end text-slate-500 rounded-lg border-2 border-slate-400 px-3">
+        <p className="text-slate-500 text-[12px] md:text-[1rem]"> 42 EU - 8.5 US</p>
+        <span className="flex justify-between items-center">
+          <p className="font-light text-[12px] md:text-[1rem]">Quantity</p>
+          <p className="text-end text-slate-500 rounded-lg border-2 border-slate-400 text-[12px] md:text-[1rem] px-3">
             {product.quantity}
           </p>
         </span>

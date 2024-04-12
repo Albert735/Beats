@@ -5,7 +5,7 @@ import DHL from "../assets/Svg/DHL.svg";
 import Navbar2 from "../Components/Navbar2";
 import { useStateContext } from "../Context/StateContext";
 import CheckOutItem from "../CheckOutItem";
-import StepForm from "../Sections/StepForm";
+import StepForm from "../Sections/MultiStepForm";
 
 const CheckOut = () => {
   const { cartItems, totalQuantity } = useStateContext();
@@ -23,6 +23,7 @@ const CheckOut = () => {
                 Check your item and select your shipping for better <br />{" "}
                 experience order item.
               </p>
+             
             </span>
           </div>
 
@@ -33,7 +34,7 @@ const CheckOut = () => {
                 <span className="Font-light">{totalQuantity}</span>
               </p>
             </span>
-            <div className="flex flex-col  border-2  md:w-[35rem] h-[27rem]  px-[2rem] py-[1rem] w-full  rounded-lg gap-y-7 overflow-y-auto ">
+            <div className="flex flex-col  border-2  md:w-[35rem] h-[27rem] px-3  md:px-[2rem] py-[1rem] w-full  rounded-lg gap-y-7 overflow-y-auto ">
               {cartItems.map((product) => (
                 <CheckOutItem
                   product={product}

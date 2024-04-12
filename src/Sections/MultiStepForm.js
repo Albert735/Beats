@@ -13,7 +13,6 @@ const StepForm = () => {
   } = useForm();
 
   const [step, setStep] = useState(1);
-
   const nextStep = () => {
     setStep(step + 1);
   };
@@ -21,6 +20,7 @@ const StepForm = () => {
   const prevStep = () => {
     setStep(step - 1);
   };
+
 
   return (
     <div className="flex justify-center items-start flex-col w-full  md:w-full  ">
@@ -357,10 +357,12 @@ const StepForm = () => {
             </div>
             <div className="flex justify-start items-center w-full md:w-[35rem] gap-3">
               {" "}
-              <input type="checkbox" name="" id="" className="rounded-full"/>
+              <input type="checkbox" name="" id="" className="rounded-full" />
               <span>
                 <p className="font-bold">Save my info for 1-click checkout </p>
-                <p className="font-light text-gray-500">Pay faster and everywhere link is accepted</p>
+                <p className="font-light text-gray-500">
+                  Pay faster and everywhere link is accepted
+                </p>
               </span>
             </div>
             <div className="flex justify-between items-center w-full md:w-[35rem]">

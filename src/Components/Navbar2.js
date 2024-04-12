@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../assets/images/beats-logo-161616.png";
+// import Stepper from "./Stepper";
 
 const Navbar2 = () => {
   return (
@@ -9,9 +10,12 @@ const Navbar2 = () => {
         <div className="p-0 border-2 h-8"></div>
         <p className="font-bold text-gray-500">Order Overview</p>
       </div>
+      <div>
+        {/* <Stepper /> */}
+      </div>
       <div className="hidden md:flex justify-center items-center gap-2">
         <div className="flex items-center gap-2">
-          <div className="rounded-full bg-lime-200 w-6 h-6"></div>
+          <div className="rounded-full bg-lime-200 w-6 h-6 active:animate-ping "></div>
           <h1>Information</h1>
         </div>
         <div className="flex items-center gap-2">

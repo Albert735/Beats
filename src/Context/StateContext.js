@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState } from "react";
 const Context = createContext();
 
+
 export const StateContext = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
   const [totalQuantity, setTotalQuantity] = useState(0);
@@ -125,14 +126,15 @@ export const StateContext = ({ children }) => {
     console.log(totalPrice);
     setTotalPrice((prev) => prev - product?.price * product.quantity);
   }
-  const [step, setStep] = useState(1);
-  const nextStep = () => {
-    setStep(step + 1);
-  };
+  // const [step, setStep] = useState(1);
+  // const nextStep = () => {
+  //   setStep(step + 1);
+  // };
 
-  const prevStep = () => {
-    setStep(step - 1);
-  };
+  // const prevStep = () => {
+  //   setStep(step - 1);
+  // };
+
 
   return (
     <Context.Provider
@@ -145,9 +147,10 @@ export const StateContext = ({ children }) => {
         decrementCartItem,
         totalQuantity,
         totalPrice,
-        nextStep,
-        setStep,
-        prevStep,
+        // nextStep,
+        // setStep,
+        // prevStep,
+        // step
       }}
     >
       {children}
