@@ -1,25 +1,34 @@
-import React, { useState } from "react";
+import React from "react";
 import { GrLinkNext } from "react-icons/gr";
 import { useForm } from "react-hook-form";
 import visa from "../assets/Svg/visa-2.svg";
 import paypal from "../assets/Svg/paypal.svg";
 import mastercard from "../assets/Svg/mastercard.svg";
-
-const StepForm = () => {
+import { useStateContext } from "../Context/StateContext";
+import { country } from "../CountryArray";
+const StepForm = ({ countries }) => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
+    trigger,
+    formState: { errors, isSubmitting, isValid },
   } = useForm();
 
-  const [step, setStep] = useState(1);
+  const { step, setStep } = useStateContext();
   const nextStep = () => {
-    setStep(step + 1);
+    trigger();
+    if (isValid) {
+      setStep(step + 1);
+    } else {
+      return;
+    }
   };
 
   const prevStep = () => {
     setStep(step - 1);
   };
+
+  // const [country, setCountry] = useState([]);
 
   return (
     <div className="flex justify-center items-start flex-col w-full  md:w-full  ">
@@ -102,7 +111,7 @@ const StepForm = () => {
               <span className="w-full md:w-[35rem]">
                 <h1 className="font-bold">Telephone</h1>
                 <input
-                  type="number"
+                  type="phone"
                   placeholder="+233"
                   {...register("telephone", {
                     required: "Telephone is required",
@@ -127,27 +136,26 @@ const StepForm = () => {
                 </span>
               </div>
               <span className="flex flex-col justify-center items-center gap-y-4 w-full md:w-[35rem] ">
-                <span className="w-full">
-                  <h1 className="font-bold">Country</h1>
-                  <input
-                    type="text"
-                    className=" w-full bg-transparent rounded-lg p-[0.7rem] border-2 border-gray-300"
-                    placeholder=""
-                    {...register("country", {
-                      required: "Country is required",
-                    })}
-                  />
-                  {errors.country && (
-                    <div className="text-red-500 text-[12px]">
-                      {errors.country.message}
-                    </div>
-                  )}
-                </span>
+                <select
+                  name="country"
+                  id="countrySelect"
+                  className="bg-transparent border-2 rounded-lg w-full border-gray-300 p-[0.7rem]"
+                >
+                  <option value={country}>Country</option>
+                  {country.map((country, index) => (
+                    <option key={index} value={country.name}>
+                      {country.name},{""}
+                      {country.code}
+                    </option>
+                  ))}
+                </select>
+
                 <span className="flex justify-between w-full gap-[2rem]">
                   <span>
                     <h1 className="font-bold">City</h1>
                     <input
                       type="text"
+                      name="city"
                       className="bg-transparent w-full rounded-lg  p-[0.7rem] border-2 border-gray-300"
                       placeholder=""
                       {...register("city", { required: "City is required" })}
@@ -162,6 +170,7 @@ const StepForm = () => {
                     <h1 className="font-bold">Zip Code</h1>
                     <input
                       type="text"
+                      name="zipCode"
                       className="bg-transparent w-full rounded-lg  p-[0.7rem] border-2 border-gray-300"
                       placeholder=""
                       {...register("zipCode", {
@@ -230,7 +239,9 @@ const StepForm = () => {
               </div>
               <div className="gap-1 border-2 border-gray-300 p-3 w-full rounded-xl active:border-blue-600 cursor-pointer">
                 <h1 className="font-bold">Credit Card or Debit card</h1>
-                <p className="text-[14px]">Apple Card, Visa, Mastercard, Amex <br /> Discover, Unionpay</p>
+                <p className="text-[14px]">
+                  Apple Card, Visa, Mastercard, Amex <br /> Discover, Unionpay
+                </p>
               </div>
             </div>
 
@@ -389,9 +400,22 @@ const StepForm = () => {
                 type="submit"
                 className="bg-black text-white rounded-lg  w-[10rem]"
               >
-                <p className="p-3 font-bold "> Next</p>
+                <p className="p-3 font-bold" onClick={nextStep}>
+                  {" "}
+                  Next
+                </p>
               </button>
             </div>
+          </div>
+        )}
+        {step === 3 && (
+          <div className="flex flex-col justify-start items-start w-[40rem] gap-4">
+            <div>
+              <h1 className="font-bold text-[2rem]">Details Summary</h1>
+            </div>
+            <div className="flex flex-col justify-center items-start w-full gap-9"></div>
+
+            <button onClick={prevStep}>Finish</button>
           </div>
         )}
       </form>

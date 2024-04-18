@@ -127,14 +127,6 @@ export const StateContext = ({ children }) => {
     setTotalPrice((prev) => prev - product?.price * product.quantity);
   }
   const [step, setStep] = useState(1);
-  const nextStep = () => {
-    setStep(step + 1);
-  };
-
-  const prevStep = () => {
-    setStep(step - 1);
-  };
-
 
   return (
     <Context.Provider
@@ -147,10 +139,8 @@ export const StateContext = ({ children }) => {
         decrementCartItem,
         totalQuantity,
         totalPrice,
-        nextStep,
-        setStep,
-        prevStep,
-        // step
+        step,
+        setStep
       }}
     >
       {children}

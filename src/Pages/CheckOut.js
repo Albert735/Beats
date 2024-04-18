@@ -8,14 +8,13 @@ import CheckOutItem from "../CheckOutItem";
 import StepForm from "../Sections/MultiStepForm";
 
 const CheckOut = () => {
-  const { cartItems, totalQuantity } = useStateContext();
+  const { cartItems, totalQuantity, step } = useStateContext();
 
   return (
-    <div> 
-      <Navbar2 />
+    <div>
+      <Navbar2 step={step} />
       <div className="flex flex-col md:flex-col xl:flex-row justify-center items-start h-full   md:gap-11 xl:gap-0  ">
         <div className="flex flex-col justify-center items-center xl:w-[100rem] md:w-full w-full ">
-
           <div className="flex flex-col justify-center items-center  w-full p-3 ">
             <span className="w-full md:w-[35rem]">
               <h1 className="font-bold text-[1.5rem]">Summary Order</h1>
@@ -23,7 +22,6 @@ const CheckOut = () => {
                 Check your item and select your shipping for better <br />{" "}
                 experience order item.
               </p>
-             
             </span>
           </div>
 

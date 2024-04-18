@@ -38,7 +38,7 @@ const Case = () => {
             <br /> can store it whenever you
             <br /> want, and keep your durability <br /> forever.
           </p>
-          <button className="dark:bg-[#f6e7e7] dark:text-black text-white  bg-[#191A1A] gap-1 flex mt-[2rem]  py-3 px-7 rounded-[3rem] drop-shadow-md xl:hover:ml-3 hover:scale-110 hover:ease-in-out duration-500">
+          <button className="dark:bg-[#f6e7e7] dark:text-black text-white  bg-[#191A1A] gap-1 flex mt-[2rem]  py-3 px-7 rounded-full transition-all ease-in-out duration-200">
             <IoIosInformationCircleOutline size={24} />
             More Info
           </button>
