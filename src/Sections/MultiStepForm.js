@@ -21,7 +21,6 @@ const StepForm = () => {
     setStep(step - 1);
   };
 
-
   return (
     <div className="flex justify-center items-start flex-col w-full  md:w-full  ">
       <form
@@ -218,7 +217,20 @@ const StepForm = () => {
                 <h1 className="font-bold text-[1.5rem]"> Payment Details</h1>
               </div>
               <div className="">
-                <p className="font-bold">+ Add new</p>
+                <p className="font-bold cursor-pointer">+ Add new</p>
+              </div>
+            </div>
+
+            <div className="flex flex-col justify-start items-start w-full md:w-[35rem] gap-4 ">
+              <div>
+                <p>
+                  In order to use your Apple Acount Balance,Sign In with your
+                  Apple ID
+                </p>
+              </div>
+              <div className="gap-1 border-2 border-gray-300 p-3 w-full rounded-xl active:border-blue-600 cursor-pointer">
+                <h1 className="font-bold">Credit Card or Debit card</h1>
+                <p className="text-[14px]">Apple Card, Visa, Mastercard, Amex <br /> Discover, Unionpay</p>
               </div>
             </div>
 
