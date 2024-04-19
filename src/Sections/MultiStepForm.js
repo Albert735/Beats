@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import { GrLinkNext } from "react-icons/gr";
 import { useForm } from "react-hook-form";
 import visa from "../assets/Svg/visa-2.svg";
@@ -7,13 +7,13 @@ import paypal from "../assets/Svg/paypal.svg";
 import mastercard from "../assets/Svg/mastercard.svg";
 import { useStateContext } from "../Context/StateContext";
 import { country } from "../CountryArray";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import check from "../assets/images/icons8-transaction-approved-64.png";
 
 const StepForm = () => {
   const [show, setShow] = React.useState(false);
   const toggling = () => setShow(!show);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const {
     register,
@@ -33,12 +33,13 @@ const StepForm = () => {
     }
   };
 
-  function reloadPage() {
-    window.location.reload();
-  }
+  // function reloadPage() {
+  //   window.location.reload();
+  // }
   const handleReload = () => {
-    navigate('/'); 
-  } 
+    window.location.reload();
+    window.location.href = '/'; 
+  }
 
   const prevStep = () => {
     setStep(step - 1);
@@ -529,16 +530,16 @@ const StepForm = () => {
                         </p>
                       </span>
 
-                      <Link to="/">
+                    
                         <button
                           type="submit"
                           id="reloadButton"
-                          onClick={() => {handleReload(); reloadPage()}}
+                          onClick={() => {handleReload(); }}
                           className="bg-black text-white rounded-lg w-[10rem] mt-5"
                         >
                           <p className=" p-3">continue</p>
                         </button>
-                      </Link>
+               
                     </div>
                   </div>
                 )}
