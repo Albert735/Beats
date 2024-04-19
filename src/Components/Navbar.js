@@ -50,10 +50,8 @@ const Navbar = () => {
 
   return (
     <div
-      className={`fixed z-20 w-full ${
-        scrolling
-          ? "dark:bg-[#0E0F10] bg-[#FFFAFA] backdrop-blur-md"
-          : "bg-transparent"
+      className={`fixed z-10 w-full ${
+        scrolling ? "dark:bg-[#0E0F10] bg-[#FFFAFA]" : "bg-transparent"
       }`}
     >
       <div className="flex px-5  md:px-10 flex-wrap items-center justify-between  md:p-4 py-4  ">

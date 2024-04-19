@@ -1,11 +1,15 @@
 import React from "react";
 import logo from "../assets/images/beats-logo-161616.png";
+import {Link} from 'react-router-dom'
 
 const Navbar2 = ({ step }) => {
   return (
     <div className="flex justify-between items-center px-10 pb-6 pt-3 w-full">
       <div className="flex justify-center items-center gap-8 ">
-        <img src={logo} alt="" className="md:h-[3rem] h-[2rem]" />
+        <Link to='/'>
+          <img src={logo} alt="" className="md:h-[3rem] h-[2rem]" />
+        </Link>
+
         <div className="p-0 border-2 h-8"></div>
         <p className="font-bold text-gray-500">Order Overview</p>
       </div>

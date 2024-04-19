@@ -11,7 +11,7 @@ const CheckOut = () => {
   const { cartItems, totalQuantity, step } = useStateContext();
 
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Navbar2 step={step} />
       <div className="flex flex-col md:flex-col xl:flex-row justify-center items-start h-full   md:gap-11 xl:gap-0  ">
         <div className="flex flex-col justify-center items-center xl:w-[100rem] md:w-full w-full ">
@@ -52,11 +52,12 @@ const CheckOut = () => {
                   <h2 className="font-bold">Available Shipping Method</h2>{" "}
                   <IoInformationCircleSharp fill="gray" />
                 </div>
-                <div className="flex border-2 justify-between rounded-lg px-[1.5rem] py-[0.5rem] md:w-[35rem] w-full">
+
+                <button className="flex border-2 justify-between items-center rounded-lg px-[1.5rem] py-[0.5rem] md:w-[35rem] w-full">
                   <span className="flex justify-center items-center gap-4">
                     <img src={FedEx} alt="" className="md:h-[5rem] h-[3rem]" />
                     <span>
-                      <h3 className="font-bold">Fedex Delivery</h3>
+                      <h3 className="font-bold">FedEX Delivery</h3>
                       <p className="font-light text-slate-500">
                         Delivery: 2-3 days work
                       </p>
@@ -64,9 +65,14 @@ const CheckOut = () => {
                   </span>
                   <span className="flex justify-center items-center gap-3">
                     <p className="font-bold">Free</p>
-                    <input type="checkbox" className="rounded-full" />
+                    <input
+                      name="shipping"
+                      value="FedEX"
+                      type="radio"
+                      className="rounded-full"
+                    />
                   </span>
-                </div>
+                </button>
               </div>
             </div>
             <div className="w-full md:w-[35rem]">
@@ -75,7 +81,7 @@ const CheckOut = () => {
                   Available International Shipping:
                 </h2>
               </div>
-              <div className="flex border-2 justify-between rounded-lg px-[1.5rem] py-[0.5rem] md:w-[35rem] w-full">
+              <button className="flex border-2 justify-between items-center rounded-lg px-[1.5rem] py-[0.5rem] md:w-[35rem] w-full">
                 <span className="flex justify-start items-center gap-4">
                   <img src={DHL} alt="" className="md:h-[5rem] h-[3rem]" />
                   <span>
@@ -87,9 +93,14 @@ const CheckOut = () => {
                 </span>
                 <span className="flex justify-center items-center gap-3">
                   <p className="font-bold">Free</p>
-                  <input type="checkbox" className="rounded-full" />
+                  <input
+                    type="radio"
+                    name="shipping"
+                    value="DHL"
+                    className="rounded-full"
+                  />
                 </span>
-              </div>
+              </button>
             </div>
           </div>
         </div>

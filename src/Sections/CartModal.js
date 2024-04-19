@@ -36,9 +36,9 @@ const CartModal = () => {
       {isOpen && (
         <div
           data-aos="fade-left"
-          data-aos-duration="1000"
+          data-aos-duration="100"
           data-aos-delay="ease-in-out"
-          className="flex flex-col fixed justify-end items-end  top-0 right-0 w-[100vw] backdrop-blur-md bg-opacity-5  h-screen z-50"
+          className="flex flex-col fixed justify-end items-end  top-0 right-0 w-screen  bg-black/60 backdrop-blur   h-screen z-50"
         >
           <div className="xl:w-[30rem] relaive w-full h-screen overflow-y-scroll scroll-mb-[90rem] bg-white">
             <div className="flex relative inset-0 z-20 justify-between items-center p-2 text-black md:p-9">
@@ -88,7 +88,7 @@ const CartModal = () => {
                     <span className="font-light">Ghc 20%</span>
                   </p>
                   <p className="flex justify-between items-center w-full rounded-xl font-bold">
-                    <span className="flex justify-center items-center gap-1 font-light" >
+                    <span className="flex justify-center items-center gap-1 font-light">
                       Tax
                       <IoIosInformationCircle />
                     </span>
@@ -100,12 +100,15 @@ const CartModal = () => {
                   <span className="font-bold">Ghc {totalPrice}</span>
                 </div>
                 <div className="flex flex-col justify-start items-center text-black text-[1rem]  w-screen md:w-[38rem] xl:w-[28rem] p-5 gap-3">
-                  <button
-                    type="button"
-                    className="flex justify-center items-center border border-gray-300  px-5 py-4 rounded-xl w-full  font-bold"
-                  >
-                    <Link to="/">Continue Shopping</Link>
-                  </button>{" "}
+                
+                    <button
+                    onClick={toggleDropdown}
+                      type="button"
+                      className="flex justify-center items-center border border-gray-300  px-5 py-4 rounded-xl w-full  font-bold"
+                    >
+                    Continue Shopping
+                    </button>
+             
                   <button
                     type="button"
                     className="flex justify-center items-center bg-[#000000] px-5 py-4 rounded-xl w-full text-white font-bold"
