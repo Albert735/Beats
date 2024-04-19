@@ -46,17 +46,6 @@ const Button = () => {
 
   return (
     <div className="xl:hidden relative flex gap-4 ">
-      {/* <div className="">
-        <span className="relative flex h-5 w-5">
-          <span className="absolute inline-flex rounded-full h-3 w-3 bg-[#DF1D3C] left-3 -top-1 text-white text-[10px] justify-center items-center">
-            0
-          </span>
-          <BsCart3
-            size={24}
-            className="cursor-pointer dark:text-white text-black font-bold"
-          />
-        </span>
-      </div> */}
       <CartModal/>
       <div>
         <button className="flex justify-end" onClick={toggling}>

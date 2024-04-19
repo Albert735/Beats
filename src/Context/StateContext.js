@@ -1,7 +1,6 @@
 import React, { createContext, useContext, useState } from "react";
 const Context = createContext();
 
-
 export const StateContext = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
   const [totalQuantity, setTotalQuantity] = useState(0);
@@ -126,6 +125,8 @@ export const StateContext = ({ children }) => {
     console.log(totalPrice);
     setTotalPrice((prev) => prev - product?.price * product.quantity);
   }
+
+
   const [step, setStep] = useState(1);
 
   return (
@@ -140,7 +141,7 @@ export const StateContext = ({ children }) => {
         totalQuantity,
         totalPrice,
         step,
-        setStep
+        setStep,
       }}
     >
       {children}
