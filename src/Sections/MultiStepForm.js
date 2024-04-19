@@ -33,6 +33,9 @@ const StepForm = () => {
     }
   };
 
+  function reloadPage() {
+    window.location.reload();
+  }
   const handleReload = () => {
     navigate('/'); 
   } 
@@ -530,7 +533,7 @@ const StepForm = () => {
                         <button
                           type="submit"
                           id="reloadButton"
-                          onClick={handleReload}
+                          onClick={() => {handleReload(); reloadPage()}}
                           className="bg-black text-white rounded-lg w-[10rem] mt-5"
                         >
                           <p className=" p-3">continue</p>
