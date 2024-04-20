@@ -237,7 +237,7 @@ const StepForm = () => {
               onClick={nextStep}
               disabled={isSubmitting}
               type="submit"
-              className="flex justify-center items-center bg-[#000000] px-5 py-4 rounded-xl w-full text-white font-bold my-5"
+              className="flex justify-center items-center bg-[#000000] px-5 py-4 gap-3 rounded-xl w-full md:w-[35rem] text-white font-bold my-5"
             >
               <p className="font-bold ">
                 {isSubmitting ? "Loading..." : "Next"}

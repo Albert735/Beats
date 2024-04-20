@@ -10,7 +10,7 @@ const PreLoader = () => {
     gsap.from(".text3", { opacity:0, x: -1200, duration: 4, repeatDelay: 0, delay:3});
     gsap.from(".text4", { opacity:0, x: -1400, duration: 3, repeatDelay: 0, delay:2});
     gsap.from(".text5", { opacity:0, x: -1600, duration: 2, repeatDelay: 0 , delay:1});
-    gsap.to(".preloader-container", { y: 1000, duration: 5, delay: 13 });
+    gsap.to(".preloader-container", { y: 1000, duration: 3, delay: 13 });
 
 
 
