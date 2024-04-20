@@ -32,7 +32,7 @@ const Case = () => {
           data-aos-easing="ease-in-out"
           className="flex flex-col justify-center items-center md:items-start p-[5rem]"
         >
-          <p className="leading-normal md:text-[1.3rem] text-[1.2rem] md:text-start text-center ">
+          <p className="leading-normal md:text-[1.3rem] text-[1.2rem] md:text-start text-justify ">
             With a comfortable and <br />
             adaptable case so that you
             <br /> can store it whenever you

@@ -11,24 +11,29 @@ import Bottom from "./Sections/Bottom";
 import Shopping from "./Sections/Shopping";
 import Section5 from "./Sections/Section5";
 import Testimonial from "./Sections/Testimonial";
+import PreLoader from "./Components/PreLoader";
 
 function App() {
   return (
-    <div className="bg-[#FFFAFA] dark:bg-[#0E0F10] dark:text-white ">
-      <Navbar />
-      <Home />
-      <Section2 />
-      <Specs />
-      <Case />
-      <Section3 />
-      <Products />
-      <Section4 />
-      <Shopping />
-      <Section5 />
-      <Testimonial />
-      <Footer />
-      <Bottom />
-    </div>
+    <>
+      <PreLoader />
+
+      <div className="bg-[#FFFAFA] dark:bg-[#0E0F10] dark:text-white ">
+        <Navbar />
+        <Home />
+        <Section2 />
+        <Specs />
+        <Case />
+        <Section3 />
+        <Products />
+        <Section4 />
+        <Shopping />
+        <Section5 />
+        <Testimonial />
+        <Footer />
+        <Bottom />
+      </div>
+    </>
   );
 }
 

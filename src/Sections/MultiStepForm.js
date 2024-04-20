@@ -1,5 +1,4 @@
 import React from "react";
-// import { useNavigate } from 'react-router-dom';
 import { GrLinkNext } from "react-icons/gr";
 import { useForm } from "react-hook-form";
 import visa from "../assets/Svg/visa-2.svg";
@@ -7,13 +6,11 @@ import paypal from "../assets/Svg/paypal.svg";
 import mastercard from "../assets/Svg/mastercard.svg";
 import { useStateContext } from "../Context/StateContext";
 import { country } from "../CountryArray";
-// import { Link } from "react-router-dom";
 import check from "../assets/images/icons8-transaction-approved-64.png";
 
 const StepForm = () => {
   const [show, setShow] = React.useState(false);
   const toggling = () => setShow(!show);
-  // const navigate = useNavigate();
 
   const {
     register,
@@ -33,13 +30,10 @@ const StepForm = () => {
     }
   };
 
-  // function reloadPage() {
-  //   window.location.reload();
-  // }
   const handleReload = () => {
     window.location.reload();
-    window.location.href = '/'; 
-  }
+    window.location.href = "/";
+  };
 
   const prevStep = () => {
     setStep(step - 1);
@@ -65,7 +59,7 @@ const StepForm = () => {
         })}
       >
         {step === 1 && (
-          <div className=" flex justify-center items-center flex-col md:w-full w-full gap-7">
+          <div className=" flex justify-center items-center flex-col md:w-full w-full gap-[1.5rem] md:gap-7">
             <div className="flex justify-center items-center w-full ">
               <span className="w-full  md:w-[35rem]  ">
                 <h1 className="font-bold text-[1.5rem]">Information</h1>
@@ -157,8 +151,8 @@ const StepForm = () => {
                 )}
               </span>
             </span>
-            <span className="flex flex-col justify-center items-center md:w-full w-full  gap-5 ">
-              <div className="flex justify-center items-center w-full ">
+            <span className="flex flex-col justify-center items-center md:w-full w-full gap-[1rem]  md;gap-5 ">
+              <div className="flex justify-center items-center w-full mt-6 md:mt-0 ">
                 <span className="w-full  md:w-[35rem]  ">
                   <h1 className="font-bold text-[1.5rem]">Billing Address</h1>
                 </span>
@@ -243,9 +237,9 @@ const StepForm = () => {
               onClick={nextStep}
               disabled={isSubmitting}
               type="submit"
-              className=" bg-black text-white md:w-[35rem] w-full rounded-lg flex justify-center items-center "
+              className="flex justify-center items-center bg-[#000000] px-5 py-4 rounded-xl w-full text-white font-bold my-5"
             >
-              <p className="p-4 font-bold ">
+              <p className="font-bold ">
                 {isSubmitting ? "Loading..." : "Next"}
               </p>
               <GrLinkNext />
@@ -440,15 +434,15 @@ const StepForm = () => {
               <button
                 type="submit"
                 onClick={prevStep}
-                className="bg-transparent w-full  border-2 rounded-lg "
+                className="flex justify-center items-center border-2 px-5 py-4 rounded-xl w-full text-black font-bold"
               >
-                <p className="p-3 font-bold">Back</p>
+                <p className="font-bold">Back</p>
               </button>
               <button
                 type="submit"
-                className="bg-black text-white rounded-lg  w-full"
+                className="flex justify-center items-center bg-[#000000] px-5 py-4 rounded-xl w-full text-white font-bold"
               >
-                <p className="p-3 font-bold" onClick={nextStep}>
+                <p className="font-bold" onClick={nextStep}>
                   {" "}
                   Next
                 </p>
@@ -501,18 +495,18 @@ const StepForm = () => {
             <div className="flex flex-col md:flex-row justify-between items-center  w-full md:w-[35rem] gap-3 my-5">
               <button
                 onClick={prevStep}
-                className="flex justify-center  bg-transparent text-black md:w-[35rem] w-full border-2 rounded-lg items-center "
+                className="flex justify-center items-center border-2  px-5 py-4 rounded-xl w-full text-black font-bold"
               >
-                <p className="p-3 font-bold"> Back</p>
+                <p className="font-bold"> Back</p>
               </button>
               <button
                 onClick={() => {
                   setShow(true);
                   toggling();
                 }}
-                className=" bg-black text-white md:w-[35rem] w-full rounded-lg flex justify-center items-center "
+                className="flex justify-center items-center bg-[#000000] px-5 py-4 rounded-xl w-full text-white font-bold"
               >
-                <p className="p-3 font-bold">Pay Now</p>
+                <p className=" font-bold">Pay Now</p>
 
                 {show && (
                   <div className="flex fixed justify-center items-center  top-0 right-0 bottom-0 left-0 bg-black/50 backdrop-blur-sm w-full h-full ">
@@ -530,16 +524,16 @@ const StepForm = () => {
                         </p>
                       </span>
 
-                    
-                        <button
-                          type="submit"
-                          id="reloadButton"
-                          onClick={() => {handleReload(); }}
-                          className="bg-black text-white rounded-lg w-[10rem] mt-5"
-                        >
-                          <p className=" p-3">continue</p>
-                        </button>
-               
+                      <button
+                        type="submit"
+                        id="reloadButton"
+                        onClick={() => {
+                          handleReload();
+                        }}
+                        className="bg-black text-white rounded-lg w-[10rem] mt-5"
+                      >
+                        <p className=" p-3">continue</p>
+                      </button>
                     </div>
                   </div>
                 )}

@@ -52,7 +52,7 @@ const CartModal = () => {
 
             <div className=" flex justify-center items-center  flex-col gap-2   p-5 ">
               {cartItems?.length === 0 ? (
-                <div className="flex absolute top-[25rem] justify-center items-center text-black flex-col p-5  border-2 rounded-xl">
+                <div className="flex absolute top-[22rem] justify-center items-center text-black flex-col p-5  border-2 rounded-xl">
                   <TiShoppingCart size={50} />
                   <p className="">Your shopping cart is empty</p>
                   <a href="#products" onClick={toggleDropdown}>

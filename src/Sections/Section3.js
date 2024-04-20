@@ -19,7 +19,7 @@ const Section3 = () => {
         <div className="gap-4">
           <div>
             <h1 className="font-bold text-[2rem]">
-              Immerse yourself in <br />
+              Immerse yourself  <br />in
               your music
             </h1>
           </div>

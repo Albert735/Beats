@@ -25,7 +25,7 @@ const Specs = () => {
       </div>
 
       <div className="flex flex-col-reverse md:flex-row justify-center w-full items-center  m-[5rem] xl:gap-[3rem] overflow-hidden">
-        <div className="md:flex grid grid-cols-2 md:flex-col justify-center items-start w-[25rem] text-sm xl:text-[1rem] font-light ">
+        <div className="md:flex grid grid-cols-2 md:flex-col justify-center items-start w-[25rem] px-6  text-sm xl:text-[1rem] font-light ">
           <div
             data-aos="fade-right"
             data-aos-duration="1000"

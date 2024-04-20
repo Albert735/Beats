@@ -11,9 +11,9 @@ const CheckOut = () => {
   const { cartItems, totalQuantity, step } = useStateContext();
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div>
       <Navbar2 step={step} />
-      <div className="flex flex-col md:flex-col xl:flex-row justify-center items-start h-full   md:gap-11 xl:gap-0  ">
+      <div className="flex flex-col md:flex-col xl:flex-row justify-center items-start h-full gap-9   md:gap-11 xl:gap-0  ">
         <div className="flex flex-col justify-center items-center xl:w-[100rem] md:w-full w-full ">
           <div className="flex flex-col justify-center items-center  w-full p-3 ">
             <span className="w-full md:w-[35rem]">
@@ -45,7 +45,7 @@ const CheckOut = () => {
             </div>
           </div>
 
-          <div className="pb-[1rem] flex flex-col justify-center items-center  w-full gap-4 p-3">
+          <div className="pb-[1rem] flex flex-col justify-center items-center  w-full gap-8 p-3">
             <div className=" flex flex-col justify-center items-start w-full md:w-[35rem]">
               <div className="w-full ">
                 <div className="flex justify-start items-center gap-2">
