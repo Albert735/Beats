@@ -59,7 +59,7 @@ const StepForm = () => {
         })}
       >
         {step === 1 && (
-          <div className=" flex justify-center items-center flex-col md:w-full w-full gap-[1.5rem] md:gap-7">
+          <div className=" flex justify-start items-center flex-col  h-svh md:w-full w-full gap-[1.5rem] md:gap-7">
             <div className="flex justify-center items-center w-full ">
               <span className="w-full  md:w-[35rem]  ">
                 <h1 className="font-bold text-[1.5rem]">Information</h1>
@@ -247,7 +247,7 @@ const StepForm = () => {
           </div>
         )}
         {step === 2 && (
-          <div className="flex flex-col justify-center items-center  w-full gap-11 md:px-[5rem]">
+          <div className="flex flex-col justify-start items-center h-svh  w-full gap-11 md:px-[5rem]">
             <div className="flex justify-between items-center w-full md:w-[35rem]">
               <div className=" ">
                 <h1 className="font-bold text-[1.5rem]"> Payment Details</h1>
@@ -451,7 +451,7 @@ const StepForm = () => {
           </div>
         )}
         {step === 3 && (
-          <div className="flex flex-col justify-center items-center w-full gap-11 h-full">
+          <div className="flex flex-col justify-start items-center w-full gap-11 h-svh">
             <div className="flex flex-col justify-center items-start w-full  md:w-[35rem] gap-2 ">
               <h1 className="font-bold text-[2rem]">Details Summary</h1>
               <div className="flex flex-col justify-center items-start w-full gap-2 ">
