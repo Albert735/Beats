@@ -11,7 +11,7 @@ const CheckOut = () => {
   const { cartItems, totalQuantity, step } = useStateContext();
 
   return (
-    <div className="flex flex-col w-full h-svh">
+    <div>
       <Navbar2 step={step} />
       <div className="flex flex-col md:flex-col xl:flex-row justify-center items-start h-full gap-9 md:gap-11 xl:gap-0  ">
         <div className="flex flex-col justify-center items-center xl:w-[100rem] md:w-full w-full ">

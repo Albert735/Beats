@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { GrLinkNext } from "react-icons/gr";
 import { useForm } from "react-hook-form";
 import visa from "../assets/Svg/visa-2.svg";
@@ -9,8 +9,9 @@ import { country } from "../CountryArray";
 import check from "../assets/images/icons8-transaction-approved-64.png";
 
 const StepForm = () => {
-  const [show, setShow] = React.useState(false);
+  const [show, setShow] = useState(false);
   const toggling = () => setShow(!show);
+
 
   const {
     register,
@@ -39,17 +40,18 @@ const StepForm = () => {
     setStep(step - 1);
   };
 
+
   const watchFirstName = watch("firstName");
   const watchLastName = watch("lastName");
   const watchEmail = watch("email");
   const watchTelephone = watch("telephone");
-  const watchCountry = watch("country");
+  const watchCountrySelect = watch("countrySelect");
   const watchCity = watch("city");
   const watchStreet = watch("street");
   const watchZip = watch("zipCode");
 
   return (
-    <div className="flex justify-center items-start flex-col w-full  md:w-full h-full ">
+    <div className="flex justify-center items-start flex-col w-full  md:w-full  ">
       <form
         action=""
         className="flex justify-center items-center flex-col md:w-full w-full  gap-7"
@@ -59,7 +61,7 @@ const StepForm = () => {
         })}
       >
         {step === 1 && (
-          <div className=" flex justify-start items-center flex-col  h-svh md:w-full w-full gap-[1.5rem] md:gap-7">
+          <div className=" flex justify-start items-center flex-col  md:w-full w-full gap-[1.5rem] md:gap-7">
             <div className="flex justify-center items-center w-full ">
               <span className="w-full  md:w-[35rem]  ">
                 <h1 className="font-bold text-[1.5rem]">Information</h1>
@@ -163,12 +165,12 @@ const StepForm = () => {
                   id="countrySelect"
                   className="bg-transparent border-2 rounded-lg w-full border-gray-300 p-[0.7rem]"
                 >
-                  <option id="country" value={country}>
+                  <option id="countrySelect" value={country}>
                     Country
                   </option>
                   {country.map((country, index) => (
-                    <option key={index} value={country.name}>
-                      {country.name},{""}
+                    <option id="countrySelect" key={index} value={country.name}>
+                      {country.name},
                       {country.code}
                     </option>
                   ))}
@@ -247,7 +249,7 @@ const StepForm = () => {
           </div>
         )}
         {step === 2 && (
-          <div className="flex flex-col justify-start items-center h-svh  w-full gap-11 md:px-[5rem]">
+          <div className="flex flex-col justify-start items-center  w-full gap-11 md:px-[5rem]">
             <div className="flex justify-between items-center w-full md:w-[35rem]">
               <div className=" ">
                 <h1 className="font-bold text-[1.5rem]"> Payment Details</h1>
@@ -273,13 +275,15 @@ const StepForm = () => {
             </div>
 
             <div className="flex  justify-center items-center w-full md:w-[35rem] md:gap-[2.3rem] gap-3">
-              <span className="flex border-2 rounded-xl">
-                <span className="p-3 flex justify-between items-start w-[10rem]">
+              <span className="flex border-2 rounded-xl " >
+                <span className="p-3 flex justify-between items-start w-[10rem]" >
                   <input
                     type="radio"
                     name="card"
                     value="Visa Card"
                     className="rounded-full mt-2"
+                    id="visa"
+                    // checked={true}
                   />
                   <span className="leading-loose text-[12px]">
                     <p>**** 1234</p>
@@ -288,13 +292,14 @@ const StepForm = () => {
                   <img src={visa} alt="" className="h-[2rem]" />
                 </span>
               </span>
-              <span className="hidden md:flex border-2 rounded-xl">
+              <span className="hidden md:flex border-2 rounded-xl" >
                 <span className="p-3 flex justify-between items-start w-[10rem]">
                   <input
                     type="radio"
                     name="card"
                     value="Master Card"
                     className="rounded-full mt-2"
+                    id="master"
                   />
                   <span className="leading-loose text-[12px]">
                     <p>**** 1234</p>
@@ -310,6 +315,7 @@ const StepForm = () => {
                     name="card"
                     value="paypal"
                     className="rounded-full mt-2"
+                    id="paypal"
                   />
                   <span className="leading-loose text-[12px]">
                     <p>**** 1234</p>
@@ -451,7 +457,7 @@ const StepForm = () => {
           </div>
         )}
         {step === 3 && (
-          <div className="flex flex-col justify-start items-center w-full gap-11 h-svh">
+          <div className="flex flex-col justify-start items-center w-full gap-11 ">
             <div className="flex flex-col justify-center items-start w-full  md:w-[35rem] gap-2 ">
               <h1 className="font-bold text-[2rem]">Details Summary</h1>
               <div className="flex flex-col justify-center items-start w-full gap-2 ">
@@ -476,7 +482,7 @@ const StepForm = () => {
               <h1 className="font-bold text-[1.5rem]">Billing Address</h1>
               <span className="flex flex-col justify-center items-start w-full  gap-2 ">
                 <span className="flex gap-4">
-                  <span>Country:</span> <p> {watchCountry}</p>
+                  <span>Country:</span> <p> {watchCountrySelect}</p>
                 </span>
                 <span className="flex gap-4">
                   <span>City:</span> <p> {watchCity}</p>
@@ -509,7 +515,7 @@ const StepForm = () => {
                 <p className=" font-bold">Pay Now</p>
 
                 {show && (
-                  <div className="flex fixed justify-center items-center  top-0 right-0 bottom-0 left-0 bg-black/50 backdrop-blur-sm w-full h-full ">
+                  <div className="flex fixed justify-center items-center z-10  top-0 right-0 bottom-0 left-0 bg-black/50 backdrop-blur-sm w-full h-full ">
                     <div className="flex absolute flex-col justify-center items-center md:w-[30rem] w-[20rem] h-[20rem] md:h-[25rem] bg-white rounded-xl gap-2 md:gap-6 ">
                       <h1 className="font-bold text-black text-[2rem]">
                         Payment Success!
@@ -545,5 +551,7 @@ const StepForm = () => {
     </div>
   );
 };
+
+
 
 export default StepForm;
