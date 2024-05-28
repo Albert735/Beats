@@ -16,7 +16,7 @@ const Navbar2 = ({ step }) => {
       </div>
 
       <div className="flex relative justify-between xl:justify-between items-start md:gap-[1rem] w-[23rem] md:w-[40rem] xl:w-full  gap-9 p-4">
-        <div className={`absolute top-[1.6rem] left-[2rem] md:top-[1.7rem] md:left-[3rem] justify-center ${step === 1 ? "w-[16rem] bg-slate-400" : ""} xl:justify-between items-center h-1 border-2  border-blue-300 w-[20rem] md:w-[33rem] xl:w-[48rem]`}></div>
+        <div className={`absolute top-[1.6rem] left-[2rem] md:top-[1.7rem] md:left-[3rem] justify-center ${step === 1 ? "w-[16rem] bg-slate-400" : ""} xl:justify-between items-center h-1 border-2  border-blue-300 w-[34dvw] md:w-[33rem] lg:w-[33rem] xl:w-[40dvw]`}></div>
         <div className="flex flex-col items-center  md:gap-2">
           <div
             className={`flex  justify-center items-center z-10  rounded-full md:w-6 md:h-6 w-6  h-6 ${
